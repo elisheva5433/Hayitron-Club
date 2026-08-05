@@ -4,20 +4,23 @@ const CATEGORIES = ['הכל', 'מסעדנות', 'אופנה', 'בריאות ור
 const REGIONS = ['כל הארץ', 'גוש דן', 'ירושלים והסביבה', 'חיפה והצפון', 'באר שבע והדרום', 'השרון'];
 
 const BUSINESSES = [
-  { name: 'מסעדת הבית של אמא', cat: 'מסעדנות', region: 'גוש דן', perk: '15% הנחה על כל התפריט', hours: '12:00–23:00', addr: 'רוטשילד 45, תל אביב' },
-  { name: 'קליניקת שיניים לבן', cat: 'בריאות ורפואה', region: 'השרון', perk: '20% הנחה על טיפולים אסתטיים', hours: '09:00–18:00', addr: 'סוקולוב 12, הרצליה' },
-  { name: 'סטודיו פילאטיס תנועה', cat: 'פנאי ותיירות', region: 'ירושלים והסביבה', perk: 'מנוי חודשי במחיר -30%', hours: '07:00–21:00', addr: 'עמק רפאים 8, ירושלים' },
-  { name: 'בוטיק אורבן קלוז', cat: 'אופנה', region: 'חיפה והצפון', perk: '2 ב-1 על כל הפריטים', hours: '10:00–20:00', addr: 'הרצל 33, חיפה' },
-  { name: 'משתלת הגינה הירוקה', cat: 'בית וגינה', region: 'השרון', perk: '10% הנחה + משלוח חינם', hours: '08:00–17:00', addr: 'ויצמן 5, רעננה' },
-  { name: 'חדר בריחה מיינדגיים', cat: 'פנאי ותיירות', region: 'גוש דן', perk: '20% הנחה לקבוצות', hours: '10:00–00:00', addr: 'אחד העם 22, תל אביב' },
-  { name: 'מרכז חוגי מדע לילדים', cat: 'חינוך', region: 'באר שבע והדרום', perk: 'חודש ראשון חינם', hours: '15:00–19:00', addr: 'רגר 10, באר שבע' },
-  { name: 'מספרת סטייל היתרון', cat: 'אופנה', region: 'ירושלים והסביבה', perk: '25% הנחה על צביעה', hours: '09:00–19:00', addr: 'יפו 90, ירושלים' },
-  { name: 'מרפאת עיניים ראייה טובה', cat: 'בריאות ורפואה', region: 'גוש דן', perk: 'בדיקת ראייה חינם + 15% על משקפיים', hours: '08:30–17:30', addr: 'אבן גבירול 60, תל אביב' },
+  { name: 'מסעדת הבית של אמא', cat: 'מסעדנות', region: 'גוש דן', perk: '15% הנחה על כל התפריט', hours: '12:00–23:00', addr: 'רוטשילד 45, תל אביב', logo: '/logos/dekcif.svg' },
+  { name: 'קליניקת שיניים לבן', cat: 'בריאות ורפואה', region: 'השרון', perk: '20% הנחה על טיפולים אסתטיים', hours: '09:00–18:00', addr: 'סוקולוב 12, הרצליה', logo: '/logos/ninja.svg' },
+  { name: 'סטודיו פילאטיס תנועה', cat: 'פנאי ותיירות', region: 'ירושלים והסביבה', perk: 'מנוי חודשי במחיר -30%', hours: '07:00–21:00', addr: 'עמק רפאים 8, ירושלים', logo: '/logos/magic-kass.svg' },
+  { name: 'בוטיק אורבן קלוז', cat: 'אופנה', region: 'חיפה והצפון', perk: '2 ב-1 על כל הפריטים', hours: '10:00–20:00', addr: 'הרצל 33, חיפה', logo: '/logos/crazy-cats.svg' },
+  { name: 'משתלת הגינה הירוקה', cat: 'בית וגינה', region: 'השרון', perk: '10% הנחה + משלוח חינם', hours: '08:00–17:00', addr: 'ויצמן 5, רעננה', logo: '/logos/hapark.svg' },
+  { name: 'חדר בריחה מיינדגיים', cat: 'פנאי ותיירות', region: 'גוש דן', perk: '20% הנחה לקבוצות', hours: '10:00–00:00', addr: 'אחד העם 22, תל אביב', logo: '/logos/rentour.svg' },
+  { name: 'מרכז חוגי מדע לילדים', cat: 'חינוך', region: 'באר שבע והדרום', perk: 'חודש ראשון חינם', hours: '15:00–19:00', addr: 'רגר 10, באר שבע', logo: '/logos/golkapa.svg' },
+  { name: 'מספרת סטייל היתרון', cat: 'אופנה', region: 'ירושלים והסביבה', perk: '25% הנחה על צביעה', hours: '09:00–19:00', addr: 'יפו 90, ירושלים', logo: '/logos/horse-trip.svg' },
+  { name: 'מרפאת עיניים ראייה טובה', cat: 'בריאות ורפואה', region: 'גוש דן', perk: 'בדיקת ראייה חינם + 15% על משקפיים', hours: '08:30–17:30', addr: 'אבן גבירול 60, תל אביב', logo: '/logos/paintball.svg' },
 ];
 
 function BizCard({ biz }) {
   return (
-    <div className="tile" style={{ padding: '1.2rem' }}>
+    <div className="tile" style={{ padding: '1.2rem', display: 'flex', flexDirection: 'column' }}>
+      <div style={{ width: '100%', height: '80px', marginBottom: '0.75rem', display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: 'var(--paper-dim)', borderRadius: '0.5rem', padding: '0.5rem' }}>
+        <img src={biz.logo} alt={biz.name} style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }} />
+      </div>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '0.5rem' }}>
         <h3 style={{ margin: 0, fontSize: '1rem' }}>{biz.name}</h3>
         <span className="tag">{biz.cat}</span>
