@@ -1,0 +1,57 @@
+:root {
+  --ink: #171b2e;
+  --ink-soft: #2b3351;
+  --paper: #f7f2e8;
+  --paper-2: #efe7d8;
+  --gold: #c9a050;
+  --gold-soft: #e5c884;
+  --teal: #2f6f62;
+  --coral: #c1483d;
+  --line: rgba(23, 27, 46, 0.1);
+}
+* { box-sizing: border-box; }
+body { margin: 0; font-family: 'Assistant', sans-serif; background: var(--paper); color: var(--ink); line-height: 1.6; }
+button, input, select, textarea { font: inherit; }
+button { cursor: pointer; }
+.container { width: min(1120px, calc(100% - 2rem)); margin: 0 auto; }
+.site-header { background: var(--ink); color: white; position: sticky; top: 0; z-index: 100; }
+.header-inner { display: flex; align-items: center; justify-content: space-between; padding: 1rem 0; gap: 1rem; }
+.brand { display: flex; align-items: center; gap: 0.7rem; border: 0; background: transparent; color: white; font-size: 1.1rem; font-weight: 800; }
+.brand-mark { display: inline-grid; place-items: center; width: 2.2rem; height: 2.2rem; border-radius: 0.7rem; background: var(--gold); color: var(--ink); }
+.top-nav { display: flex; gap: 1rem; flex-wrap: wrap; }
+.top-nav button { border: 0; background: transparent; color: rgba(255,255,255,0.82); padding: 0.35rem 0.1rem; font-weight: 700; }
+.top-nav button.active { color: var(--gold-soft); }
+.hero { padding: 4rem 0 3rem; background: linear-gradient(135deg, var(--ink) 0%, var(--ink-soft) 100%); color: white; }
+.hero-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 2rem; align-items: center; }
+.hero h1 { font-size: clamp(2rem, 4vw, 3rem); margin: 0 0 1rem; line-height: 1.2; }
+.hero p { font-size: 1.05rem; color: rgba(255,255,255,0.84); }
+.hero-actions { display: flex; gap: 0.8rem; flex-wrap: wrap; margin-top: 1.4rem; }
+.btn-primary, .btn-secondary, .btn-ghost { display: inline-flex; align-items: center; justify-content: center; gap: 0.4rem; border-radius: 999px; padding: 0.75rem 1.2rem; border: 0; font-weight: 700; margin-top: 0.8rem; }
+.btn-primary { background: var(--gold); color: var(--ink); }
+.btn-secondary { background: var(--teal); color: white; }
+.btn-ghost { background: transparent; color: var(--ink); border: 1px solid var(--line); }
+.card { background: white; border-radius: 1.2rem; border: 1px solid var(--line); box-shadow: 0 8px 30px rgba(0,0,0,0.06); }
+.card-body { padding: 1.2rem; }
+.section { padding: 3rem 0; }
+.section-title { margin-bottom: 1.2rem; }
+.section-title h2 { margin: 0 0 0.35rem; font-size: 1.5rem; }
+.section-title p { margin: 0; color: var(--ink-soft); }
+.grid-3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
+.grid-2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+.membership-card { border-radius: 1.2rem; padding: 1.2rem; color: white; min-height: 240px; }
+.membership-card.basic { background: linear-gradient(135deg, #1f2740 0%, #0f1428 100%); }
+.membership-card.vip { background: linear-gradient(135deg, #6b4811 0%, #c99a4f 100%); }
+.membership-card.family { background: linear-gradient(135deg, #184f41 0%, #2f6f62 100%); }
+.price { font-size: 1.2rem; font-weight: 800; margin-top: 0.6rem; }
+.benefit-list { display: grid; gap: 0.8rem; }
+.benefit-item, .vote-item, .transaction-item { border: 1px solid var(--line); border-radius: 1rem; padding: 1rem; background: white; margin-bottom: 0.7rem; }
+.badge { display: inline-block; padding: 0.25rem 0.6rem; border-radius: 999px; background: rgba(47,111,98,0.12); color: var(--teal); font-size: 0.84rem; font-weight: 700; margin-bottom: 1rem; }
+.status-pill { display: inline-block; padding: 0.3rem 0.65rem; border-radius: 999px; font-weight: 700; }
+.status-active { background: rgba(47,111,98,0.12); color: var(--teal); }
+.personal-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 1rem; }
+input { width: 100%; border: 1px solid var(--line); border-radius: 0.8rem; background: white; padding: 0.8rem 0.9rem; margin-top: 0.4rem; margin-bottom: 0.8rem; }
+label { font-weight: 700; }
+.site-footer { background: var(--ink); color: white; padding: 2rem 0; margin-top: 2rem; }
+.footer-inner { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
+.site-footer ul { padding-right: 1rem; }
+@media (max-width: 900px) { .hero-grid, .personal-grid, .grid-3, .grid-2, .footer-inner { grid-template-columns: 1fr; } .top-nav { display: none; } }

@@ -1,0 +1,8 @@
+{
+    "chat.tools.terminal.autoApprove": {
+        "/^cmd /c \"where python && where python3 && where py\"$/": {
+            "approve": true,
+            "matchCommandLine": true
+        }
+    }
+}

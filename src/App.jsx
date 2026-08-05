@@ -1,0 +1,30 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { AuthProvider } from './context/AuthContext';
+import Layout from './components/Layout';
+import HomePage from './pages/HomePage';
+import CardsPage from './pages/CardsPage';
+import BenefitsPage from './pages/BenefitsPage';
+import CommunityPage from './pages/CommunityPage';
+import PersonalPage from './pages/PersonalPage';
+import AdminPage from './pages/AdminPage';
+
+function App() {
+  return (
+    <AuthProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route element={<Layout />}>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/cards" element={<CardsPage />} />
+            <Route path="/benefits" element={<BenefitsPage />} />
+            <Route path="/community" element={<CommunityPage />} />
+            <Route path="/admin" element={<AdminPage />} />
+            <Route path="/personal" element={<PersonalPage />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </AuthProvider>
+  );
+}
+
+export default App;
