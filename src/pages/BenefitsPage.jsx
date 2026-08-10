@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react';
-import { BENEFITS_BUSINESSES } from '../data/benefitsData';
+import { BENEFITS_BUSINESSES } from '../data/benefitsData.js';
 
 function sanitizeText(value) {
   const text = String(value || '');
