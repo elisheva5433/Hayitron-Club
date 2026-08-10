@@ -4,7 +4,7 @@ services:
     runtime: static
     repo: https://github.com/elisheva5433/Hayitron-Club
     branch: main
-    buildCommand: npm ci && npm run build
+    buildCommand: npm ci --include=dev && npm run build
     staticPublishPath: dist
     pullRequestPreviewsEnabled: false
     routes:
