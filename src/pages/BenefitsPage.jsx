@@ -1,31 +1,68 @@
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
+import { BENEFITS_BUSINESSES } from '../data/benefitsData';
 
-const CATEGORIES = ['הכל', 'מסעדנות', 'אופנה', 'בריאות ורפואה', 'פנאי ותיירות', 'בית וגינה', 'חינוך'];
-const REGIONS = ['כל הארץ', 'גוש דן', 'ירושלים והסביבה', 'חיפה והצפון', 'באר שבע והדרום', 'השרון'];
+function sanitizeText(value) {
+  const text = String(value || '');
+  // Hide known mojibake artifacts from mixed encodings.
+  if (/׳|Ã|â|×/.test(text)) {
+    return 'פרטי ההטבה לפי המועדון';
+  }
+  return text;
+}
 
-const BUSINESSES = [
-  { name: 'מסעדת הבית של אמא', cat: 'מסעדנות', region: 'גוש דן', perk: '15% הנחה על כל התפריט', hours: '12:00–23:00', addr: 'רוטשילד 45, תל אביב', logo: '/logos/dekcif.svg' },
-  { name: 'קליניקת שיניים לבן', cat: 'בריאות ורפואה', region: 'השרון', perk: '20% הנחה על טיפולים אסתטיים', hours: '09:00–18:00', addr: 'סוקולוב 12, הרצליה', logo: '/logos/ninja.svg' },
-  { name: 'סטודיו פילאטיס תנועה', cat: 'פנאי ותיירות', region: 'ירושלים והסביבה', perk: 'מנוי חודשי במחיר -30%', hours: '07:00–21:00', addr: 'עמק רפאים 8, ירושלים', logo: '/logos/magic-kass.svg' },
-  { name: 'בוטיק אורבן קלוז', cat: 'אופנה', region: 'חיפה והצפון', perk: '2 ב-1 על כל הפריטים', hours: '10:00–20:00', addr: 'הרצל 33, חיפה', logo: '/logos/crazy-cats.svg' },
-  { name: 'משתלת הגינה הירוקה', cat: 'בית וגינה', region: 'השרון', perk: '10% הנחה + משלוח חינם', hours: '08:00–17:00', addr: 'ויצמן 5, רעננה', logo: '/logos/hapark.svg' },
-  { name: 'חדר בריחה מיינדגיים', cat: 'פנאי ותיירות', region: 'גוש דן', perk: '20% הנחה לקבוצות', hours: '10:00–00:00', addr: 'אחד העם 22, תל אביב', logo: '/logos/rentour.svg' },
-  { name: 'מרכז חוגי מדע לילדים', cat: 'חינוך', region: 'באר שבע והדרום', perk: 'חודש ראשון חינם', hours: '15:00–19:00', addr: 'רגר 10, באר שבע', logo: '/logos/golkapa.svg' },
-  { name: 'מספרת סטייל היתרון', cat: 'אופנה', region: 'ירושלים והסביבה', perk: '25% הנחה על צביעה', hours: '09:00–19:00', addr: 'יפו 90, ירושלים', logo: '/logos/horse-trip.svg' },
-  { name: 'מרפאת עיניים ראייה טובה', cat: 'בריאות ורפואה', region: 'גוש דן', perk: 'בדיקת ראייה חינם + 15% על משקפיים', hours: '08:30–17:30', addr: 'אבן גבירול 60, תל אביב', logo: '/logos/paintball.svg' },
-];
+function getLogoFallbackLabel(name) {
+  const text = String(name || '').trim();
+  if (!text) return 'לוגו';
+
+  const words = text.split(/\s+/).filter(Boolean);
+  const initials = words.slice(0, 2).map((word) => word[0]).join('');
+  return initials || text.slice(0, 2);
+}
 
 function BizCard({ biz }) {
+  const [logoFailed, setLogoFailed] = useState(false);
+  const fallbackLabel = getLogoFallbackLabel(biz.name);
+
   return (
     <div className="tile" style={{ padding: '1.2rem', display: 'flex', flexDirection: 'column' }}>
       <div style={{ width: '100%', height: '80px', marginBottom: '0.75rem', display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: 'var(--paper-dim)', borderRadius: '0.5rem', padding: '0.5rem' }}>
-        <img src={biz.logo} alt={biz.name} style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }} />
+        {biz.logo && !logoFailed ? (
+          <img
+            src={biz.logo}
+            alt={biz.name}
+            loading="lazy"
+            onError={() => setLogoFailed(true)}
+            style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain', transform: biz.rotate ? `rotate(${biz.rotate}deg)` : undefined }}
+          />
+        ) : (
+          <div
+            style={{
+              width: '100%',
+              height: '100%',
+              borderRadius: '0.4rem',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              background: 'linear-gradient(135deg, rgba(47,111,98,0.14), rgba(221,180,64,0.18))',
+              border: '1px solid rgba(15, 23, 42, 0.08)',
+              color: 'var(--ink)',
+              fontWeight: 800,
+              letterSpacing: '0.04em',
+              textAlign: 'center',
+              padding: '0.5rem',
+              lineHeight: 1.2,
+            }}
+          >
+            <span>{fallbackLabel}</span>
+          </div>
+        )}
       </div>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '0.5rem' }}>
         <h3 style={{ margin: 0, fontSize: '1rem' }}>{biz.name}</h3>
         <span className="tag">{biz.cat}</span>
       </div>
-      <p style={{ margin: '0 0 0.35rem', fontWeight: 700, color: 'var(--teal)', fontSize: '0.95rem' }}>{biz.perk}</p>
+      <p style={{ margin: '0 0 0.35rem', fontWeight: 700, color: 'var(--teal)', fontSize: '0.95rem' }}>{sanitizeText(biz.perk)}</p>
+      <p style={{ margin: '0 0 0.4rem', fontSize: '0.83rem', color: 'var(--ink-soft)' }}>{sanitizeText(biz.benefitText)}</p>
       <p style={{ margin: '0 0 0.2rem', fontSize: '0.85rem', color: 'var(--ink-soft)' }}>📍 {biz.addr}</p>
       <p style={{ margin: 0, fontSize: '0.85rem', color: 'var(--ink-soft)' }}>🕐 {biz.hours}</p>
     </div>
@@ -33,11 +70,22 @@ function BizCard({ biz }) {
 }
 
 function BenefitsPage() {
+  const [businesses] = useState(BENEFITS_BUSINESSES);
   const [search, setSearch] = useState('');
   const [cat, setCat] = useState('הכל');
   const [region, setRegion] = useState('כל הארץ');
 
-  const filtered = BUSINESSES.filter((b) => {
+  const categories = useMemo(() => {
+    const dynamicCategories = [...new Set(businesses.map((b) => b.cat).filter(Boolean))];
+    return ['הכל', ...dynamicCategories];
+  }, [businesses]);
+
+  const regions = useMemo(() => {
+    const dynamicRegions = [...new Set(businesses.map((b) => b.region).filter((value) => value && value !== 'כל הארץ'))];
+    return ['כל הארץ', ...dynamicRegions];
+  }, [businesses]);
+
+  const filtered = businesses.filter((b) => {
     const matchSearch = b.name.includes(search) || b.perk.includes(search) || b.addr.includes(search);
     const matchCat = cat === 'הכל' || b.cat === cat;
     const matchRegion = region === 'כל הארץ' || b.region === region;
@@ -64,13 +112,13 @@ function BenefitsPage() {
             <div>
               <label className="label">קטגוריה</label>
               <select className="field" value={cat} onChange={(e) => setCat(e.target.value)}>
-                {CATEGORIES.map((c) => <option key={c}>{c}</option>)}
+                {categories.map((c) => <option key={c}>{c}</option>)}
               </select>
             </div>
             <div>
               <label className="label">אזור</label>
               <select className="field" value={region} onChange={(e) => setRegion(e.target.value)}>
-                {REGIONS.map((r) => <option key={r}>{r}</option>)}
+                {regions.map((r) => <option key={r}>{r}</option>)}
               </select>
             </div>
           </div>
@@ -79,7 +127,7 @@ function BenefitsPage() {
 
           {filtered.length > 0 ? (
             <div className="grid-3">
-              {filtered.map((b) => <BizCard key={b.name} biz={b} />)}
+              {filtered.map((b) => <BizCard key={b.id} biz={b} />)}
             </div>
           ) : (
             <div className="empty-state">לא נמצאו תוצאות לחיפוש הזה.</div>

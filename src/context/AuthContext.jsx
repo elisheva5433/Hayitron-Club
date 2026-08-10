@@ -1,4 +1,4 @@
-import { createContext, useContext, useMemo, useState } from 'react';
+import { createContext, useContext, useMemo, useState, useEffect } from 'react';
 import { loginUser, registerUser, topupBalance } from '../services/api';
 
 const AuthContext = createContext(null);
@@ -7,6 +7,30 @@ export function AuthProvider({ children }) {
   const [member, setMember] = useState(null);
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [statusMessage, setStatusMessage] = useState('');
+
+  // Load saved user from localStorage on mount
+  useEffect(() => {
+    const savedUser = localStorage.getItem('auth_user');
+    if (savedUser) {
+      try {
+        const user = JSON.parse(savedUser);
+        setMember(user);
+        setIsAuthenticated(true);
+      } catch (err) {
+        console.error('Failed to load saved user:', err);
+        localStorage.removeItem('auth_user');
+      }
+    }
+  }, []);
+
+  // Save user to localStorage whenever it changes
+  useEffect(() => {
+    if (member && isAuthenticated) {
+      localStorage.setItem('auth_user', JSON.stringify(member));
+    } else {
+      localStorage.removeItem('auth_user');
+    }
+  }, [member, isAuthenticated]);
 
   const login = async (email, password) => {
     const data = await loginUser(email, password);
@@ -44,6 +68,7 @@ export function AuthProvider({ children }) {
   const value = useMemo(() => ({
     member,
     isAuthenticated,
+    isAdmin: member?.role === 'admin',
     statusMessage,
     setStatusMessage,
     login,

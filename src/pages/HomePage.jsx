@@ -1,7 +1,7 @@
 const STATS = [
-  { value: '850+', label: 'בתי עסק שותפים' },
-  { value: '12,000+', label: 'חברי מועדון' },
-  { value: '₪2.4M', label: 'נחסכו לחברים' },
+  { value: '1,200+', label: 'בתי עסק שותפים' },
+  { value: '38', label: 'קבוצות רכישה עד כה' },
+  { value: '4.8/5', label: 'שביעות רצון חברים' },
 ];
 
 const HIGHLIGHTS = [
@@ -14,24 +14,51 @@ const HIGHLIGHTS = [
 function HomePage() {
   return (
     <>
-      <section className="hero">
-        <div className="container hero-grid">
-          <div>
-            <p className="eyebrow" style={{ marginBottom: '0.75rem' }}>מועדון היתרון</p>
-            <h1 className="font-display">מחברים בין חברים, עסקים וקהילה</h1>
-            <p>הטבות, כרטיסי חבר, קבוצות רכישה וחוויית שימוש אחת — כל זה במקום אחד.</p>
-            <div className="hero-actions">
-              <a className="btn-primary" href="/cards">לגלות את הכרטיסים</a>
-              <a className="btn-ghost" href="/benefits" style={{ color: 'rgba(255,255,255,0.85)', borderColor: 'rgba(255,255,255,0.25)' }}>אינדקס הטבות</a>
+      <section className="hero-v2">
+        <div className="container hero-v2-grid">
+          {/* Text - first in DOM = right side in RTL */}
+          <div style={{ color: 'white' }}>
+            <p className="eyebrow" style={{ marginBottom: '1rem', color: 'var(--gold-soft)' }}>מועדון קהילתי להטבות אמיתיות</p>
+            <h1 className="font-display" style={{ fontSize: 'clamp(2.2rem, 5vw, 3.5rem)', lineHeight: 1.1, marginBottom: '1.25rem', color: 'white' }}>
+              כרטיס אחד.<br />קהילה שלמה של יתרון.
+            </h1>
+            <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '1.05rem', lineHeight: 1.7, marginBottom: '2rem', maxWidth: '480px' }}>
+              הטבות בבתי עסק נבחרים, קבוצות רכישה חודשיות במחירי רצפה, וזירת קהילה שבה אתם קובעים מה קורה בחודש הבא.
+            </p>
+            <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+              <a className="btn-primary" href="/cards">בחר/י כרטיס והצטרפ/י →</a>
+              <a className="btn-ghost" href="/benefits" style={{ color: 'white', borderColor: 'rgba(255,255,255,0.25)' }}>גלה/י את ההטבות</a>
+            </div>
+            <div className="hero-v2-stats">
+              {STATS.map((s) => (
+                <div key={s.label}>
+                  <div className="hero-v2-stat-value">{s.value}</div>
+                  <div className="hero-v2-stat-label">{s.label}</div>
+                </div>
+              ))}
             </div>
           </div>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
-            {STATS.map((s) => (
-              <div key={s.label} className="card card-body" style={{ textAlign: 'center' }}>
-                <div className="font-num" style={{ fontSize: '1.8rem', fontWeight: 700, color: 'var(--gold)' }}>{s.value}</div>
-                <div style={{ fontSize: '0.9rem', color: 'var(--ink-soft)' }}>{s.label}</div>
+
+          {/* Card - second in DOM = left side in RTL */}
+          <div className="card-stage" style={{ display: 'flex', justifyContent: 'center' }}>
+            <div className="hero-card">
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', position: 'relative', zIndex: 1 }}>
+                <div className="chip" />
+                <span style={{ fontFamily: "'Frank Ruhl Libre', serif", fontWeight: 700, fontSize: '1.15rem', letterSpacing: '0.04em' }}>היתרון</span>
               </div>
-            ))}
+              <div style={{ position: 'relative', zIndex: 1 }}>
+                <div style={{ fontFamily: "'Rubik', sans-serif", fontSize: '1.1rem', letterSpacing: '0.14em', opacity: 0.9, marginBottom: '0.6rem' }}>
+                  4291 8830 1122 4457
+                </div>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end' }}>
+                  <div>
+                    <div style={{ fontSize: '0.7rem', opacity: 0.6, marginBottom: '0.15rem' }}>בעל/ת הכרטיס</div>
+                    <div style={{ fontWeight: 600, fontSize: '0.95rem' }}>נועה שגיא · פרימיום</div>
+                  </div>
+                  <div style={{ fontSize: '0.7rem', opacity: 0.6 }}>08/29</div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

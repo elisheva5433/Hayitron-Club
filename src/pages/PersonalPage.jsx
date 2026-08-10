@@ -70,47 +70,14 @@ function PersonalPage() {
           ) : null}
 
           {!isAuthenticated ? (
-            <div className="grid-2">
+            <div style={{ maxWidth: '440px', margin: '0 auto' }}>
               <div className="card card-body">
-                <div style={{ display: 'flex', gap: '0.5rem', marginBottom: '1.25rem' }}>
-                  <button
-                    className={formMode === 'login' ? 'btn-primary' : 'btn-ghost'}
-                    style={{ flex: 1 }}
-                    onClick={() => setFormMode('login')}
-                    type="button"
-                  >התחברות</button>
-                  <button
-                    className={formMode === 'register' ? 'btn-primary' : 'btn-ghost'}
-                    style={{ flex: 1 }}
-                    onClick={() => setFormMode('register')}
-                    type="button"
-                  >הרשמה</button>
-                </div>
-
-                {formMode === 'login' ? (
-                  <form onSubmit={handleLogin} style={{ display: 'flex', flexDirection: 'column', gap: '0.85rem' }}>
-                    <div><label className="label">אימייל</label><input className="field" name="email" type="email" required /></div>
-                    <div><label className="label">סיסמה</label><input className="field" name="password" type="password" required /></div>
-                    <button className="btn-teal" type="submit">התחברות</button>
-                  </form>
-                ) : (
-                  <form onSubmit={handleRegister} style={{ display: 'flex', flexDirection: 'column', gap: '0.85rem' }}>
-                    <div><label className="label">שם מלא</label><input className="field" name="name" required /></div>
-                    <div><label className="label">אימייל</label><input className="field" name="email" type="email" required /></div>
-                    <div><label className="label">סיסמה</label><input className="field" name="password" type="password" required /></div>
-                    <div><label className="label">מספר כרטיס</label><input className="field" name="cardNumber" placeholder="0000 0000 0000 0000" /></div>
-                    <button className="btn-primary" type="submit">הרשמה</button>
-                  </form>
-                )}
-              </div>
-              <div className="card card-body">
-                <h3 className="font-display" style={{ marginTop: 0 }}>למה כדאי?</h3>
-                <ul style={{ paddingRight: '1rem', lineHeight: 2 }}>
-                  <li>ניהול כרטיסים ונקודות במקום אחד</li>
-                  <li>הטבות מותאמות אישית</li>
-                  <li>עדכונים על קבוצות רכישה</li>
-                  <li>היסטוריית פעולות מלאה</li>
-                </ul>
+                <h3 className="font-display" style={{ marginTop: 0, marginBottom: '1.25rem', fontSize: '1.2rem' }}>התחברות לאזור האישי</h3>
+                <form onSubmit={handleLogin} style={{ display: 'flex', flexDirection: 'column', gap: '0.85rem' }}>
+                  <div><label className="label">אימייל</label><input className="field" name="email" type="email" required /></div>
+                  <div><label className="label">סיסמה</label><input className="field" name="password" type="password" required /></div>
+                  <button className="btn-teal" type="submit">כניסה לאזור האישי</button>
+                </form>
               </div>
             </div>
           ) : (

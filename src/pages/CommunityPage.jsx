@@ -1,36 +1,86 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { createCommunityPost, getCommunityPosts } from '../services/api';
 
-const INITIAL_VOTES = [
-  { id: 'stroller', name: 'עגלת תינוקות פרימיום', emoji: '🛒', price: '₪890 (מחיר רגיל ₪1,450)', votes: 142 },
-  { id: 'freezer', name: 'מקפיא 5 מגירות', emoji: '🧊', price: '₪1,290 (מחיר רגיל ₪1,890)', votes: 97 },
-  { id: 'oven', name: 'תנור אפייה משולב', emoji: '🔥', price: '₪2,190 (מחיר רגיל ₪2,990)', votes: 118 },
+const VOTE_OPTIONS = [
+  { id: 'stroller', name: 'עגלת תינוקות פרימיום', emoji: '🛒', price: '₪890 (מחיר רגיל ₪1,450)' },
+  { id: 'freezer', name: 'מקפיא 5 מגירות', emoji: '🧊', price: '₪1,290 (מחיר רגיל ₪1,890)' },
+  { id: 'oven', name: 'תנור אפייה משולב', emoji: '🔥', price: '₪2,190 (מחיר רגיל ₪2,990)' },
 ];
 
-const INITIAL_POSTS = [
-  { author: 'מיכל א.', time: 'לפני שעתיים', text: 'מישהו יכול להמליץ על מוצר לחודש הבא? הייתי שמחה לראות מכונת כביסה בקבוצת הרכישה הבאה.' },
-  { author: 'אורי ב.', time: 'אתמול', text: 'קניתי את המקרר מקבוצת הרכישה הקודמת — שירות מעולה וההנחה הייתה משמעותית. ממליץ בחום!' },
-  { author: 'דנה כ.', time: 'לפני יומיים', text: 'האם אפשר להוסיף למועדון גם בתי עסק לטיפוח חיות מחמד? יש לי כמה המלצות טובות באזור השרון.' },
-];
+function useCountdown() {
+  const [timeLeft, setTimeLeft] = useState('');
+
+  useEffect(() => {
+    function calc() {
+      const now = new Date();
+      const endOfMonth = new Date(now.getFullYear(), now.getMonth() + 1, 1, 0, 0, 0);
+      const diff = endOfMonth - now;
+      if (diff <= 0) { setTimeLeft('ההצבעה נסגרה'); return; }
+      const days = Math.floor(diff / 86400000);
+      const hours = Math.floor((diff % 86400000) / 3600000);
+      const mins = Math.floor((diff % 3600000) / 60000);
+      setTimeLeft(`${days} ימים, ${hours} שעות, ${mins} דקות`);
+    }
+    calc();
+    const t = setInterval(calc, 60000);
+    return () => clearInterval(t);
+  }, []);
+
+  return timeLeft;
+}
 
 function CommunityPage() {
-  const [votes, setVotes] = useState(INITIAL_VOTES);
+  const [votes, setVotes] = useState({});
   const [votedId, setVotedId] = useState(null);
-  const [posts, setPosts] = useState(INITIAL_POSTS);
+  const [posts, setPosts] = useState([]);
   const [newPost, setNewPost] = useState('');
+  const countdown = useCountdown();
 
-  const totalVotes = votes.reduce((s, v) => s + v.votes, 0);
+  useEffect(() => {
+    fetch('/api/votes')
+      .then(r => r.json())
+      .then(data => {
+        const map = {};
+        (data.votes || []).forEach(v => { map[v.optionId] = v.count; });
+        setVotes(map);
+      })
+      .catch(() => {});
+  }, []);
 
-  function castVote(id) {
+  useEffect(() => {
+    getCommunityPosts()
+      .then((data) => setPosts(data.posts || []))
+      .catch(() => {});
+  }, []);
+
+  const totalVotes = VOTE_OPTIONS.reduce((s, v) => s + (votes[v.id] || 0), 0);
+
+  async function castVote(id) {
     if (votedId === id) return;
-    setVotes((prev) => prev.map((v) => v.id === id ? { ...v, votes: v.votes + 1 } : (votedId === v.id ? { ...v, votes: v.votes - 1 } : v)));
     setVotedId(id);
+    try {
+      const res = await fetch('/api/votes', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ optionId: id }),
+      });
+      const data = await res.json();
+      const map = {};
+      (data.votes || []).forEach(v => { map[v.optionId] = v.count; });
+      setVotes(map);
+    } catch {
+      setVotes(prev => ({ ...prev, [id]: (prev[id] || 0) + 1 }));
+    }
   }
 
-  function addPost(e) {
+  async function addPost(e) {
     e.preventDefault();
     if (!newPost.trim()) return;
-    setPosts([{ author: 'אתם', time: 'עכשיו', text: newPost.trim() }, ...posts]);
-    setNewPost('');
+    try {
+      const data = await createCommunityPost({ author: 'אתם', text: newPost.trim() });
+      setPosts((current) => [data.post, ...current]);
+      setNewPost('');
+    } catch {}
   }
 
   return (
@@ -47,10 +97,18 @@ function CommunityPage() {
         <div className="container" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem', alignItems: 'start' }}>
 
           <div>
-            <h3 className="font-display" style={{ marginBottom: '1rem', fontSize: '1.25rem' }}>הצבעה — מוצר חודש אוגוסט</h3>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.75rem', flexWrap: 'wrap', gap: '0.5rem' }}>
+              <h3 className="font-display" style={{ margin: 0, fontSize: '1.25rem' }}>הצבעה — מוצר חודש אוגוסט</h3>
+              {countdown && (
+                <span style={{ fontSize: '0.8rem', fontWeight: 600, color: 'var(--coral)', background: 'rgba(193,72,61,0.1)', padding: '0.25rem 0.75rem', borderRadius: '999px' }}>
+                  ⏱ נסגר בעוד {countdown}
+                </span>
+              )}
+            </div>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
-              {votes.map((v) => {
-                const pct = Math.round((v.votes / totalVotes) * 100);
+              {VOTE_OPTIONS.map((v) => {
+                const count = votes[v.id] || 0;
+                const pct = totalVotes > 0 ? Math.round((count / totalVotes) * 100) : 0;
                 const isVoted = votedId === v.id;
                 return (
                   <button
@@ -71,7 +129,7 @@ function CommunityPage() {
                       </div>
                       <div style={{ textAlign: 'center', minWidth: '50px' }}>
                         <div className="font-num" style={{ fontSize: '1.1rem', fontWeight: 700, color: isVoted ? 'var(--teal)' : 'var(--ink)' }}>{pct}%</div>
-                        <div style={{ fontSize: '0.75rem', color: 'var(--ink-soft)' }}>{v.votes} קולות</div>
+                        <div style={{ fontSize: '0.75rem', color: 'var(--ink-soft)' }}>{count} קולות</div>
                       </div>
                     </div>
                   </button>
@@ -93,10 +151,10 @@ function CommunityPage() {
             </form>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
               {posts.map((p, i) => (
-                <div key={i} className="tile" style={{ padding: '1rem' }}>
+                <div key={p.id || i} className="tile" style={{ padding: '1rem' }}>
                   <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.4rem' }}>
                     <strong style={{ fontSize: '0.9rem' }}>{p.author}</strong>
-                    <span style={{ fontSize: '0.8rem', color: 'var(--ink-soft)' }}>{p.time}</span>
+                    <span style={{ fontSize: '0.8rem', color: 'var(--ink-soft)' }}>{p.createdAt || p.time}</span>
                   </div>
                   <p style={{ margin: 0, fontSize: '0.92rem', lineHeight: 1.55 }}>{p.text}</p>
                 </div>

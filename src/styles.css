@@ -26,13 +26,19 @@ button { cursor: pointer; }
 .hero h1 { font-size: clamp(2rem, 4vw, 3rem); margin: 0 0 1rem; line-height: 1.2; }
 .hero p { font-size: 1.05rem; color: rgba(255,255,255,0.84); }
 .hero-actions { display: flex; gap: 0.8rem; flex-wrap: wrap; margin-top: 1.4rem; }
-.btn-primary, .btn-secondary, .btn-ghost { display: inline-flex; align-items: center; justify-content: center; gap: 0.4rem; border-radius: 999px; padding: 0.75rem 1.2rem; border: 0; font-weight: 700; margin-top: 0.8rem; }
+.btn-primary, .btn-secondary, .btn-ghost, .btn-teal { display: inline-flex; align-items: center; justify-content: center; gap: 0.4rem; border-radius: 999px; padding: 0.75rem 1.2rem; border: 0; font-weight: 700; margin-top: 0.8rem; }
 .btn-primary { background: var(--gold); color: var(--ink); }
 .btn-secondary { background: var(--teal); color: white; }
 .btn-ghost { background: transparent; color: var(--ink); border: 1px solid var(--line); }
+.btn-teal { background: var(--teal); color: white; }
 .card { background: white; border-radius: 1.2rem; border: 1px solid var(--line); box-shadow: 0 8px 30px rgba(0,0,0,0.06); }
 .card-body { padding: 1.2rem; }
+.tile { background: white; border-radius: 1rem; border: 1px solid var(--line); padding: 1rem; }
+.eyebrow { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; font-weight: 700; }
+.font-num { font-family: 'Frank Ruhl Libre', serif; }
+.font-display { font-family: 'Frank Ruhl Libre', serif; font-weight: 700; }
 .section { padding: 3rem 0; }
+.section-pad { padding: 3rem 0; }
 .section-title { margin-bottom: 1.2rem; }
 .section-title h2 { margin: 0 0 0.35rem; font-size: 1.5rem; }
 .section-title p { margin: 0; color: var(--ink-soft); }
@@ -42,6 +48,49 @@ button { cursor: pointer; }
 .membership-card.basic { background: linear-gradient(135deg, #1f2740 0%, #0f1428 100%); }
 .membership-card.vip { background: linear-gradient(135deg, #6b4811 0%, #c99a4f 100%); }
 .membership-card.family { background: linear-gradient(135deg, #184f41 0%, #2f6f62 100%); }
+
+/* 3D card stage for homepage hero */
+.card-stage { perspective: 1400px; }
+.card-stage .hero-card {
+  width: 100%; max-width: 420px; aspect-ratio: 1.586;
+  border-radius: 20px; position: relative; overflow: hidden;
+  transform: rotateY(-14deg) rotateX(6deg);
+  transition: transform .25s ease-out;
+  box-shadow: 0 30px 60px -20px rgba(0,0,0,0.55), 0 10px 25px -10px rgba(0,0,0,0.4);
+  background: linear-gradient(135deg, #3a2f10 0%, #c9a050 55%, #7c5f22 100%);
+  padding: 1.4rem; display: flex; flex-direction: column; justify-content: space-between;
+  color: white;
+}
+.card-stage:hover .hero-card { transform: rotateY(-4deg) rotateX(2deg) scale(1.02); }
+.hero-card::before {
+  content: ""; position: absolute; inset: 0;
+  background: radial-gradient(circle at 25% 20%, rgba(255,255,255,0.20), transparent 45%),
+    repeating-linear-gradient(115deg, rgba(255,255,255,0.05) 0 2px, transparent 2px 6px);
+  mix-blend-mode: overlay;
+}
+.hero-card .chip {
+  width: 46px; height: 34px; border-radius: 6px;
+  background: linear-gradient(135deg, #f4e2b0, #c9a050 60%, #8a6a2a);
+  position: relative;
+}
+.hero-card .chip::before, .hero-card .chip::after {
+  content: ""; position: absolute; background: rgba(0,0,0,0.25); left: 8px; right: 8px;
+}
+.hero-card .chip::before { top: 11px; height: 1.5px; }
+.hero-card .chip::after { top: 18px; height: 1.5px; }
+
+/* Hero redesign */
+.hero-v2 { background: var(--ink); padding: 5rem 0 4rem; }
+.hero-v2-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;
+}
+.hero-v2-stats { display: flex; gap: 2.5rem; margin-top: 2.5rem; }
+.hero-v2-stat-value { font-family: 'Frank Ruhl Libre', serif; font-size: 2rem; font-weight: 700; color: white; }
+.hero-v2-stat-label { font-size: 0.78rem; color: rgba(255,255,255,0.5); margin-top: 0.2rem; }
+@media (max-width: 768px) {
+  .hero-v2-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .card-stage .hero-card { transform: none; max-width: 340px; margin: 0 auto; }
+}
 .price { font-size: 1.2rem; font-weight: 800; margin-top: 0.6rem; }
 .benefit-list { display: grid; gap: 0.8rem; }
 .benefit-item, .vote-item, .transaction-item { border: 1px solid var(--line); border-radius: 1rem; padding: 1rem; background: white; margin-bottom: 0.7rem; }

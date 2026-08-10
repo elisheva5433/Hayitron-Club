@@ -1,0 +1,806 @@
+[
+  {
+    "id": "biz-137",
+    "name": "בורסלינו - כובעים",
+    "status": "kept-local",
+    "logo": "/logos/biz-137.jfif"
+  },
+  {
+    "id": "biz-71",
+    "name": "ויסטה - בני ברק",
+    "status": "kept-local",
+    "logo": "/logos/biz-71.jpg"
+  },
+  {
+    "id": "biz-182",
+    "name": "מעיין 2000",
+    "status": "kept-local",
+    "logo": "/logos/biz-182.png"
+  },
+  {
+    "id": "biz-1",
+    "name": "פניצה",
+    "status": "kept-local",
+    "logo": "/logos/biz-1.jpg"
+  },
+  {
+    "id": "biz-152",
+    "name": "שפע ברכת השם",
+    "status": "kept-local",
+    "logo": "/logos/biz-152.jpg"
+  },
+  {
+    "id": "biz-49",
+    "name": "101 חליפות",
+    "status": "kept-local",
+    "logo": "/logos/biz-49.jpg"
+  },
+  {
+    "id": "biz-70",
+    "name": "280 (יו אופטיק) - אלעד",
+    "status": "kept-local",
+    "logo": "/logos/biz-70.jpg"
+  },
+  {
+    "id": "biz-209",
+    "name": "אביבית ויצמן",
+    "status": "kept-local",
+    "logo": "/logos/biz-209.jpg"
+  },
+  {
+    "id": "biz-210",
+    "name": "אביבית ויצמן פאשן",
+    "status": "kept-local",
+    "logo": "/logos/biz-210.jpg"
+  },
+  {
+    "id": "biz-55",
+    "name": "אדור - אהרונוביץ",
+    "status": "kept-local",
+    "logo": "/logos/biz-55.png"
+  },
+  {
+    "id": "biz-179",
+    "name": "אדור - בית אופנה לגברים",
+    "status": "kept-local",
+    "logo": "/logos/biz-179.jpg"
+  },
+  {
+    "id": "biz-54",
+    "name": "אוטו בני ברק",
+    "status": "kept-local",
+    "logo": "/logos/biz-54.jpg"
+  },
+  {
+    "id": "biz-208",
+    "name": "אופטיוויו",
+    "status": "kept-local",
+    "logo": "/logos/biz-208.jpg"
+  },
+  {
+    "id": "biz-109",
+    "name": "אופטימלי - בית שמש",
+    "status": "kept-local",
+    "logo": "/logos/biz-109.webp"
+  },
+  {
+    "id": "biz-73",
+    "name": "אופטימלי - מלכי ישראל",
+    "status": "kept-local",
+    "logo": "/logos/biz-73.jpg"
+  },
+  {
+    "id": "biz-60",
+    "name": "אופטיקה סיגנר",
+    "status": "kept-local",
+    "logo": "/logos/biz-60.jpg"
+  },
+  {
+    "id": "biz-16",
+    "name": "אורדמן - חלוקים",
+    "status": "kept-local",
+    "logo": "/logos/biz-16.png"
+  },
+  {
+    "id": "biz-96",
+    "name": "אקסוס - אלעד",
+    "status": "kept-local",
+    "logo": ""
+  },
+  {
+    "id": "biz-102",
+    "name": "אקסוס - ביתר",
+    "status": "kept-local",
+    "logo": "/logos/biz-102.webp"
+  },
+  {
+    "id": "biz-59",
+    "name": "אקסוס - בני ברק",
+    "status": "kept-local",
+    "logo": "/logos/biz-59.jpg"
+  },
+  {
+    "id": "biz-40",
+    "name": "אקסוס יחזקאל",
+    "status": "kept-local",
+    "logo": "/logos/biz-40.jpg"
+  },
+  {
+    "id": "biz-39",
+    "name": "אקסוס רב שפע",
+    "status": "kept-local",
+    "logo": "/logos/biz-39.jpg"
+  },
+  {
+    "id": "biz-69",
+    "name": "ארבעת המינים - גדות כינרת רוטנברג",
+    "status": "kept-local",
+    "logo": "/logos/biz-69.jpg"
+  },
+  {
+    "id": "biz-106",
+    "name": "בגיר",
+    "status": "kept-local",
+    "logo": "/logos/biz-106.jpg"
+  },
+  {
+    "id": "biz-121",
+    "name": "בזאר שטראוס - אלעד",
+    "status": "kept-local",
+    "logo": "/logos/biz-121.jpeg"
+  },
+  {
+    "id": "biz-126",
+    "name": "בזאר שטראוס - אשדוד",
+    "status": "kept-local",
+    "logo": "/logos/biz-126.jpeg"
+  },
+  {
+    "id": "biz-131",
+    "name": "בזאר שטראוס - בית שמש",
+    "status": "kept-local",
+    "logo": "/logos/biz-131.jpeg"
+  },
+  {
+    "id": "biz-119",
+    "name": "בזאר שטראוס - ביתר",
+    "status": "kept-local",
+    "logo": "/logos/biz-119.jpeg"
+  },
+  {
+    "id": "biz-120",
+    "name": "בזאר שטראוס - בני ברק",
+    "status": "kept-local",
+    "logo": "/logos/biz-120.jpeg"
+  },
+  {
+    "id": "biz-127",
+    "name": "בזאר שטראוס - גאולה",
+    "status": "kept-local",
+    "logo": "/logos/biz-127.jpeg"
+  },
+  {
+    "id": "biz-130",
+    "name": "בזאר שטראוס - גבעת שאול",
+    "status": "kept-local",
+    "logo": "/logos/biz-130.jpeg"
+  },
+  {
+    "id": "biz-122",
+    "name": "בזאר שטראוס - מודיעין עילית",
+    "status": "kept-local",
+    "logo": "/logos/biz-122.jpeg"
+  },
+  {
+    "id": "biz-129",
+    "name": "בזאר שטראוס - פסגת זאב",
+    "status": "kept-local",
+    "logo": "/logos/biz-129.jpeg"
+  },
+  {
+    "id": "biz-132",
+    "name": "בזאר שטראוס - קניון רמות צעצועים",
+    "status": "kept-local",
+    "logo": "/logos/biz-132.jpg"
+  },
+  {
+    "id": "biz-128",
+    "name": "בזאר שטראוס - קרית אתא",
+    "status": "kept-local",
+    "logo": "/logos/biz-128.jpeg"
+  },
+  {
+    "id": "biz-125",
+    "name": "בזאר שטראוס - שטראוס (ירושלים)",
+    "status": "kept-local",
+    "logo": "/logos/biz-125.jpeg"
+  },
+  {
+    "id": "biz-133",
+    "name": "בזאר שטראוס קניון רמות ביגוד",
+    "status": "kept-local",
+    "logo": "/logos/biz-133.jpeg"
+  },
+  {
+    "id": "biz-86",
+    "name": "בלאן",
+    "status": "kept-local",
+    "logo": "/logos/biz-86.jpeg"
+  },
+  {
+    "id": "biz-28",
+    "name": "בלאן - בני ברק",
+    "status": "kept-local",
+    "logo": "/logos/biz-28.jpg"
+  },
+  {
+    "id": "biz-63",
+    "name": "בלייזר חליפות",
+    "status": "kept-local",
+    "logo": "/logos/biz-63.jpg"
+  },
+  {
+    "id": "biz-190",
+    "name": "ברודווי הלבשה חסידית",
+    "status": "kept-local",
+    "logo": "/logos/biz-190.png"
+  },
+  {
+    "id": "biz-25",
+    "name": "ברון",
+    "status": "kept-local",
+    "logo": "/logos/biz-25.jpg"
+  },
+  {
+    "id": "biz-22",
+    "name": "ברטון חליפות",
+    "status": "kept-local",
+    "logo": "/logos/biz-22.jpg"
+  },
+  {
+    "id": "biz-42",
+    "name": "ג'יבאני",
+    "status": "kept-local",
+    "logo": "/logos/biz-42.jpg"
+  },
+  {
+    "id": "biz-185",
+    "name": "גלורי קידס בע\"מ",
+    "status": "kept-local",
+    "logo": "/logos/biz-185.jpg"
+  },
+  {
+    "id": "biz-205",
+    "name": "גרביים עד הבית",
+    "status": "kept-local",
+    "logo": "/logos/biz-205.jpg"
+  },
+  {
+    "id": "biz-100",
+    "name": "גרונר שעונים",
+    "status": "kept-local",
+    "logo": "/logos/biz-100.jpg"
+  },
+  {
+    "id": "biz-27",
+    "name": "דובי יגר שליחויות",
+    "status": "kept-local",
+    "logo": "/logos/magic-kass.svg"
+  },
+  {
+    "id": "biz-18",
+    "name": "דפוס sos",
+    "status": "kept-local",
+    "logo": "/logos/biz-18.jpg"
+  },
+  {
+    "id": "biz-115",
+    "name": "האטסטון - חידוש וייצור כובעים",
+    "status": "kept-local",
+    "logo": "/logos/biz-115.jpg"
+  },
+  {
+    "id": "biz-218",
+    "name": "המכירה לקהילה שלך",
+    "status": "kept-local",
+    "logo": "/logos/biz-218.jpg"
+  },
+  {
+    "id": "biz-203",
+    "name": "המעדניה ליזרוביץ",
+    "status": "kept-local",
+    "logo": "/logos/biz-203.jpg"
+  },
+  {
+    "id": "biz-21",
+    "name": "המשקף",
+    "status": "kept-local",
+    "logo": "/logos/biz-21.jpg"
+  },
+  {
+    "id": "biz-9",
+    "name": "ויסטה - ירושלים",
+    "status": "kept-local",
+    "logo": "/logos/biz-9.jpg"
+  },
+  {
+    "id": "biz-48",
+    "name": "חולצות ניו יורק",
+    "status": "kept-local",
+    "logo": "/logos/biz-48.jpg"
+  },
+  {
+    "id": "biz-61",
+    "name": "חליפות מילאנו ירושלים",
+    "status": "kept-local",
+    "logo": "/logos/biz-61.jpg"
+  },
+  {
+    "id": "biz-202",
+    "name": "חמדת הארץ",
+    "status": "kept-local",
+    "logo": "/logos/biz-202.jpg"
+  },
+  {
+    "id": "biz-103",
+    "name": "טיימינג שעונים",
+    "status": "kept-local",
+    "logo": "/logos/biz-103.jpg"
+  },
+  {
+    "id": "biz-184",
+    "name": "טמבור פלוס",
+    "status": "kept-local",
+    "logo": "/logos/biz-184.png"
+  },
+  {
+    "id": "biz-68",
+    "name": "כובעי פוקס",
+    "status": "kept-local",
+    "logo": "/logos/biz-68.jpg"
+  },
+  {
+    "id": "biz-45",
+    "name": "כשר פון",
+    "status": "kept-local",
+    "logo": "/logos/biz-45.jpg"
+  },
+  {
+    "id": "biz-212",
+    "name": "לוסו (LUSSO) בגדי יוקרה לתינוקות ופעוטות",
+    "status": "kept-local",
+    "logo": "/logos/biz-212.jpg"
+  },
+  {
+    "id": "biz-112",
+    "name": "לוקסמן",
+    "status": "kept-local",
+    "logo": "/logos/biz-112.jpg"
+  },
+  {
+    "id": "biz-66",
+    "name": "לורנס - קרית יערים",
+    "status": "kept-local",
+    "logo": "/logos/biz-66.jpg"
+  },
+  {
+    "id": "biz-153",
+    "name": "לורנס פריז - צפת",
+    "status": "kept-local",
+    "logo": "/logos/biz-153.jpg"
+  },
+  {
+    "id": "biz-85",
+    "name": "לטס גו",
+    "status": "kept-local",
+    "logo": "/logos/biz-85.jpg"
+  },
+  {
+    "id": "biz-107",
+    "name": "ליבוביץ",
+    "status": "kept-local",
+    "logo": "/logos/biz-107.png"
+  },
+  {
+    "id": "biz-87",
+    "name": "ליברו - שדרת הבשמים",
+    "status": "kept-local",
+    "logo": "/logos/biz-87.jpg"
+  },
+  {
+    "id": "biz-221",
+    "name": "לידר",
+    "status": "kept-local",
+    "logo": "/logos/biz-221.jpg"
+  },
+  {
+    "id": "biz-34",
+    "name": "לייביש טשונט",
+    "status": "kept-local",
+    "logo": "/logos/biz-34.jpg"
+  },
+  {
+    "id": "biz-216",
+    "name": "ליל שישי בגג",
+    "status": "kept-local",
+    "logo": "/logos/biz-216.png"
+  },
+  {
+    "id": "biz-220",
+    "name": "מאפיית קציר חיטים",
+    "status": "kept-local",
+    "logo": "/logos/biz-220.jpg"
+  },
+  {
+    "id": "biz-214",
+    "name": "מחסני קרעסטיר",
+    "status": "kept-local",
+    "logo": "/logos/biz-214.jpg"
+  },
+  {
+    "id": "biz-97",
+    "name": "מטאל - סלולר כשר",
+    "status": "kept-local",
+    "logo": "/logos/biz-97.jpg"
+  },
+  {
+    "id": "biz-10",
+    "name": "מילאנו אופטיק",
+    "status": "kept-local",
+    "logo": "/logos/biz-10.jpg"
+  },
+  {
+    "id": "biz-222",
+    "name": "מקימי",
+    "status": "kept-local",
+    "logo": "/logos/biz-222.jpg"
+  },
+  {
+    "id": "biz-215",
+    "name": "מרכז התתים",
+    "status": "kept-local",
+    "logo": "/logos/biz-215.jpg"
+  },
+  {
+    "id": "biz-211",
+    "name": "משביר לעמו",
+    "status": "kept-local",
+    "logo": "/logos/biz-211.jpg"
+  },
+  {
+    "id": "biz-88",
+    "name": "משכן התכלת",
+    "status": "kept-local",
+    "logo": "/logos/biz-88.jpg"
+  },
+  {
+    "id": "biz-17",
+    "name": "משקפופר",
+    "status": "kept-local",
+    "logo": "/logos/biz-17.jpg"
+  },
+  {
+    "id": "biz-74",
+    "name": "מתאים לי",
+    "status": "kept-local",
+    "logo": "/logos/biz-74.jpg"
+  },
+  {
+    "id": "biz-223",
+    "name": "נטו חיסכון",
+    "status": "kept-local",
+    "logo": ""
+  },
+  {
+    "id": "biz-183",
+    "name": "נעלי סטפס",
+    "status": "kept-local",
+    "logo": "/logos/biz-183.jpg"
+  },
+  {
+    "id": "biz-37",
+    "name": "נעלי שכטר",
+    "status": "kept-local",
+    "logo": "/logos/magic-kass.svg"
+  },
+  {
+    "id": "biz-15",
+    "name": "נתי קלמן ביטוח",
+    "status": "kept-local",
+    "logo": "/logos/biz-15.png"
+  },
+  {
+    "id": "biz-149",
+    "name": "סלולארג'",
+    "status": "kept-local",
+    "logo": "/logos/biz-149.jpg"
+  },
+  {
+    "id": "biz-150",
+    "name": "ספרייתי גיטלר",
+    "status": "kept-local",
+    "logo": "/logos/biz-150.png"
+  },
+  {
+    "id": "biz-7",
+    "name": "סקובה",
+    "status": "kept-local",
+    "logo": "/logos/biz-7.jpg"
+  },
+  {
+    "id": "biz-199",
+    "name": "סקול",
+    "status": "kept-local",
+    "logo": "/logos/biz-199.jpg"
+  },
+  {
+    "id": "biz-33",
+    "name": "עור והדר",
+    "status": "kept-local",
+    "logo": "/logos/biz-33.jpg"
+  },
+  {
+    "id": "biz-47",
+    "name": "פאקו מישל",
+    "status": "kept-local",
+    "logo": "/logos/biz-47.jpg"
+  },
+  {
+    "id": "biz-181",
+    "name": "פאר הרהיטים",
+    "status": "kept-local",
+    "logo": "/logos/biz-181.jpg"
+  },
+  {
+    "id": "biz-108",
+    "name": "פביו",
+    "status": "kept-local",
+    "logo": "/logos/biz-108.jpg"
+  },
+  {
+    "id": "biz-138",
+    "name": "פוד אפיל",
+    "status": "kept-local",
+    "logo": "/logos/biz-138.png"
+  },
+  {
+    "id": "biz-8",
+    "name": "פיומה",
+    "status": "kept-local",
+    "logo": "/logos/biz-8.jpeg"
+  },
+  {
+    "id": "biz-64",
+    "name": "פינת הגלידה",
+    "status": "kept-local",
+    "logo": "/logos/biz-64.jpg"
+  },
+  {
+    "id": "biz-117",
+    "name": "פיצה שמש",
+    "status": "kept-local",
+    "logo": "/logos/biz-117.jpg"
+  },
+  {
+    "id": "biz-219",
+    "name": "פמילי פאשן",
+    "status": "kept-local",
+    "logo": "/logos/biz-219.jpg"
+  },
+  {
+    "id": "biz-50",
+    "name": "פרסטר",
+    "status": "kept-local",
+    "logo": "/logos/biz-50.jpg"
+  },
+  {
+    "id": "biz-217",
+    "name": "צ'ירינה",
+    "status": "kept-local",
+    "logo": "/logos/biz-217.jpg"
+  },
+  {
+    "id": "biz-186",
+    "name": "צולנט עולמי",
+    "status": "kept-local",
+    "logo": "/logos/biz-186.png"
+  },
+  {
+    "id": "biz-201",
+    "name": "צולנט עולמי - ירושלים",
+    "status": "kept-local",
+    "logo": "/logos/biz-201.png"
+  },
+  {
+    "id": "biz-213",
+    "name": "צרכניית אחיעזר",
+    "status": "kept-local",
+    "logo": "/logos/biz-213.jpg"
+  },
+  {
+    "id": "biz-89",
+    "name": "קינדר טויס",
+    "status": "kept-local",
+    "logo": "/logos/biz-89.jpg"
+  },
+  {
+    "id": "biz-56",
+    "name": "קלאס מן",
+    "status": "kept-local",
+    "logo": "/logos/biz-56.jpg"
+  },
+  {
+    "id": "biz-136",
+    "name": "רפאלי - כל הסניפים",
+    "status": "kept-local",
+    "logo": "/logos/biz-136.jfif"
+  },
+  {
+    "id": "biz-135",
+    "name": "רפאלי - רבי עקיבא",
+    "status": "kept-local",
+    "logo": "/logos/biz-135.jfif"
+  },
+  {
+    "id": "biz-14",
+    "name": "רקורד",
+    "status": "kept-local",
+    "logo": "/logos/biz-14.jpg"
+  },
+  {
+    "id": "biz-206",
+    "name": "שהחיינו קולורס",
+    "status": "kept-local",
+    "logo": "/logos/biz-206.jpg"
+  },
+  {
+    "id": "biz-23",
+    "name": "שוזים",
+    "status": "kept-local",
+    "logo": "/logos/biz-23.jpg"
+  },
+  {
+    "id": "biz-118",
+    "name": "שטיין יודאיקה",
+    "status": "kept-local",
+    "logo": "/logos/biz-118.jpg"
+  },
+  {
+    "id": "biz-224",
+    "name": "שיא החשמל והמיזוג",
+    "status": "kept-local",
+    "logo": "/logos/biz-224.webp"
+  },
+  {
+    "id": "biz-43",
+    "name": "שיק מן",
+    "status": "kept-local",
+    "logo": "/logos/biz-43.jpg"
+  },
+  {
+    "id": "biz-92",
+    "name": "שפע סטוק - בני ברק",
+    "status": "kept-local",
+    "logo": "/logos/biz-92.jpeg"
+  },
+  {
+    "id": "biz-94",
+    "name": "תכשיטי שנרך",
+    "status": "kept-local",
+    "logo": "/logos/magic-kass.svg"
+  },
+  {
+    "id": "biz-187",
+    "name": "תכשיק",
+    "status": "kept-local",
+    "logo": "/logos/biz-187.jpg"
+  },
+  {
+    "id": "biz-105",
+    "name": "תת האמוראים",
+    "status": "kept-local",
+    "logo": "/logos/magic-kass.svg"
+  },
+  {
+    "id": "biz-legacy-1",
+    "name": "שמלות כלה חן",
+    "status": "kept-local",
+    "logo": "/logos/shmalot-kala-hen.png"
+  },
+  {
+    "id": "biz-legacy-2",
+    "name": "פיצה פון",
+    "status": "kept-local",
+    "logo": "/logos/pizza-phone.jpg"
+  },
+  {
+    "id": "biz-legacy-3",
+    "name": "קונדיטוריית קצבורג",
+    "status": "kept-local",
+    "logo": "/logos/IMG-20260805-WA0001.jpg"
+  },
+  {
+    "id": "biz-legacy-4",
+    "name": "פיצה מיה - טבריה",
+    "status": "kept-local",
+    "logo": "/logos/pizza-mia.png"
+  },
+  {
+    "id": "biz-legacy-5",
+    "name": "יין בסביבה בני ברק",
+    "status": "kept-local",
+    "logo": "/logos/IMG-20260804-WA0001.jpg"
+  },
+  {
+    "id": "biz-legacy-6",
+    "name": "פיצה פסטלה קריית ספר",
+    "status": "kept-local",
+    "logo": "/logos/IMG-20260804-WA0014.jpg"
+  },
+  {
+    "id": "biz-legacy-7",
+    "name": "המסעדה היהודית",
+    "status": "kept-local",
+    "logo": "/logos/hamisada-hayehudit.png"
+  },
+  {
+    "id": "biz-legacy-8",
+    "name": "ג'אסט מיט",
+    "status": "kept-local",
+    "logo": "/logos/just-meat.jpg"
+  },
+  {
+    "id": "biz-legacy-9",
+    "name": "רפטינג נהר הירדן",
+    "status": "kept-local",
+    "logo": "/logos/rafting-yarden.png"
+  },
+  {
+    "id": "biz-legacy-10",
+    "name": "מיני ישראל",
+    "status": "kept-local",
+    "logo": "/logos/mini-israel.png"
+  },
+  {
+    "id": "biz-legacy-11",
+    "name": "חלום עולמי",
+    "status": "kept-local",
+    "logo": "/logos/halom-olami.png"
+  },
+  {
+    "id": "biz-legacy-12",
+    "name": "נינג'ה ישראל",
+    "status": "kept-local",
+    "logo": "/logos/ninja-israel.png"
+  },
+  {
+    "id": "biz-legacy-13",
+    "name": "פיינטבול הגושרים",
+    "status": "kept-local",
+    "logo": "/logos/paintball-hagoshrim.png"
+  },
+  {
+    "id": "biz-legacy-14",
+    "name": "ג'יפים נהר הירדן",
+    "status": "kept-local",
+    "logo": "/logos/IMG-20260804-WA0007.jpg"
+  },
+  {
+    "id": "biz-legacy-15",
+    "name": "איתמר ג'יפים",
+    "status": "kept-local",
+    "logo": "/logos/IMG-20260804-WA0003.jpg"
+  },
+  {
+    "id": "biz-legacy-16",
+    "name": "רייזר בר",
+    "status": "kept-local",
+    "logo": "/logos/razor-bar.png"
+  },
+  {
+    "id": "biz-legacy-17",
+    "name": "עידן גל אופן",
+    "status": "kept-local",
+    "logo": "/logos/golkapa.svg"
+  }
+]
