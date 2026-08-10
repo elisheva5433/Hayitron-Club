@@ -6,6 +6,10 @@ import { fileURLToPath } from 'node:url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+const ADMIN_EMAIL = 'admin@hayitron.co.il';
+const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || 'HayitronAdm!2026';
+const LEGACY_ADMIN_PASSWORDS = new Set(['admin1234']);
+
 export function initializeDatabase(dbPath = path.join(__dirname, '..', '..', '..', 'data', 'hayitron.db')) {
   const resolvedPath = path.resolve(dbPath);
   fs.mkdirSync(path.dirname(resolvedPath), { recursive: true });
@@ -140,12 +144,16 @@ export function initializeDatabase(dbPath = path.join(__dirname, '..', '..', '..
   try { db.exec(`ALTER TABLE purchase_groups ADD COLUMN inventory INTEGER NOT NULL DEFAULT 0`); } catch {}
 
   // ensure admin user exists with correct role
-  const adminExists = db.prepare('SELECT 1 FROM users WHERE email = ?').get('admin@hayitron.co.il');
+  const adminUser = db.prepare('SELECT id, password FROM users WHERE email = ?').get(ADMIN_EMAIL);
+  const adminExists = Boolean(adminUser);
   if (!adminExists) {
     db.prepare(`INSERT INTO users (name, email, password, cardNumber, balance, status, role) VALUES (?, ?, ?, ?, ?, ?, ?)`)
-      .run('מנהל מערכת', 'admin@hayitron.co.il', 'admin1234', '', 0, 'active', 'admin');
+      .run('מנהל מערכת', ADMIN_EMAIL, ADMIN_PASSWORD, '', 0, 'active', 'admin');
   } else {
-    db.prepare(`UPDATE users SET role = 'admin' WHERE email = ?`).run('admin@hayitron.co.il');
+    db.prepare(`UPDATE users SET role = 'admin' WHERE email = ?`).run(ADMIN_EMAIL);
+    if (LEGACY_ADMIN_PASSWORDS.has(String(adminUser.password || ''))) {
+      db.prepare('UPDATE users SET password = ? WHERE email = ?').run(ADMIN_PASSWORD, ADMIN_EMAIL);
+    }
   }
 
   const existing = db.prepare('SELECT COUNT(*) AS count FROM users').get();
@@ -159,7 +167,7 @@ export function initializeDatabase(dbPath = path.join(__dirname, '..', '..', '..
     db.prepare(`
       INSERT INTO users (name, email, password, cardNumber, balance, status, role)
       VALUES (?, ?, ?, ?, ?, ?, ?)
-    `).run('מנהל מערכת', 'admin@hayitron.co.il', 'admin1234', '', 0, 'active', 'admin');
+    `).run('מנהל מערכת', ADMIN_EMAIL, ADMIN_PASSWORD, '', 0, 'active', 'admin');
   }
 
   const votingWindow = db.prepare('SELECT 1 FROM admin_settings WHERE key = ?').get('votingOpen');
