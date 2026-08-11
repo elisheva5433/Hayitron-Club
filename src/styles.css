@@ -114,12 +114,13 @@ label { font-weight: 700; }
   display: block;
   text-decoration: none;
   color: inherit;
-  background: white;
+  background: linear-gradient(160deg, #ffffff 0%, #fbf8f1 100%);
   border-radius: 1rem;
   border: 1px solid var(--line);
   overflow: hidden;
   box-shadow: 0 14px 36px rgba(0, 0, 0, 0.08);
   transition: transform 0.22s ease, box-shadow 0.22s ease;
+  position: relative;
 }
 
 .partner-card:hover {
@@ -127,24 +128,33 @@ label { font-weight: 700; }
   box-shadow: 0 22px 44px rgba(0, 0, 0, 0.14);
 }
 
+.partner-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.62);
+  pointer-events: none;
+}
+
 .partner-card-logo-shell {
-  height: 220px;
-  padding: 0.9rem;
+  height: 210px;
+  padding: 1rem 1rem 0.7rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  background:
-    radial-gradient(circle at 8% 10%, rgba(255, 255, 255, 0.85), transparent 32%),
-    linear-gradient(155deg, #f9f6ef 0%, #ece3d2 48%, #f8f2e6 100%);
+  background: transparent;
   position: relative;
+  border-bottom: 1px solid rgba(23, 27, 46, 0.08);
 }
 
 .partner-card-logo-shell::after {
   content: '';
   position: absolute;
-  inset: 10px;
+  inset: 10px 10px 6px;
   border-radius: 0.8rem;
-  border: 1px solid rgba(255, 255, 255, 0.55);
+  border: 1px solid rgba(23, 27, 46, 0.08);
+  background: radial-gradient(circle at 15% 14%, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.65) 38%, rgba(255, 255, 255, 0.3) 100%);
   pointer-events: none;
 }
 
@@ -170,7 +180,7 @@ label { font-weight: 700; }
 }
 
 .partner-card-body {
-  padding: 1rem 1.1rem 1.15rem;
+  padding: 0.95rem 1.1rem 1.15rem;
 }
 
 .partner-detail-grid {
