@@ -17,35 +17,23 @@ function normalizePartnerKey(name) {
   return parts[0] || text;
 }
 
-function extractFirstWebsite(text) {
-  const source = String(text || '');
-  const match = source.match(/https?:\/\/[^\s)]+/i);
-  return match ? match[0].replace(/[.,;!?]+$/, '') : '';
-}
-
-function extractPhone(text) {
-  const source = String(text || '');
-  const match = source.match(/(?:\+972[-\s]?)?0\d{1,2}[-\s]?\d{7}/);
-  return match ? match[0] : '';
-}
-
 function toDistinctBranches(branches) {
   const seen = new Set();
   const result = [];
 
   for (const branch of branches) {
-    const city = sanitizeText(branch.region || '');
-    const address = sanitizeText(branch.addr || city || '');
+    const city = sanitizeText(branch.city || branch.region || '');
+    const address = sanitizeText(branch.address || branch.addr || city || '');
     const key = `${city}::${address}`;
 
     if (seen.has(key)) continue;
     seen.add(key);
 
     result.push({
-      id: branch.id,
+      id: branch.id || `${city}-${address}`,
       city: city || 'לא זמין',
       address: address || 'לא זמין',
-      phone: extractPhone(branch.benefitText),
+      phone: branch.phone || '',
     });
   }
 
@@ -73,15 +61,21 @@ function BenefitPartnerPage() {
     return businesses.filter((biz) => normalizePartnerKey(biz.name) === partnerKey);
   }, [businesses, partnerKey]);
 
-  const branches = useMemo(() => toDistinctBranches(relatedBranches), [relatedBranches]);
+  const website = String(selected.website || '').trim();
+  const phones = Array.isArray(selected.phones) ? selected.phones.filter(Boolean) : [];
+  const officialBranches = Array.isArray(selected.branches) ? selected.branches : [];
+  const branchSource = officialBranches.length > 0 ? officialBranches : relatedBranches;
+  const branches = useMemo(() => toDistinctBranches(branchSource), [branchSource]);
 
-  const website = useMemo(() => {
-    for (const biz of relatedBranches) {
-      const found = extractFirstWebsite(biz.benefitText);
-      if (found) return found;
-    }
-    return '';
-  }, [relatedBranches]);
+  const verifiedNote = selected.infoVerifiedFrom === 'kehilotcard-public-api'
+    ? 'נתוני העסק והסניפים אומתו מול מאגר ציבורי רשמי של קהילות.'
+    : 'חלק מהנתונים מבוססים על מאגר מקומי היסטורי, ללא מקור ציבורי מאמת לכל השדות.';
+
+  const branchPhonesText = branches.some((branch) => branch.phone)
+    ? branches.map((branch) => `${branch.city}: ${branch.phone || 'לא זמין'}`).join(' | ')
+    : phones.length > 0
+      ? phones.join(' | ')
+      : 'לא זמין במאגר הנתונים הנוכחי';
 
   if (!selected) {
     return (
@@ -103,7 +97,7 @@ function BenefitPartnerPage() {
         <div className="container">
           <p className="eyebrow" style={{ color: 'rgba(255,255,255,0.7)' }}>עמוד עסק</p>
           <h1 className="font-display" style={{ margin: '0.25rem 0 0.6rem', color: 'white', fontSize: 'clamp(1.9rem, 4vw, 2.8rem)' }}>{sanitizeText(selected.name)}</h1>
-          <p style={{ color: 'rgba(255,255,255,0.8)', margin: 0 }}>המידע בעמוד זה מוצג על בסיס נתונים קיימים במאגר בלבד.</p>
+          <p style={{ color: 'rgba(255,255,255,0.8)', margin: 0 }}>{verifiedNote}</p>
         </div>
       </section>
 
@@ -142,9 +136,7 @@ function BenefitPartnerPage() {
                 <ul className="partner-info-list">
                   <li>
                     <strong>טלפון:</strong>{' '}
-                    {branches.some((branch) => branch.phone)
-                      ? branches.map((branch) => `${branch.city}: ${branch.phone || 'לא זמין'}`).join(' | ')
-                      : 'לא זמין במאגר הנתונים הנוכחי'}
+                    {branchPhonesText}
                   </li>
                   <li>
                     <strong>אתר:</strong>{' '}
