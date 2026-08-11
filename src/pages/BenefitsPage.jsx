@@ -1,4 +1,5 @@
 import { useMemo, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { BENEFITS_BUSINESSES } from '../data/benefitsData.js';
 
 function sanitizeText(value) {
@@ -24,48 +25,34 @@ function BizCard({ biz }) {
   const fallbackLabel = getLogoFallbackLabel(biz.name);
 
   return (
-    <div className="tile" style={{ padding: '1.2rem', display: 'flex', flexDirection: 'column' }}>
-      <div style={{ width: '100%', height: '80px', marginBottom: '0.75rem', display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: 'var(--paper-dim)', borderRadius: '0.5rem', padding: '0.5rem' }}>
+    <Link to={`/benefits/${biz.id}`} className="partner-card" aria-label={`מעבר לעסק ${biz.name}`}>
+      <div className="partner-card-logo-shell">
         {biz.logo && !logoFailed ? (
           <img
             src={biz.logo}
             alt={biz.name}
             loading="lazy"
             onError={() => setLogoFailed(true)}
-            style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain', transform: biz.rotate ? `rotate(${biz.rotate}deg)` : undefined }}
+            className="partner-card-logo"
+            style={{ transform: biz.rotate ? `rotate(${biz.rotate}deg)` : undefined }}
           />
         ) : (
-          <div
-            style={{
-              width: '100%',
-              height: '100%',
-              borderRadius: '0.4rem',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              background: 'linear-gradient(135deg, rgba(47,111,98,0.14), rgba(221,180,64,0.18))',
-              border: '1px solid rgba(15, 23, 42, 0.08)',
-              color: 'var(--ink)',
-              fontWeight: 800,
-              letterSpacing: '0.04em',
-              textAlign: 'center',
-              padding: '0.5rem',
-              lineHeight: 1.2,
-            }}
-          >
+          <div className="partner-card-fallback">
             <span>{fallbackLabel}</span>
           </div>
         )}
       </div>
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '0.5rem' }}>
-        <h3 style={{ margin: 0, fontSize: '1rem' }}>{biz.name}</h3>
-        <span className="tag">{biz.cat}</span>
+
+      <div className="partner-card-body">
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '0.5rem', gap: '0.6rem' }}>
+          <h3 style={{ margin: 0, fontSize: '1.02rem' }}>{sanitizeText(biz.name)}</h3>
+          <span className="tag">{sanitizeText(biz.cat)}</span>
+        </div>
+        <p style={{ margin: '0 0 0.35rem', fontWeight: 700, color: 'var(--teal)', fontSize: '0.95rem' }}>{sanitizeText(biz.perk)}</p>
+        <p style={{ margin: 0, fontSize: '0.86rem', color: 'var(--ink-soft)' }}>📍 {sanitizeText(biz.addr)}</p>
+        <p style={{ margin: '0.2rem 0 0', fontSize: '0.78rem', color: 'var(--ink-soft)' }}>לצפייה בפרטי העסק המלאים</p>
       </div>
-      <p style={{ margin: '0 0 0.35rem', fontWeight: 700, color: 'var(--teal)', fontSize: '0.95rem' }}>{sanitizeText(biz.perk)}</p>
-      <p style={{ margin: '0 0 0.4rem', fontSize: '0.83rem', color: 'var(--ink-soft)' }}>{sanitizeText(biz.benefitText)}</p>
-      <p style={{ margin: '0 0 0.2rem', fontSize: '0.85rem', color: 'var(--ink-soft)' }}>📍 {biz.addr}</p>
-      <p style={{ margin: 0, fontSize: '0.85rem', color: 'var(--ink-soft)' }}>🕐 {biz.hours}</p>
-    </div>
+    </Link>
   );
 }
 
@@ -97,8 +84,8 @@ function BenefitsPage() {
       <section style={{ background: 'var(--ink)', color: 'white', padding: '3.5rem 0' }}>
         <div className="container">
           <p className="eyebrow" style={{ marginBottom: '0.5rem' }}>שותפים</p>
-          <h2 className="font-display" style={{ margin: '0 0 0.5rem', fontSize: 'clamp(1.8rem, 3.5vw, 2.4rem)', color: 'white' }}>אינדקס ההטבות</h2>
-          <p style={{ color: 'rgba(255,255,255,0.72)', margin: 0 }}>כל ההטבות שלנו, מסועפות לפי קטגוריה ואזור.</p>
+          <h2 className="font-display" style={{ margin: '0 0 0.5rem', fontSize: 'clamp(1.8rem, 3.5vw, 2.4rem)', color: 'white' }}>מועדון העסקים השותפים</h2>
+          <p style={{ color: 'rgba(255,255,255,0.72)', margin: 0 }}>קטלוג העסקים וההטבות הרשמיות, מבוסס על נתוני המאגר בלבד.</p>
         </div>
       </section>
 
@@ -123,7 +110,7 @@ function BenefitsPage() {
             </div>
           </div>
 
-          <p style={{ margin: '0 0 1rem', fontSize: '0.9rem', color: 'var(--ink-soft)' }}>{filtered.length} בתי עסק נמצאו</p>
+          <p style={{ margin: '0 0 1rem', fontSize: '0.9rem', color: 'var(--ink-soft)' }}>{filtered.length} עסקים שותפים נמצאו</p>
 
           {filtered.length > 0 ? (
             <div className="grid-3">

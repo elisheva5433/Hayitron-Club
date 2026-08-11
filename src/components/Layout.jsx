@@ -39,8 +39,8 @@ function Layout() {
             <div className="eyebrow" style={{ color: 'var(--gold-soft)', marginBottom: '0.75rem' }}>ניווט</div>
             <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
               <li><NavLink to="/cards" style={{ fontSize: '0.88rem', color: 'rgba(255,255,255,0.7)' }}>הכרטיסים שלנו</NavLink></li>
-              <li><NavLink to="/benefits" style={{ fontSize: '0.88rem', color: 'rgba(255,255,255,0.7)' }}>אינדקס הטבות</NavLink></li>
-              <li><NavLink to="/benefits" style={{ fontSize: '0.88rem', color: 'rgba(255,255,255,0.7)' }}>אינדקס חנויות</NavLink></li>
+              <li><NavLink to="/benefits" style={{ fontSize: '0.88rem', color: 'rgba(255,255,255,0.7)' }}>מועדון העסקים השותפים</NavLink></li>
+              <li><NavLink to="/benefits" style={{ fontSize: '0.88rem', color: 'rgba(255,255,255,0.7)' }}>פרופילי עסקים</NavLink></li>
               <li><NavLink to="/community" style={{ fontSize: '0.88rem', color: 'rgba(255,255,255,0.7)' }}>קהילה וקבוצות רכישה</NavLink></li>
               <li><NavLink to="/personal" style={{ fontSize: '0.88rem', color: 'rgba(255,255,255,0.7)' }}>אזור אישי</NavLink></li>
             </ul>

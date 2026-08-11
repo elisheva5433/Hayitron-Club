@@ -4,6 +4,7 @@ import Layout from './components/Layout';
 import HomePage from './pages/HomePage';
 import CardsPage from './pages/CardsPage';
 import BenefitsPage from './pages/BenefitsPage';
+import BenefitPartnerPage from './pages/BenefitPartnerPage';
 import CommunityPage from './pages/CommunityPage';
 import PersonalPage from './pages/PersonalPage';
 import AdminPage from './pages/AdminPage';
@@ -17,6 +18,7 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/cards" element={<CardsPage />} />
             <Route path="/benefits" element={<BenefitsPage />} />
+            <Route path="/benefits/:businessId" element={<BenefitPartnerPage />} />
             <Route path="/community" element={<CommunityPage />} />
             <Route path="/admin" element={<AdminPage />} />
             <Route path="/personal" element={<PersonalPage />} />
