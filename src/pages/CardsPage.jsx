@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 const cardTypes = [
   {
@@ -10,20 +11,22 @@ const cardTypes = [
     perks: ['כל הטבות הכרטיס הבסיסי', 'הנחות עומק בשותפים מובילים', 'הגרלות ואירועי VIP', 'עדיפות בקבוצות רכישה'],
   },
   {
-    id: 'family', title: 'כרטיס עסקי / משפחתי', cardName: 'בית חלומותי', tone: 'family', price: '₪89', period: 'לחודש',
-    perks: ['עד 5 מוטבים תחת חשבון אחד', 'דוח שימוש חודשי', 'ניהול הרשאות', 'תמיכה עדיפה'],
+    id: 'family', title: 'כרטיס תושבי חו"ל', cardName: 'בן בית', tone: 'benbait', price: '₪89', period: 'לחודש',
+    link: '/ben-bait',
+    perks: ['הטבות ייחודיות לתושבי חו"ל', 'דיסקונטים במאות עסקים', 'בישראל אתה בן בית', 'תמיכה עדיפה'],
   },
 ];
 
 function CardVisual({ tone, cardName }) {
-  const lastDigits = { basic: '7790', vip: '4457', family: '2201' }[tone];
+  const lastDigits = { basic: '7790', vip: '4457', family: '2201', benbait: '3614' }[tone];
   return (
     <div style={{ perspective: '1200px', marginBottom: '1.5rem' }}>
       <div
-        className={`membership-card ${tone}`}
+        className={`membership-card ${tone === 'benbait' ? '' : tone}`}
         style={{
           minHeight: '200px', position: 'relative', display: 'flex', flexDirection: 'column',
           justifyContent: 'space-between', padding: '1.3rem',
+          ...(tone === 'benbait' ? { background: 'linear-gradient(135deg, #0a1628 0%, #1e4080 52%, #0d2a55 100%)' } : {}),
           transform: 'rotateY(-10deg) rotateX(5deg)',
           transition: 'transform .25s ease',
           boxShadow: '0 20px 50px -15px rgba(0,0,0,0.45)',
@@ -106,26 +109,42 @@ function CardsPage() {
       <section className="section-pad">
         <div className="container">
           <div className="grid-3">
-            {cardTypes.map((card) => (
-              <div key={card.id} className="tile" style={{ padding: '1.5rem', cursor: 'pointer', outline: chosen === card.id ? '2px solid var(--teal)' : 'none' }} onClick={() => setChosen(card.id)}>
-                <CardVisual tone={card.tone} cardName={card.cardName} />
-                <h3 style={{ margin: '0 0 0.25rem', fontFamily: "'Frank Ruhl Libre', serif" }}>{card.title}</h3>
-                <p style={{ margin: '0 0 1rem', fontFamily: "'Rubik', sans-serif", fontSize: '1.35rem', fontWeight: 700, color: 'var(--gold)' }}>
-                  {card.price} <span style={{ fontSize: '0.9rem', fontWeight: 400, color: 'var(--ink-soft)' }}>{card.period}</span>
-                </p>
-                <ul style={{ paddingRight: '1rem', margin: 0 }}>
-                  {card.perks.map((p) => <li key={p} style={{ marginBottom: '0.3rem', fontSize: '0.92rem' }}>{p}</li>)}
-                </ul>
-                <button
-                  className={chosen === card.id ? 'btn-primary' : 'btn-ghost'}
-                  style={{ marginTop: '1.2rem', width: '100%' }}
-                  onClick={() => setChosen(card.id)}
-                  type="button"
-                >
-                  {chosen === card.id ? '✓ נבחר' : 'בחירה'}
-                </button>
-              </div>
-            ))}
+            {cardTypes.map((card) => {
+              const isLink = !!card.link;
+              const tileContent = (
+                <>
+                  <CardVisual tone={card.tone} cardName={card.cardName} />
+                  <h3 style={{ margin: '0 0 0.25rem', fontFamily: "'Frank Ruhl Libre', serif" }}>{card.title}</h3>
+                  <p style={{ margin: '0 0 1rem', fontFamily: "'Rubik', sans-serif", fontSize: '1.35rem', fontWeight: 700, color: 'var(--gold)' }}>
+                    {card.price} <span style={{ fontSize: '0.9rem', fontWeight: 400, color: 'var(--ink-soft)' }}>{card.period}</span>
+                  </p>
+                  <ul style={{ paddingRight: '1rem', margin: 0 }}>
+                    {card.perks.map((p) => <li key={p} style={{ marginBottom: '0.3rem', fontSize: '0.92rem' }}>{p}</li>)}
+                  </ul>
+                  {isLink ? (
+                    <div className="btn-ghost" style={{ marginTop: '1.2rem', width: '100%', textAlign: 'center' }}>פרטים נוספים →</div>
+                  ) : (
+                    <button
+                      className={chosen === card.id ? 'btn-primary' : 'btn-ghost'}
+                      style={{ marginTop: '1.2rem', width: '100%' }}
+                      onClick={() => setChosen(card.id)}
+                      type="button"
+                    >
+                      {chosen === card.id ? '✓ נבחר' : 'בחירה'}
+                    </button>
+                  )}
+                </>
+              );
+              return isLink ? (
+                <Link key={card.id} to={card.link} className="tile" style={{ padding: '1.5rem', textDecoration: 'none', color: 'inherit', display: 'block' }}>
+                  {tileContent}
+                </Link>
+              ) : (
+                <div key={card.id} className="tile" style={{ padding: '1.5rem', cursor: 'pointer', outline: chosen === card.id ? '2px solid var(--teal)' : 'none' }} onClick={() => setChosen(card.id)}>
+                  {tileContent}
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>

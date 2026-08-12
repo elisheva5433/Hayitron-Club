@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom';
 
 const STATS = [
-  { value: '1,200+', label: 'בתי עסק שותפים' },
-  { value: '38', label: 'קבוצות רכישה עד כה' },
-  { value: '4.8/5', label: 'שביעות רצון חברים' },
+  { value: '141+', label: 'עסקים שותפים' },
+  { value: '3,800+', label: 'חברי מועדון' },
+  { value: '₪480K', label: 'נחסך ללקוחות בשנה האחרונה' },
 ];
 
 const HIGHLIGHTS = [
@@ -65,7 +65,7 @@ function HomePage() {
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end' }}>
                       <div>
                         <div style={{ fontSize: '0.7rem', opacity: 0.6, marginBottom: '0.15rem' }}>בעל/ת הכרטיס</div>
-                        <div style={{ fontWeight: 600, fontSize: '0.95rem' }}>נועה שגיא · פרימיום</div>
+                        <div style={{ fontWeight: 600, fontSize: '0.95rem' }}>ישראל ישראלי</div>
                       </div>
                       <div style={{ fontSize: '0.7rem', opacity: 0.6 }}>08/29</div>
                     </div>

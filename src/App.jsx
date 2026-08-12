@@ -9,6 +9,7 @@ import CommunityPage from './pages/CommunityPage';
 import PersonalPage from './pages/PersonalPage';
 import AdminPage from './pages/AdminPage';
 import BeitNaamanPage from './pages/BeitNaamanPage';
+import BenBaitPage from './pages/BenBaitPage';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
             <Route path="/admin" element={<AdminPage />} />
             <Route path="/personal" element={<PersonalPage />} />
             <Route path="/beit-naaman" element={<BeitNaamanPage />} />
+            <Route path="/ben-bait" element={<BenBaitPage />} />
           </Route>
         </Routes>
       </BrowserRouter>
