@@ -9,8 +9,9 @@ function Layout() {
     <div className="app-shell">
       <header className="site-header">
         <div className="container header-inner">
-          <NavLink className="brand" to="/">
-            <img src="/לוגו הלב היהודי-02.png" alt="הלב היהודי" style={{ height: '48px', objectFit: 'contain' }} />
+          <NavLink className="brand" to="/" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.25rem', textDecoration: 'none' }}>
+            <img src="/לוגו הלב היהודי-02.png" alt="הלב היהודי" style={{ height: '48px', objectFit: 'contain', filter: 'brightness(1.8) contrast(0.9)' }} />
+            <span style={{ fontSize: '0.72rem', color: 'var(--gold-soft)', letterSpacing: '0.03em', whiteSpace: 'nowrap' }}>עם אחד. לב אחד. אין סוף אפשרויות.</span>
           </NavLink>
           <nav className="top-nav">
             <NavLink className={({ isActive }) => isActive ? 'active' : ''} to="/">בית</NavLink>
@@ -65,7 +66,7 @@ function Layout() {
         <div style={{ borderTop: '1px solid rgba(255,255,255,0.08)', padding: '1.25rem 0' }}>
           <div className="container" style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.78rem', color: 'rgba(255,255,255,0.45)' }}>
             <span>תקנון ותנאי שימוש · מדיניות פרטיות</span>
-            <span>© 2026 מועדון היתרון. כל הזכויות שמורות.</span>
+            <span>© 2026 הלב היהודי. כל הזכויות שמורות.</span>
           </div>
         </div>
       </footer>

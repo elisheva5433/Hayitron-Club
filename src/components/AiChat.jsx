@@ -27,7 +27,7 @@ export default function AiChat() {
 
   useEffect(() => {
     if (open && messages.length === 0) {
-      setMessages([{ role: 'bot', text: 'שלום! אני העוזר האישי של מועדון היתרון. אפשר לשאול אותי על הטבות, קבוצת הרכישה, סטטוס כרטיס ויתרה. איך אפשר לעזור?' }]);
+      setMessages([{ role: 'bot', text: 'שלום! אני העוזר האישי של הלב היהודי. אפשר לשאול אותי על הטבות, קבוצת הרכישה, סטטוס כרטיס ויתרה. איך אפשר לעזור?' }]);
     }
   }, [open]);
 
@@ -44,7 +44,7 @@ export default function AiChat() {
     setLoading(true);
 
     try {
-      const systemPrompt = `את/ה העוזר האישי הדיגיטלי של 'מועדון היתרון' - מועדון הטבות קהילתי בישראל עם כרטיסי חברות, אינדקס הטבות בבתי עסק, קבוצות רכישה חודשיות ופורום קהילתי. ענה/י תמיד בעברית, בקצרה (2-3 משפטים), בטון ידידותי ומקצועי.${user ? ` המשתמש הנוכחי: ${user.name}, יתרה: ₪${user.balance || 0}.` : ''}`;
+      const systemPrompt = `את/ה העוזר האישי הדיגיטלי של 'הלב היהודי' - מועדון הטבות קהילתי בישראל עם כרטיסי חברות, אינדקס הטבות בבתי עסק, קבוצות רכישה חודשיות ופורום קהילתי. ענה/י תמיד בעברית, בקצרה (2-3 משפטים), בטון ידידותי ומקצועי.${user ? ` המשתמש הנוכחי: ${user.name}, יתרה: ₪${user.balance || 0}.` : ''}`;
 
       const res = await fetch('/api/chat', {
         method: 'POST',
@@ -76,7 +76,7 @@ export default function AiChat() {
           background: 'var(--ink)', color: 'var(--gold-soft)',
           display: 'flex', alignItems: 'center', justifyContent: 'center',
           boxShadow: '0 12px 30px -10px rgba(0,0,0,0.5)',
-          transition: 'transform .2s ease', border: 'none', cursor: 'pointer',
+          transition: 'transform .2s ease', border: '2px solid var(--gold)', cursor: 'pointer',
           transform: open ? 'scale(1.06)' : 'scale(1)',
         }}
       >
@@ -100,7 +100,7 @@ export default function AiChat() {
           {/* Header */}
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '0.75rem 1rem', background: 'var(--ink)', color: '#fff' }}>
             <div>
-              <div style={{ fontWeight: 700, fontSize: '0.9rem' }}>העוזר האישי של היתרון</div>
+              <div style={{ fontWeight: 700, fontSize: '0.9rem' }}>העוזר האישי של הלב היהודי</div>
               <div style={{ fontSize: '0.75rem', color: 'rgba(255,255,255,0.5)' }}>זמין 24/7 · מבוסס בינה מלאכותית</div>
             </div>
             <button onClick={() => setOpen(false)} style={{ background: 'none', border: 'none', color: 'rgba(255,255,255,0.7)', cursor: 'pointer', padding: '4px' }}>
@@ -128,6 +128,16 @@ export default function AiChat() {
               </div>
             )}
             <div ref={messagesEndRef} />
+          </div>
+
+          {/* Contact info */}
+          <div style={{ padding: '0.5rem 1rem', borderTop: '1px solid var(--line)', display: 'flex', justifyContent: 'center', gap: '1.2rem', flexWrap: 'wrap' }}>
+            <a href="mailto:info@halvhayehudi.co.il" style={{ fontSize: '0.75rem', color: 'var(--ink-soft)', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.3rem' }}>
+              <span>✉</span> info@halvhayehudi.co.il
+            </a>
+            <a href="https://wa.me/9720500000000" target="_blank" rel="noreferrer" style={{ fontSize: '0.75rem', color: 'var(--teal)', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.3rem' }}>
+              <span>💬</span> WhatsApp
+            </a>
           </div>
 
           {/* Input */}

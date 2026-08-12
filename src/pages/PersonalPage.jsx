@@ -86,7 +86,7 @@ function PersonalPage() {
                 {/* card visual */}
                 <div className="membership-card vip" style={{ marginBottom: '1.25rem', maxWidth: '380px', minHeight: '200px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', padding: '1.4rem' }}>
                   <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                    <span style={{ fontFamily: "'Frank Ruhl Libre', serif", fontWeight: 700, fontSize: '1.1rem' }}>היתרון</span>
+                    <span style={{ fontFamily: "'Frank Ruhl Libre', serif", fontWeight: 700, fontSize: '1.1rem' }}>הלב היהודי</span>
                     <div className="chip" />
                   </div>
                   <div>

@@ -20,13 +20,13 @@ export async function sendWelcomeEmail({ name, email, cardNumber }) {
   if (!emailClient) return console.log('Email skipped (no API key)');
   
   await emailClient.emails.send({
-    from: 'מועדון היתרון <onboarding@resend.dev>',
+    from: 'הלב היהודי <onboarding@resend.dev>',
     to: email,
     reply_to: 'noreply@hayitron.co.il',
-    subject: 'ברוכים הבאים למועדון היתרון! 🎉',
+    subject: 'ברוכים הבאים להלב היהודי! 🎉',
     html: `
       <div dir="rtl" style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
-        <h1 style="color: #171B2E;">ברוכים הבאים למועדון היתרון!</h1>
+        <h1 style="color: #171B2E;">ברוכים הבאים להלב היהודי!</h1>
         <p style="font-size: 16px;">שלום <strong>${name}</strong>,</p>
         <p style="font-size: 16px;">ההרשמה שלך הושלמה בהצלחה 🎉</p>
         <div style="background: #F8F6F0; border-radius: 8px; padding: 20px; margin: 20px 0;">
@@ -34,7 +34,7 @@ export async function sendWelcomeEmail({ name, email, cardNumber }) {
           <p style="margin: 4px 0 0; font-size: 20px; font-weight: bold; color: #C9A050; letter-spacing: 2px;">${cardNumber}</p>
         </div>
         <p style="font-size: 16px;">כעת תוכלי ליהנות מכל הטבות המועדון באלפי בתי עסק ברחבי הארץ.</p>
-        <p style="color: #888; font-size: 13px; margin-top: 30px;">מועדון היתרון — כי אתם מגיעים ליותר</p>
+        <p style="color: #888; font-size: 13px; margin-top: 30px;">הלב היהודי — כי אתם מגיעים ליותר</p>
       </div>
     `,
   });
@@ -62,7 +62,7 @@ export async function sendBulkBroadcast({ recipients, subject, body }) {
 
   try {
     const result = await emailClient.emails.send({
-      from: 'מועדון היתרון <onboarding@resend.dev>',
+      from: 'הלב היהודי <onboarding@resend.dev>',
       to: recipients,
       reply_to: 'noreply@hayitron.co.il',
       subject,
@@ -70,7 +70,7 @@ export async function sendBulkBroadcast({ recipients, subject, body }) {
         <div dir="rtl" style="font-family: Arial, sans-serif; max-width: 640px; margin: 0 auto; padding: 24px;">
           <h1 style="color: #171B2E; margin-bottom: 16px;">${subject}</h1>
           <div style="font-size: 16px; line-height: 1.7; color: #1f2740; white-space: pre-wrap;">${body}</div>
-          <p style="color: #888; font-size: 13px; margin-top: 32px;">נשלח ממערכת הניהול של מועדון היתרון</p>
+          <p style="color: #888; font-size: 13px; margin-top: 32px;">נשלח ממערכת הניהול של הלב היהודי</p>
         </div>
       `,
     });

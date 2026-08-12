@@ -40,8 +40,11 @@ function CardVisual({ tone, cardName }) {
         </div>
         <div>
           {cardName && (
-            <div style={{ fontFamily: "'Frank Ruhl Libre', serif", fontSize: '1.5rem', fontWeight: 700, marginBottom: '0.4rem', letterSpacing: '0.02em', textShadow: '0 2px 6px rgba(0,0,0,0.3)' }}>
-              {cardName}
+            <div style={{ marginBottom: '0.4rem' }}>
+              <div style={{ fontFamily: "'Frank Ruhl Libre', serif", fontSize: '1.5rem', fontWeight: 700, letterSpacing: '0.02em', textShadow: '0 2px 6px rgba(0,0,0,0.3)' }}>
+                {cardName}
+              </div>
+              <div style={{ fontSize: '0.75rem', opacity: 0.7, letterSpacing: '0.03em', marginTop: '0.15rem' }}>כל ההטבות בבית אחד.</div>
             </div>
           )}
           <div style={{ fontFamily: "'Rubik', sans-serif", fontSize: '1rem', letterSpacing: '0.12em', opacity: 0.9 }}>

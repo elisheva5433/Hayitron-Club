@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 const STATS = [
   { value: '1,200+', label: 'בתי עסק שותפים' },
   { value: '38', label: 'קבוצות רכישה עד כה' },
@@ -16,18 +18,18 @@ function HomePage() {
     <>
       <section className="hero-v2">
         <div className="container hero-v2-grid">
-          {/* Text - first in DOM = right side in RTL */}
+          {/* Text */}
           <div style={{ color: 'white' }}>
             <p className="eyebrow" style={{ marginBottom: '1rem', color: 'var(--gold-soft)' }}>מועדון קהילתי להטבות אמיתיות</p>
             <h1 className="font-display" style={{ fontSize: 'clamp(2.2rem, 5vw, 3.5rem)', lineHeight: 1.1, marginBottom: '1.25rem', color: 'white' }}>
-              כרטיס אחד.<br />קהילה שלמה של יתרון.
+              כרטיס אחד.<br />קהילה שלמה של לב יהודי.
             </h1>
             <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '1.05rem', lineHeight: 1.7, marginBottom: '2rem', maxWidth: '480px' }}>
               הטבות בבתי עסק נבחרים, קבוצות רכישה חודשיות במחירי רצפה, וזירת קהילה שבה אתם קובעים מה קורה בחודש הבא.
             </p>
             <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
-              <a className="btn-primary" href="/cards">בחר/י כרטיס והצטרפ/י →</a>
-              <a className="btn-ghost" href="/benefits" style={{ color: 'white', borderColor: 'rgba(255,255,255,0.25)' }}>גלה/י את ההטבות</a>
+              <a className="btn-primary" href="/cards">הכרטיסים שלנו →</a>
+              <a className="btn-ghost" href="/benefits" style={{ color: 'white', borderColor: 'rgba(255,255,255,0.25)' }}>עולם ההטבות</a>
             </div>
             <div className="hero-v2-stats">
               {STATS.map((s) => (
@@ -39,25 +41,37 @@ function HomePage() {
             </div>
           </div>
 
-          {/* Card - second in DOM = left side in RTL */}
+          {/* Card with entrance animation + stage rings — clickable */}
           <div className="card-stage" style={{ display: 'flex', justifyContent: 'center' }}>
-            <div className="hero-card">
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', position: 'relative', zIndex: 1 }}>
-                <div className="chip" />
-                <span style={{ fontFamily: "'Frank Ruhl Libre', serif", fontWeight: 700, fontSize: '1.15rem', letterSpacing: '0.04em' }}>היתרון</span>
-              </div>
-              <div style={{ position: 'relative', zIndex: 1 }}>
-                <div style={{ fontFamily: "'Rubik', sans-serif", fontSize: '1.1rem', letterSpacing: '0.14em', opacity: 0.9, marginBottom: '0.6rem' }}>
-                  4291 8830 1122 4457
-                </div>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end' }}>
-                  <div>
-                    <div style={{ fontSize: '0.7rem', opacity: 0.6, marginBottom: '0.15rem' }}>בעל/ת הכרטיס</div>
-                    <div style={{ fontWeight: 600, fontSize: '0.95rem' }}>נועה שגיא · פרימיום</div>
+            {/* eslint-disable-next-line */}
+            <div className="hero-stage-wrap">
+              {/* platform rings — animate in then fade out */}
+              <div className="hero-stage-ring hero-stage-ring-3" />
+              <div className="hero-stage-ring hero-stage-ring-2" />
+              <div className="hero-stage-ring hero-stage-ring-1" />
+              <div className="hero-stage-glow" />
+
+              <Link to="/beit-naaman" className="hero-card-animated" style={{ display: 'block', textDecoration: 'none' }}>
+                <div className="hero-card" style={{ cursor: 'pointer' }}>
+                  <div className="splash-card-shine" />
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', position: 'relative', zIndex: 1 }}>
+                    <div className="chip" />
+                    <span style={{ fontFamily: "'Frank Ruhl Libre', serif", fontWeight: 700, fontSize: '1.15rem', letterSpacing: '0.04em' }}>הלב היהודי</span>
                   </div>
-                  <div style={{ fontSize: '0.7rem', opacity: 0.6 }}>08/29</div>
+                  <div style={{ position: 'relative', zIndex: 1 }}>
+                    <div style={{ fontFamily: "'Frank Ruhl Libre', serif", fontWeight: 700, fontSize: '1.4rem', letterSpacing: '0.02em', marginBottom: '0.15rem' }}>בית נאמן</div>
+                    <div style={{ fontSize: '0.72rem', opacity: 0.65, letterSpacing: '0.03em', marginBottom: '0.55rem' }}>כל ההטבות בבית אחד.</div>
+                    <div style={{ fontFamily: "'Rubik', sans-serif", fontSize: '1.1rem', letterSpacing: '0.14em', opacity: 0.9, marginBottom: '0.6rem' }}>4291 8830 1122 4457</div>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end' }}>
+                      <div>
+                        <div style={{ fontSize: '0.7rem', opacity: 0.6, marginBottom: '0.15rem' }}>בעל/ת הכרטיס</div>
+                        <div style={{ fontWeight: 600, fontSize: '0.95rem' }}>נועה שגיא · פרימיום</div>
+                      </div>
+                      <div style={{ fontSize: '0.7rem', opacity: 0.6 }}>08/29</div>
+                    </div>
+                  </div>
                 </div>
-              </div>
+              </Link>
             </div>
           </div>
         </div>

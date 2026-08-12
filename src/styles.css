@@ -1,3 +1,209 @@
+/* ── Splash Screen ──────────────────────────────────────────────────── */
+@keyframes splash-fade-in        { from { opacity: 0 } to { opacity: 1 } }
+@keyframes splash-logo-drop      { from { opacity: 0; transform: translateY(-18px) } to { opacity: 1; transform: translateY(0) } }
+@keyframes splash-ring-rise {
+  from { opacity: 0; transform: translateX(-50%) scaleX(0.6) scaleY(0.4) translateY(30px); }
+  to   { opacity: 1; transform: translateX(-50%) scaleX(1)   scaleY(1)   translateY(0); }
+}
+@keyframes splash-card-arrive {
+  0%   { opacity: 0; transform: translateY(-140px) rotateY(-28deg) rotateX(18deg) scale(0.65); }
+  65%  { opacity: 1; transform: translateY(6px)    rotateY(-12deg) rotateX(4deg)  scale(1.04); }
+  100% { opacity: 1; transform: translateY(0)      rotateY(-12deg) rotateX(4deg)  scale(1); }
+}
+@keyframes splash-card-spin {
+  0%   { transform: rotateY(-12deg) rotateX(4deg); }
+  35%  { transform: rotateY(14deg)  rotateX(-3deg); }
+  65%  { transform: rotateY(-8deg)  rotateX(5deg); }
+  100% { transform: rotateY(-12deg) rotateX(4deg); }
+}
+@keyframes splash-slogan-up      { from { opacity: 0; transform: translateY(14px) } to { opacity: 1; transform: translateY(0) } }
+@keyframes splash-shine-sweep {
+  0%   { transform: translateX(150%) skewX(-15deg); opacity: 0.6; }
+  100% { transform: translateX(-150%) skewX(-15deg); opacity: 0; }
+}
+@keyframes splash-spotlight-pulse {
+  0%, 100% { opacity: 0.18; }
+  50%       { opacity: 0.28; }
+}
+
+.splash-overlay {
+  position: fixed; inset: 0; z-index: 9999;
+  background: radial-gradient(ellipse at 50% 40%, #1e2540 0%, #0c0e1a 100%);
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  animation: splash-fade-in 0.5s ease both;
+  transition: opacity 0.7s ease;
+  cursor: pointer;
+}
+.splash-overlay.splash-exit { opacity: 0; pointer-events: none; }
+
+.splash-spotlight {
+  position: absolute; inset: 0; pointer-events: none;
+  background: radial-gradient(ellipse 60% 55% at 50% 38%, rgba(201,160,80,0.22) 0%, transparent 70%);
+  animation: splash-spotlight-pulse 2.4s ease-in-out infinite;
+}
+
+.splash-logo {
+  position: absolute; top: 2.2rem; left: 50%; transform: translateX(-50%);
+  animation: splash-logo-drop 0.7s 0.3s cubic-bezier(.22,1,.36,1) both;
+}
+
+/* ── Platform stage ── */
+.splash-stage-wrap {
+  position: relative; display: flex; flex-direction: column; align-items: center;
+  margin-bottom: 2.5rem;
+}
+.splash-platform {
+  position: absolute; bottom: -28px; left: 50%;
+  width: 0; height: 0;
+}
+.splash-ring {
+  position: absolute; left: 50%; border-radius: 50%;
+  border: 1px solid rgba(201,160,80,0.25);
+  transform-origin: center center;
+}
+.splash-ring-1 {
+  width: 240px; height: 52px;
+  background: linear-gradient(180deg, rgba(201,160,80,0.18) 0%, rgba(201,160,80,0.05) 100%);
+  bottom: 0; transform: translateX(-50%);
+  box-shadow: 0 0 28px 4px rgba(201,160,80,0.12), inset 0 1px 0 rgba(201,160,80,0.3);
+  animation: splash-ring-rise 0.7s 0.25s cubic-bezier(.22,1,.36,1) both;
+}
+.splash-ring-2 {
+  width: 340px; height: 68px;
+  background: linear-gradient(180deg, rgba(201,160,80,0.1) 0%, transparent 100%);
+  bottom: -10px; transform: translateX(-50%);
+  animation: splash-ring-rise 0.7s 0.15s cubic-bezier(.22,1,.36,1) both;
+}
+.splash-ring-3 {
+  width: 460px; height: 86px;
+  background: linear-gradient(180deg, rgba(201,160,80,0.05) 0%, transparent 100%);
+  bottom: -20px; transform: translateX(-50%);
+  animation: splash-ring-rise 0.7s 0.05s cubic-bezier(.22,1,.36,1) both;
+}
+.splash-ring-glow {
+  position: absolute; left: 50%; bottom: -4px;
+  width: 180px; height: 18px;
+  transform: translateX(-50%);
+  background: radial-gradient(ellipse, rgba(201,160,80,0.35) 0%, transparent 72%);
+  border-radius: 50%;
+  animation: splash-ring-rise 0.6s 0.35s ease both;
+}
+
+/* ── The card ── */
+.splash-card-wrap {
+  perspective: 900px;
+  margin-bottom: 18px;
+}
+.splash-card-arrive { animation: splash-card-arrive 1s 0.55s cubic-bezier(.22,1,.36,1) both; }
+.splash-card-spin   { animation: splash-card-spin 4.5s 0s ease-in-out infinite; }
+
+.splash-card {
+  width: min(360px, 82vw);
+  aspect-ratio: 1.586;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #3a2608 0%, #c9a050 52%, #7c5520 100%);
+  padding: 1.2rem 1.3rem;
+  display: flex; flex-direction: column; justify-content: space-between;
+  color: white; position: relative; overflow: hidden;
+  box-shadow:
+    0 30px 70px -20px rgba(0,0,0,0.7),
+    0 10px 30px -10px rgba(0,0,0,0.5),
+    inset 0 1px 0 rgba(255,255,255,0.18);
+}
+.splash-card-shine {
+  position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(110deg, transparent 30%, rgba(255,255,255,0.22) 50%, transparent 70%);
+  animation: splash-shine-sweep 2.2s 1.4s ease both;
+}
+
+.splash-chip {
+  width: 36px; height: 28px; border-radius: 5px;
+  background: linear-gradient(135deg, #d4a84b, #f0d080, #b8882e);
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+.splash-chip-inner {
+  width: 22px; height: 16px; border-radius: 2px;
+  border: 1px solid rgba(0,0,0,0.25);
+  background: linear-gradient(135deg, #c8982a, #e8c060);
+}
+
+/* ── Slogan ── */
+.splash-slogan {
+  animation: splash-slogan-up 0.7s 1.2s ease both;
+  text-align: center; color: rgba(255,255,255,0.55);
+  font-size: 0.88rem; letter-spacing: 0.06em;
+  font-family: 'Frank Ruhl Libre', serif;
+}
+.splash-slogan p { margin: 0; }
+
+/* ── Skip button ── */
+.splash-skip {
+  position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%);
+  background: transparent; border: 1px solid rgba(255,255,255,0.18);
+  color: rgba(255,255,255,0.4); border-radius: 999px;
+  padding: 0.4rem 1.2rem; font-size: 0.8rem; letter-spacing: 0.05em;
+  cursor: pointer; transition: all 0.2s;
+  animation: splash-slogan-up 0.5s 1.8s ease both;
+}
+.splash-skip:hover { color: rgba(255,255,255,0.8); border-color: rgba(255,255,255,0.4); }
+
+@keyframes hero-card-intro {
+  0%   { opacity: 0; transform: translateY(-100px) rotateY(-30deg) rotateX(20deg) scale(0.65); }
+  55%  { opacity: 1; transform: translateY(6px)    rotateY(-10deg) rotateX(3deg)  scale(1.03); }
+  70%  { transform: rotateY(10deg)  rotateX(-2deg); }
+  85%  { transform: rotateY(-8deg)  rotateX(4deg); }
+  100% { opacity: 1; transform: rotateY(-14deg) rotateX(6deg) scale(1); }
+}
+@keyframes hero-ring-show {
+  0%   { opacity: 0; transform: translateX(-50%) scaleX(0.55) translateY(22px); }
+  40%  { opacity: 1; transform: translateX(-50%) scaleX(1)    translateY(0); }
+  72%  { opacity: 1; }
+  100% { opacity: 0; transform: translateX(-50%) scaleX(1.05) translateY(-4px); }
+}
+@keyframes hero-ring-glow-show {
+  0%   { opacity: 0; transform: translateX(-50%) scale(0.5); }
+  40%  { opacity: 1; transform: translateX(-50%) scale(1); }
+  72%  { opacity: 1; }
+  100% { opacity: 0; }
+}
+.hero-card-animated { animation: hero-card-intro 2.4s cubic-bezier(.22,1,.36,1) both; width: 100%; max-width: 420px; }
+.hero-card-animated .splash-card-shine { animation: splash-shine-sweep 1.8s 2s ease both; }
+
+/* hero-stage rings — fade in with card, then dissolve */
+.hero-stage-wrap { position: relative; display: flex; justify-content: center; width: 100%; }
+.hero-stage-ring {
+  position: absolute; left: 50%; border-radius: 50%;
+  border: 1px solid rgba(201,160,80,0.28);
+  pointer-events: none;
+}
+.hero-stage-ring-1 {
+  width: 260px; height: 56px; bottom: -22px;
+  background: linear-gradient(180deg, rgba(201,160,80,0.16) 0%, rgba(201,160,80,0.04) 100%);
+  box-shadow: 0 0 24px 4px rgba(201,160,80,0.1), inset 0 1px 0 rgba(201,160,80,0.28);
+  animation: hero-ring-show 3.8s 0.4s cubic-bezier(.22,1,.36,1) both;
+}
+.hero-stage-ring-2 {
+  width: 370px; height: 72px; bottom: -32px;
+  background: linear-gradient(180deg, rgba(201,160,80,0.08) 0%, transparent 100%);
+  animation: hero-ring-show 3.8s 0.25s cubic-bezier(.22,1,.36,1) both;
+}
+.hero-stage-ring-3 {
+  width: 490px; height: 90px; bottom: -42px;
+  background: linear-gradient(180deg, rgba(201,160,80,0.04) 0%, transparent 100%);
+  animation: hero-ring-show 3.8s 0.1s cubic-bezier(.22,1,.36,1) both;
+}
+.hero-stage-glow {
+  position: absolute; left: 50%; bottom: -16px;
+  width: 200px; height: 20px;
+  transform: translateX(-50%);
+  background: radial-gradient(ellipse, rgba(201,160,80,0.32) 0%, transparent 72%);
+  border-radius: 50%; pointer-events: none;
+  animation: hero-ring-glow-show 3.8s 0.5s ease both;
+}
+
+/* ── end Splash ───────────────────────────────────────────────────── */
+
 :root {
   --ink: #171b2e;
   --ink-soft: #2b3351;
@@ -80,7 +286,7 @@ button { cursor: pointer; }
 .hero-card .chip::after { top: 18px; height: 1.5px; }
 
 /* Hero redesign */
-.hero-v2 { background: var(--ink); padding: 5rem 0 4rem; }
+.hero-v2 { background: var(--ink); padding: 3.5rem 0 3rem; }
 .hero-v2-grid {
   display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;
 }
@@ -154,7 +360,7 @@ label { font-weight: 700; }
   inset: 10px 10px 6px;
   border-radius: 0.8rem;
   border: 1px solid rgba(23, 27, 46, 0.08);
-  background: radial-gradient(circle at 15% 14%, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.65) 38%, rgba(255, 255, 255, 0.3) 100%);
+  background: radial-gradient(circle at 15% 14%, rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0.15) 35%, rgba(255, 255, 255, 0) 65%);
   pointer-events: none;
 }
 

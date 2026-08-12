@@ -8,6 +8,7 @@ import BenefitPartnerPage from './pages/BenefitPartnerPage';
 import CommunityPage from './pages/CommunityPage';
 import PersonalPage from './pages/PersonalPage';
 import AdminPage from './pages/AdminPage';
+import BeitNaamanPage from './pages/BeitNaamanPage';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
             <Route path="/community" element={<CommunityPage />} />
             <Route path="/admin" element={<AdminPage />} />
             <Route path="/personal" element={<PersonalPage />} />
+            <Route path="/beit-naaman" element={<BeitNaamanPage />} />
           </Route>
         </Routes>
       </BrowserRouter>

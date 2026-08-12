@@ -9,7 +9,7 @@ export const BENEFITS_BUSINESSES = [
     "hours": "יש לבדוק מול הסניף",
     "addr": "בני ברק",
     "logo": "/logos/biz-137.jfif",
-    "website": "",
+    "website": "https://borsalino.co.il/",
     "phones": [],
     "branches": [
       {
@@ -65,7 +65,7 @@ export const BENEFITS_BUSINESSES = [
     "hours": "יש לבדוק מול הסניף",
     "addr": "ברנפלד 17",
     "logo": "/logos/biz-182.png",
-    "website": "",
+    "website": "https://www.m2000.co.il/",
     "phones": [],
     "branches": [
       {
@@ -535,7 +535,7 @@ export const BENEFITS_BUSINESSES = [
     "hours": "יש לבדוק מול הסניף",
     "addr": "רבי עקיבא 107",
     "logo": "/logos/biz-209.jpg",
-    "website": "",
+    "website": "https://avivit-weizman.co.il/",
     "phones": [],
     "branches": [
       {
@@ -603,7 +603,7 @@ export const BENEFITS_BUSINESSES = [
     "hours": "יש לבדוק מול הסניף",
     "addr": "אהרונוביץ 59",
     "logo": "/logos/biz-55.png",
-    "website": "",
+    "website": "https://adorefashion.co.il/",
     "phones": [],
     "branches": [
       {
@@ -625,7 +625,7 @@ export const BENEFITS_BUSINESSES = [
     "hours": "יש לבדוק מול הסניף",
     "addr": "אשדוד",
     "logo": "/logos/biz-179.jpg",
-    "website": "",
+    "website": "https://adorefashion.co.il/",
     "phones": [],
     "branches": [
       {
@@ -715,7 +715,7 @@ export const BENEFITS_BUSINESSES = [
     "hours": "יש לבדוק מול הסניף",
     "addr": "האמוראיים 56 רמה ד",
     "logo": "/logos/biz-109.webp",
-    "website": "",
+    "website": "https://optimali.ravpage.co.il/",
     "phones": [],
     "branches": [
       {
@@ -743,7 +743,7 @@ export const BENEFITS_BUSINESSES = [
     "hours": "יש לבדוק מול הסניף",
     "addr": "מלכי ישראל 6",
     "logo": "/logos/biz-73.jpg",
-    "website": "",
+    "website": "https://optimali.ravpage.co.il/",
     "phones": [],
     "branches": [
       {
@@ -787,7 +787,7 @@ export const BENEFITS_BUSINESSES = [
     "hours": "יש לבדוק מול הסניף",
     "addr": "אלעד",
     "logo": "/logos/biz-16.png",
-    "website": "",
+    "website": "https://www.ordman.co.il/",
     "phones": [],
     "branches": [
       {
@@ -838,8 +838,8 @@ export const BENEFITS_BUSINESSES = [
     "benefitText": "הנחות ת\"ת כללי",
     "hours": "יש לבדוק מול הסניף",
     "addr": "הריטבא 25",
-    "logo": "",
-    "website": "",
+    "logo": "/logos/biz-59.jpg",
+    "website": "https://xsosshirts.co.il/",
     "phones": [],
     "branches": [
       {
@@ -861,7 +861,7 @@ export const BENEFITS_BUSINESSES = [
     "hours": "יש לבדוק מול הסניף",
     "addr": "הרן 14",
     "logo": "/logos/biz-102.webp",
-    "website": "",
+    "website": "https://xsosshirts.co.il/",
     "phones": [],
     "branches": [
       {
@@ -883,7 +883,7 @@ export const BENEFITS_BUSINESSES = [
     "hours": "יש לבדוק מול הסניף",
     "addr": "רבי עקיבא 51",
     "logo": "/logos/biz-59.jpg",
-    "website": "",
+    "website": "https://xsosshirts.co.il/",
     "phones": [],
     "branches": [
       {
@@ -905,7 +905,7 @@ export const BENEFITS_BUSINESSES = [
     "hours": "יש לבדוק מול הסניף",
     "addr": "יחזקאל 29",
     "logo": "/logos/biz-40.jpg",
-    "website": "",
+    "website": "https://xsosshirts.co.il/",
     "phones": [],
     "branches": [
       {
@@ -927,7 +927,7 @@ export const BENEFITS_BUSINESSES = [
     "hours": "יש לבדוק מול הסניף",
     "addr": "שמגר 16",
     "logo": "/logos/biz-39.jpg",
-    "website": "",
+    "website": "https://xsosshirts.co.il/",
     "phones": [],
     "branches": [
       {
@@ -1053,7 +1053,7 @@ export const BENEFITS_BUSINESSES = [
     "hours": "יש לבדוק מול הסניף",
     "addr": "יהודה הנשיא 94",
     "logo": "/logos/biz-121.jpeg",
-    "website": "",
+    "website": "https://www.bazars.co.il/",
     "phones": [],
     "branches": [
       {
@@ -1075,7 +1075,7 @@ export const BENEFITS_BUSINESSES = [
     "hours": "יש לבדוק מול הסניף",
     "addr": "רשבי 17",
     "logo": "/logos/biz-126.jpeg",
-    "website": "",
+    "website": "https://www.bazars.co.il/",
     "phones": [],
     "branches": [
       {
@@ -1097,7 +1097,7 @@ export const BENEFITS_BUSINESSES = [
     "hours": "יש לבדוק מול הסניף",
     "addr": "דרך יצחק רבין 2",
     "logo": "/logos/biz-131.jpeg",
-    "website": "",
+    "website": "https://www.bazars.co.il/",
     "phones": [],
     "branches": [
       {
@@ -1125,7 +1125,7 @@ export const BENEFITS_BUSINESSES = [
     "hours": "יש לבדוק מול הסניף",
     "addr": "הרן 7",
     "logo": "/logos/biz-119.jpeg",
-    "website": "",
+    "website": "https://www.bazars.co.il/",
     "phones": [],
     "branches": [
       {
@@ -1147,7 +1147,7 @@ export const BENEFITS_BUSINESSES = [
     "hours": "יש לבדוק מול הסניף",
     "addr": "הרב יעקב לנדא 4",
     "logo": "/logos/biz-120.jpeg",
-    "website": "",
+    "website": "https://www.bazars.co.il/",
     "phones": [],
     "branches": [
       {
@@ -1169,7 +1169,7 @@ export const BENEFITS_BUSINESSES = [
     "hours": "יש לבדוק מול הסניף",
     "addr": "יחזקאל 11",
     "logo": "/logos/biz-127.jpeg",
-    "website": "",
+    "website": "https://www.bazars.co.il/",
     "phones": [],
     "branches": [
       {
@@ -1191,7 +1191,7 @@ export const BENEFITS_BUSINESSES = [
     "hours": "יש לבדוק מול הסניף",
     "addr": "בית הדפוס 9",
     "logo": "/logos/biz-130.jpeg",
-    "website": "",
+    "website": "https://www.bazars.co.il/",
     "phones": [],
     "branches": [
       {
@@ -1213,7 +1213,7 @@ export const BENEFITS_BUSINESSES = [
     "hours": "יש לבדוק מול הסניף",
     "addr": "רשבי 46",
     "logo": "/logos/biz-122.jpeg",
-    "website": "",
+    "website": "https://www.bazars.co.il/",
     "phones": [],
     "branches": [
       {
@@ -1235,7 +1235,7 @@ export const BENEFITS_BUSINESSES = [
     "hours": "יש לבדוק מול הסניף",
     "addr": "משה דיין 158",
     "logo": "/logos/biz-129.jpeg",
-    "website": "",
+    "website": "https://www.bazars.co.il/",
     "phones": [],
     "branches": [
       {
@@ -1257,7 +1257,7 @@ export const BENEFITS_BUSINESSES = [
     "hours": "יש לבדוק מול הסניף",
     "addr": "שדרות גולדה מאיר 255",
     "logo": "/logos/biz-132.jpg",
-    "website": "",
+    "website": "https://www.bazars.co.il/",
     "phones": [],
     "branches": [
       {
@@ -1279,7 +1279,7 @@ export const BENEFITS_BUSINESSES = [
     "hours": "יש לבדוק מול הסניף",
     "addr": "קריית אתא",
     "logo": "/logos/biz-128.jpeg",
-    "website": "",
+    "website": "https://www.bazars.co.il/",
     "phones": [],
     "branches": [
       {
@@ -1301,7 +1301,7 @@ export const BENEFITS_BUSINESSES = [
     "hours": "יש לבדוק מול הסניף",
     "addr": "שטראוס 10",
     "logo": "/logos/biz-125.jpeg",
-    "website": "",
+    "website": "https://www.bazars.co.il/",
     "phones": [],
     "branches": [
       {
@@ -1323,7 +1323,7 @@ export const BENEFITS_BUSINESSES = [
     "hours": "יש לבדוק מול הסניף",
     "addr": "גולדה מאיר 255",
     "logo": "/logos/biz-133.jpeg",
-    "website": "",
+    "website": "https://www.bazars.co.il/",
     "phones": [],
     "branches": [
       {
@@ -1395,7 +1395,7 @@ export const BENEFITS_BUSINESSES = [
     "hours": "יש לבדוק מול הסניף",
     "addr": "רבי עקיבא 135",
     "logo": "/logos/biz-63.jpg",
-    "website": "",
+    "website": "https://blazershop.co.il/",
     "phones": [],
     "branches": [
       {
@@ -1417,7 +1417,7 @@ export const BENEFITS_BUSINESSES = [
     "hours": "יש לבדוק מול הסניף",
     "addr": "עקיבא בן מהלל 2",
     "logo": "/logos/biz-190.png",
-    "website": "",
+    "website": "https://xtra.co.il/pages/brand/broadway-haredi-fashion",
     "phones": [],
     "branches": [
       {
@@ -1463,7 +1463,7 @@ export const BENEFITS_BUSINESSES = [
     "hours": "יש לבדוק מול הסניף",
     "addr": "מנחם פורוש",
     "logo": "/logos/biz-25.jpg",
-    "website": "",
+    "website": "https://baronhats.co.il/",
     "phones": [],
     "branches": [
       {
@@ -1629,7 +1629,7 @@ export const BENEFITS_BUSINESSES = [
     "hours": "יש לבדוק מול הסניף",
     "addr": "אלעד",
     "logo": "/logos/biz-205.jpg",
-    "website": "",
+    "website": "https://sockstohome.co.il/",
     "phones": [],
     "branches": [
       {
@@ -1693,7 +1693,7 @@ export const BENEFITS_BUSINESSES = [
     "hours": "יש לבדוק מול הסניף",
     "addr": "אביי 11",
     "logo": "/logos/biz-100.jpg",
-    "website": "",
+    "website": "https://www.grunerbytime.co.il/",
     "phones": [],
     "branches": [
       {
@@ -1781,7 +1781,7 @@ export const BENEFITS_BUSINESSES = [
     "hours": "יש לבדוק מול הסניף",
     "addr": "ר' אליעזר 9",
     "logo": "/logos/biz-218.jpg",
-    "website": "",
+    "website": "https://www.sales.org.il/",
     "phones": [],
     "branches": [
       {
@@ -2621,7 +2621,7 @@ export const BENEFITS_BUSINESSES = [
     "hours": "יש לבדוק מול הסניף",
     "addr": "בני ברק",
     "logo": "/logos/biz-220.jpg",
-    "website": "",
+    "website": "https://kzirhitim.co.il/",
     "phones": [],
     "branches": [
       {
@@ -2853,7 +2853,7 @@ export const BENEFITS_BUSINESSES = [
     "hours": "יש לבדוק מול הסניף",
     "addr": "אלעד",
     "logo": "/logos/biz-88.jpg",
-    "website": "",
+    "website": "https://mishkan-hatchelet.co.il/",
     "phones": [],
     "branches": [
       {
@@ -3050,8 +3050,8 @@ export const BENEFITS_BUSINESSES = [
     "benefitText": "3% הנחה לכסף שנטען על ידי ארגונים בלבד",
     "hours": "יש לבדוק מול הסניף",
     "addr": "שמעיה",
-    "logo": "",
-    "website": "",
+    "logo": "/logos/נטו חיסכון.jpg",
+    "website": "https://netohisahon.co.il/",
     "phones": [],
     "branches": [
       {
@@ -3257,7 +3257,7 @@ export const BENEFITS_BUSINESSES = [
     "hours": "יש לבדוק מול הסניף",
     "addr": "כל הארץ",
     "logo": "/logos/biz-150.png",
-    "website": "",
+    "website": "https://www.gitlerbooks.co.il/",
     "phones": [],
     "branches": [
       {
@@ -3393,7 +3393,7 @@ export const BENEFITS_BUSINESSES = [
     "hours": "יש לבדוק מול הסניף",
     "addr": "רבי עקיבא 95",
     "logo": "/logos/biz-47.jpg",
-    "website": "",
+    "website": "https://www.pacomishel.co.il/",
     "phones": [],
     "branches": [
       {
@@ -4075,7 +4075,7 @@ export const BENEFITS_BUSINESSES = [
     "hours": "יש לבדוק מול הסניף",
     "addr": "רבי יוסי בר חלפתא",
     "logo": "/logos/biz-50.jpg",
-    "website": "",
+    "website": "https://fersterhats.com/",
     "phones": [],
     "branches": [
       {
@@ -4271,7 +4271,7 @@ export const BENEFITS_BUSINESSES = [
     "hours": "יש לבדוק מול הסניף",
     "addr": "יהודה הנשיא 94",
     "logo": "/logos/biz-136.jfif",
-    "website": "",
+    "website": "https://refaeli.co.il/",
     "phones": [],
     "branches": [
       {
@@ -4311,7 +4311,7 @@ export const BENEFITS_BUSINESSES = [
     "hours": "יש לבדוק מול הסניף",
     "addr": "רבי עקיבא 115",
     "logo": "/logos/biz-135.jfif",
-    "website": "",
+    "website": "https://refaeli.co.il/",
     "phones": [],
     "branches": [
       {
@@ -4453,7 +4453,7 @@ export const BENEFITS_BUSINESSES = [
     "hours": "יש לבדוק מול הסניף",
     "addr": "מהרשל 1",
     "logo": "/logos/biz-118.jpg",
-    "website": "",
+    "website": "https://steinjudaica.co.il/",
     "phones": [],
     "branches": [
       {
@@ -5048,5 +5048,134 @@ export const BENEFITS_BUSINESSES = [
       }
     ],
     "infoVerifiedFrom": "local-legacy-data"
+  },
+  {
+    "id": "biz-225",
+    "name": "חיימקה סלולר",
+    "cat": "אלקטרוניק וסלולר",
+    "region": "בני ברק",
+    "perk": "יש לבדוק מול הסניף",
+    "benefitText": "בית פרמיום לסלולר — הטבות חברי המועדון. יש לבדוק פרטי ההנחה מול הסניף.",
+    "hours": "יש לבדוק מול הסניף",
+    "addr": "בני ברק",
+    "logo": "/logos/חיימקה.jpg",
+    "website": "",
+    "phones": [],
+    "branches": [
+      {
+        "city": "בני ברק",
+        "address": "בני ברק",
+        "name": "חיימקה סלולר",
+        "phone": null
+      }
+    ],
+    "infoVerifiedFrom": "local-manual"
+  },
+  {
+    "id": "biz-226",
+    "name": "קלינג - תקשורת נקיה",
+    "cat": "אלקטרוניק וסלולר",
+    "region": "כל הארץ",
+    "perk": "יש לבדוק מול הסניף",
+    "benefitText": "תקשורת נקיה — הטבות חברי המועדון. יש לבדוק פרטי ההנחה מול הסניף.",
+    "hours": "יש לבדוק מול הסניף",
+    "addr": "כל הארץ",
+    "logo": "/logos/קלינג.png",
+    "website": "",
+    "phones": [],
+    "branches": [
+      {
+        "city": "כל הארץ",
+        "address": "כל הארץ",
+        "name": "קלינג",
+        "phone": null
+      }
+    ],
+    "infoVerifiedFrom": "local-manual"
+  },
+  {
+    "id": "biz-227",
+    "name": "מעדנייה בסביבה",
+    "cat": "מזון",
+    "region": "כל הארץ",
+    "perk": "יש לבדוק מול הסניף",
+    "benefitText": "כשר למהדרין — סלטים, דגים מלוחים ומעושנים, פיצוחים, חלות. הטבות חברי המועדון. לבירורים: 03-6526667.",
+    "hours": "יש לבדוק מול הסניף",
+    "addr": "כל הארץ",
+    "logo": "/logos/מעדנייה בסביבה.jpg",
+    "website": "",
+    "phones": ["03-6526667"],
+    "branches": [
+      {
+        "city": "כל הארץ",
+        "address": "כל הארץ",
+        "name": "מעדנייה בסביבה",
+        "phone": "03-6526667"
+      }
+    ],
+    "infoVerifiedFrom": "local-manual"
+  },
+  {
+    "id": "biz-228",
+    "name": "יין בסביבה",
+    "cat": "מסעדנות",
+    "region": "כל הארץ",
+    "perk": "יש לבדוק מול הסניף",
+    "benefitText": "הטבות חברי המועדון — יש לבדוק פרטי ההנחה מול הסניף.",
+    "hours": "יש לבדוק מול הסניף",
+    "addr": "כל הארץ",
+    "logo": "/logos/IMG-20260804-WA0001.jpg",
+    "website": "",
+    "phones": [],
+    "branches": [{ "city": "כל הארץ", "address": "כל הארץ", "name": "יין בסביבה", "phone": null }],
+    "infoVerifiedFrom": "local-manual"
+  },
+  {
+    "id": "biz-229",
+    "name": "אשד הנחלים – טיולי גיפים",
+    "cat": "פנאי ותיירות",
+    "region": "כל הארץ",
+    "perk": "יש לבדוק מול הסניף",
+    "benefitText": "טיולי ג'יפים ושטח — הטבות חברי המועדון. טלפון: 054-6444950.",
+    "hours": "יש לבדוק מול הסניף",
+    "addr": "כל הארץ",
+    "logo": "/logos/IMG-20260804-WA0003.jpg",
+    "website": "",
+    "phones": ["054-6444950"],
+    "branches": [{ "city": "כל הארץ", "address": "כל הארץ", "name": "אשד הנחלים", "phone": "054-6444950" }],
+    "infoVerifiedFrom": "local-manual"
+  },
+  {
+    "id": "biz-230",
+    "name": "פיצה פסטה",
+    "cat": "מסעדנות",
+    "region": "כל הארץ",
+    "perk": "יש לבדוק מול הסניף",
+    "benefitText": "הטבות חברי המועדון — יש לבדוק פרטי ההנחה מול הסניף.",
+    "hours": "יש לבדוק מול הסניף",
+    "addr": "כל הארץ",
+    "logo": "/logos/IMG-20260804-WA0014.jpg",
+    "website": "",
+    "phones": [],
+    "branches": [{ "city": "כל הארץ", "address": "כל הארץ", "name": "פיצה פסטה", "phone": null }],
+    "infoVerifiedFrom": "local-manual"
+  },
+  {
+    "id": "biz-231",
+    "name": "מגדנית קצבורג",
+    "cat": "מזון",
+    "region": "ירושלים",
+    "perk": "יש לבדוק מול הסניף",
+    "benefitText": "מגדנית קצבורג — נוסד 1954. הטבות חברי המועדון. לבירורים: 02-5375777.",
+    "hours": "יש לבדוק מול הסניף",
+    "addr": "יחזקאל 14",
+    "logo": "/logos/IMG-20260805-WA0001.jpg",
+    "website": "",
+    "phones": ["02-5375777"],
+    "branches": [
+      { "city": "ירושלים", "address": "יחזקאל 14", "name": "יחזקאל", "phone": "02-5375777" },
+      { "city": "ירושלים", "address": "מלכי ישראל 6", "name": "מלכי ישראל", "phone": "02-5375777" }
+    ],
+    "infoVerifiedFrom": "local-manual"
   }
 ];
