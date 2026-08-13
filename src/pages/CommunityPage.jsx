@@ -140,7 +140,11 @@ function CommunityPage() {
           </div>
 
           <div>
-            <h3 className="font-display" style={{ marginBottom: '1rem', fontSize: '1.25rem' }}>פורום הקהילה</h3>
+            <h3 className="font-display" style={{ marginBottom: '0.5rem', fontSize: '1.25rem' }}>פורום הקהילה</h3>
+            <p style={{ fontSize: '0.85rem', color: 'var(--ink-soft)', marginBottom: '1rem', lineHeight: 1.6 }}>
+              רוצים לשתף המלצה, שאלה או עדכון? כתבו כאן והקהילה תקרא.
+              אנא שמרו על שיח מכבד, ללא פרסומת או תכנים.
+            </p>
             <form onSubmit={addPost} style={{ display: 'flex', gap: '0.6rem', marginBottom: '1rem' }}>
               <input
                 className="field" placeholder="כתבו משהו לקהילה..."

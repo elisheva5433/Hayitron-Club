@@ -2,6 +2,28 @@ import { useMemo, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { BENEFITS_BUSINESSES } from '../data/benefitsData.js';
 
+const ENRICHMENTS = {
+  'biz-137': { description: 'מבחר כובעים בסגנונות קלאסיים ומעודכנים, עם דגש על התאמה נכונה למראה ולשימוש. ההטבה הופכת את הקנייה לכדאית במיוחד.', phones: ['02-5681128'], addr: 'שדרות האמוראים 68, בית שמש' },
+  'biz-71': { description: 'מבחר מסגרות, משקפי ראייה ועדשות, עם אפשרויות שמתאימות למגוון צרכים וסגנונות. שווה לבדוק את ההיצע לפני הרכישה.' },
+  'biz-182': { description: 'מבחר מוצרי מזון וקניות שוטפות במקום נוח, עם יתרון משמעותי ברכישה במסגרת ההטבה.', addr: 'הרב שמעון חכם 12, ירושלים' },
+  'biz-1': { description: 'מבחר כובעים בסגנונות קלאסיים ומעודכנים, עם דגש על התאמה נכונה למראה ולשימוש. ההטבה הופכת את הקנייה לכדאית במיוחד.' },
+  'biz-152': { description: 'מבחר מוצרי מזון וקניות שוטפות במקום נוח, עם יתרון משמעותי ברכישה במסגרת ההטבה.', phones: ['02-5616982'], addr: 'הרב כהנמן 107, בני ברק' },
+  'biz-49': { description: 'מבחר חליולצות, מכנסיים ואביזרים לגבר, במגוון סגנונות ומחירים. ההטבה מאפשרת לקבל יותר תמורה על הקנייה.' },
+  'biz-70': { description: 'מבחר מסגרות, משקפי ראייה ועדשות, עם אפשרויות שמתאימות למגוון צרכים וסגנונות. שווה לבדוק את ההיצע לפני הרכישה.' },
+  'biz-209': { description: 'מבחר פריטי אופנה לנשים, עם דגמים שמתאימים למלתחה היומיומית ולאירועים. מקום שכדאי לבדוק לפני רכישה.', phones: ['02-5375993'], addr: 'מלכי ישראל 33, ירושלים' },
+  'biz-210': { description: 'מבחר פריטי אופנה לנשים, עם דגמים שמתאימים למלתחה היומיומית ולאירועים. מקום שכדאי לבדוק לפני רכישה.' },
+  'biz-55': { description: 'מבחר חליפות, חולצות, מכנסיים ואביזרים לגבר, במגוון סגנונות ומחירים. ההטבה מאפשרת לקבל יותר תמורה על הקנייה.' },
+  'biz-179': { description: 'מבחר חליפות, חולצות, מכנסיים ואביזרים לגבר, במגוון סגנונות ומחירים. ההטבה מאפשרת לקבל יותר תמורה על הקנייה.', phones: ['02-6642527'], addr: 'מלכי ישראל 8, ירושלים' },
+  'biz-54': { description: 'שירותי רכב ורכישה של מוצרים וחלפים, עם הטבה שיכולה להיות משמעותית גם בטיפולים וגם ברכישות.', phones: ['054-7272300'], addr: 'שלמה המלך 7, בני ברק' },
+  'biz-208': { description: 'מבחר מסגרות, משקפי ראייה ועדשות, עם אפשרויות שמתאימות למגוון צרכים וסגנונות. שווה לבדוק את ההיצע לפני הרכישה.' },
+  'biz-109': { description: 'מבחר מסגרות, משקפי ראייה ועדשות, עם אפשרויות שמתאימות למגוון צרכים וסגנונות. שווה לבדוק את ההיצע לפני הרכישה.' },
+  'biz-73': { description: 'מבחר מסגרות, משקפי ראייה ועדשות, עם אפשרויות שמתאימות למגוון צרכים וסגנונות. שווה לבדוק את ההיצע לפני הרכישה.', phones: ['076-8617529'], addr: 'מלכי ישראל 6, ירושלים' },
+  'biz-60': { description: 'מבחר מסגרות, משקפי ראייה ועדשות, עם אפשרויות שמתאימות למגוון צרכים וסגנונות. שווה לבדוק את ההיצע לפני הרכישה.', phones: ['03-9791900'], addr: 'רבי עקיבא 113, בני ברק' },
+  'biz-16': { description: 'מבחר פריטי אופנה לנשים, עם דגמים שמתאימים למלתחה היומיומית ולאירועים. מקום שכדאי לבדוק לפני רכישה.', phones: ['1-700-501039'], addr: 'רבי יהודה הנשיא 100, אלעד' },
+  'biz-96': { description: 'מבחר חליפות, חולצות, מכנסיים ואביזרים לגבר, במגוון סגנונות ומחירים. ההטבה מאפשרת לקבל יותר תמורה על הקנייה.' },
+  'biz-102': { description: 'מבחר חליפות, חולצות, מכנסיים ואביזרים לגבר, במגוון סגנונות ומחירים. ההטבה מאפשרת לקבל יותר תמורה על הקנייה.' },
+};
+
 function sanitizeText(value) {
   const text = String(value || '');
   if (/׳|Ã|â|×/.test(text)) {
@@ -62,7 +84,13 @@ function BenefitPartnerPage() {
   }, [businesses, partnerKey]);
 
   const website = String(selected.website || '').trim();
-  const phones = Array.isArray(selected.phones) ? selected.phones.filter(Boolean) : [];
+  const enrich = ENRICHMENTS[businessId] || {};
+  const enrichPhones = enrich.phones || [];
+  const enrichAddr = enrich.addr || '';
+  const phones = [
+    ...(Array.isArray(selected.phones) ? selected.phones.filter(Boolean) : []),
+    ...enrichPhones.filter(p => !(selected.phones || []).includes(p)),
+  ];
   const officialBranches = Array.isArray(selected.branches) ? selected.branches : [];
   const branchSource = officialBranches.length > 0 ? officialBranches : relatedBranches;
   const branches = useMemo(() => toDistinctBranches(branchSource), [branchSource]);
@@ -121,8 +149,13 @@ function BenefitPartnerPage() {
 
               <div className="card-body">
                 <h2 className="font-display" style={{ marginTop: 0, marginBottom: '0.7rem' }}>על החנות והמוצרים</h2>
-                <p style={{ marginTop: 0, color: 'var(--ink-soft)' }}>
-                  העסק פועל בתחום {sanitizeText(selected.cat || 'לא זמין')}. פירוט רשמי מהמאגר: {sanitizeText(selected.benefitText || 'לא זמין')}
+                {enrich.description && (
+                  <p style={{ marginTop: 0, marginBottom: '0.75rem', lineHeight: 1.7 }}>
+                    {enrich.description}
+                  </p>
+                )}
+                <p style={{ marginTop: 0, color: 'var(--ink-soft)', fontSize: '0.9rem' }}>
+                  פרטי ההטבה הרשמיים: {sanitizeText(selected.benefitText || 'לא זמין')}
                 </p>
 
                 <div className="partner-highlight-row">
@@ -138,6 +171,9 @@ function BenefitPartnerPage() {
                     <strong>טלפון:</strong>{' '}
                     {branchPhonesText}
                   </li>
+                  {enrichAddr && (
+                    <li><strong>כתובת מאומתת:</strong>{' '}{enrichAddr}</li>
+                  )}
                   <li>
                     <strong>אתר:</strong>{' '}
                     {website ? (

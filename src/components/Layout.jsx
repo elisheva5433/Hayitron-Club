@@ -1,9 +1,12 @@
-import { NavLink, Outlet } from 'react-router-dom';
+import { NavLink, Outlet, useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import AiChat from './AiChat';
 
 function Layout() {
   const { isAuthenticated, isAdmin } = useAuth();
+  const navigate = useNavigate();
+  const { pathname } = useLocation();
+  const showBack = pathname !== '/';
 
   return (
     <div className="app-shell">
@@ -25,6 +28,15 @@ function Layout() {
       </header>
 
       <main>
+        {showBack && (
+          <div style={{ background: 'var(--paper)', borderBottom: '1px solid var(--line)', padding: '0.5rem 0' }}>
+            <div className="container">
+              <button onClick={() => navigate(-1)} style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'var(--ink-soft)', fontSize: '0.88rem', fontWeight: 600, display: 'flex', alignItems: 'center', gap: '0.3rem', padding: '0.2rem 0' }}>
+                ← חזרה
+              </button>
+            </div>
+          </div>
+        )}
         <Outlet />
       </main>
 

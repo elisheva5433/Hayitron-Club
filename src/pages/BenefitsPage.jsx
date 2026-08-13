@@ -91,20 +91,20 @@ function BenefitsPage() {
 
       <section className="section-pad" style={{ paddingTop: '2.5rem' }}>
         <div className="container">
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr auto auto', gap: '0.75rem', marginBottom: '1.5rem', alignItems: 'end' }}>
-            <div>
+          <div style={{ display: 'flex', gap: '0.75rem', alignItems: 'flex-end', marginBottom: '1.5rem', flexWrap: 'wrap' }}>
+            <div style={{ flex: 1, minWidth: '200px' }}>
               <label className="label">חיפוש</label>
-              <input className="field" placeholder="שם עסק, הטבה או כתובת..." value={search} onChange={(e) => setSearch(e.target.value)} />
+              <input className="field" style={{ height: '44px', padding: '0 0.9rem' }} placeholder="שם עסק, הטבה או כתובת..." value={search} onChange={(e) => setSearch(e.target.value)} />
             </div>
             <div>
               <label className="label">קטגוריה</label>
-              <select className="field" value={cat} onChange={(e) => setCat(e.target.value)}>
+              <select className="field" style={{ height: '44px', padding: '0 0.9rem' }} value={cat} onChange={(e) => setCat(e.target.value)}>
                 {categories.map((c) => <option key={c}>{c}</option>)}
               </select>
             </div>
             <div>
               <label className="label">אזור</label>
-              <select className="field" value={region} onChange={(e) => setRegion(e.target.value)}>
+              <select className="field" style={{ height: '44px', padding: '0 0.9rem' }} value={region} onChange={(e) => setRegion(e.target.value)}>
                 {regions.map((r) => <option key={r}>{r}</option>)}
               </select>
             </div>
