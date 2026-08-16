@@ -1,15 +1,7 @@
 import { useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { BENEFITS_BUSINESSES } from '../data/benefitsData.js';
-
-function sanitizeText(value) {
-  const text = String(value || '');
-  // Hide known mojibake artifacts from mixed encodings.
-  if (/׳|Ã|â|×/.test(text)) {
-    return 'פרטי ההטבה לפי המועדון';
-  }
-  return text;
-}
+import { sanitizeText, normalizePartnerKey, normalizeSearchValue, matchesBusinessName, getBranchSummary } from '../utils/benefitsCatalog.js';
 
 function getLogoFallbackLabel(name) {
   const text = String(name || '').trim();
@@ -23,6 +15,7 @@ function getLogoFallbackLabel(name) {
 function BizCard({ biz }) {
   const [logoFailed, setLogoFailed] = useState(false);
   const fallbackLabel = getLogoFallbackLabel(biz.name);
+  const branchSummary = getBranchSummary(biz);
 
   return (
     <Link to={`/benefits/${biz.id}`} className="partner-card" aria-label={`מעבר לעסק ${biz.name}`}>
@@ -49,7 +42,7 @@ function BizCard({ biz }) {
           <span className="tag">{sanitizeText(biz.cat)}</span>
         </div>
         <p style={{ margin: '0 0 0.35rem', fontWeight: 700, color: 'var(--teal)', fontSize: '0.95rem' }}>{sanitizeText(biz.perk)}</p>
-        <p style={{ margin: 0, fontSize: '0.86rem', color: 'var(--ink-soft)' }}>📍 {sanitizeText(biz.addr)}</p>
+        <p style={{ margin: 0, fontSize: '0.86rem', color: 'var(--ink-soft)' }}>📍 {branchSummary || sanitizeText(biz.addr)}</p>
         <p style={{ margin: '0.2rem 0 0', fontSize: '0.78rem', color: 'var(--ink-soft)' }}>לצפייה בפרטי העסק המלאים</p>
       </div>
     </Link>
@@ -57,7 +50,30 @@ function BizCard({ biz }) {
 }
 
 function BenefitsPage() {
-  const [businesses] = useState(BENEFITS_BUSINESSES);
+  const businesses = useMemo(() => {
+    const deduped = new Map();
+
+    for (const biz of BENEFITS_BUSINESSES) {
+      const key = normalizePartnerKey(biz.name);
+      const existing = deduped.get(key);
+
+      if (!existing) {
+        deduped.set(key, { ...biz, branches: Array.isArray(biz.branches) ? [...biz.branches] : [] });
+        continue;
+      }
+
+      const nextBranches = [...(existing.branches || []), ...(Array.isArray(biz.branches) ? biz.branches : [])];
+      deduped.set(key, {
+        ...existing,
+        ...biz,
+        branches: nextBranches,
+        addr: existing.addr || biz.addr || '',
+      });
+    }
+
+    return Array.from(deduped.values());
+  }, []);
+
   const [search, setSearch] = useState('');
   const [cat, setCat] = useState('הכל');
   const [region, setRegion] = useState('כל הארץ');
@@ -72,8 +88,10 @@ function BenefitsPage() {
     return ['כל הארץ', ...dynamicRegions];
   }, [businesses]);
 
+  const normalizedSearch = normalizeSearchValue(search);
+
   const filtered = businesses.filter((b) => {
-    const matchSearch = b.name.includes(search) || b.perk.includes(search) || b.addr.includes(search);
+    const matchSearch = !normalizedSearch || matchesBusinessName(b.name, normalizedSearch);
     const matchCat = cat === 'הכל' || b.cat === cat;
     const matchRegion = region === 'כל הארץ' || b.region === region;
     return matchSearch && matchCat && matchRegion;
@@ -94,7 +112,7 @@ function BenefitsPage() {
           <div style={{ display: 'flex', gap: '0.75rem', alignItems: 'flex-end', marginBottom: '1.5rem', flexWrap: 'wrap' }}>
             <div style={{ flex: 1, minWidth: '200px' }}>
               <label className="label">חיפוש</label>
-              <input className="field" style={{ height: '44px', padding: '0 0.9rem' }} placeholder="שם עסק, הטבה או כתובת..." value={search} onChange={(e) => setSearch(e.target.value)} />
+              <input className="field" style={{ height: '44px', padding: '0 0.9rem' }} placeholder="שם עסק" value={search} onChange={(e) => setSearch(e.target.value)} />
             </div>
             <div>
               <label className="label">קטגוריה</label>
@@ -124,6 +142,14 @@ function BenefitsPage() {
     </>
   );
 }
+
+export {
+  sanitizeText,
+  normalizePartnerKey,
+  normalizeSearchValue,
+  matchesBusinessName,
+  getBranchSummary,
+};
 
 export default BenefitsPage;
 

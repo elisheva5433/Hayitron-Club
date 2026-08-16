@@ -390,7 +390,7 @@ function AdminPage() {
                   <select value={groupForm.category} onChange={(event) => setGroupForm((current) => ({ ...current, category: event.target.value }))}>
                     <option>בית וגינה</option>
                     <option>חינוך</option>
-                    <option>מסעדנות</option>
+                    <option>אוכל ומסעדנות</option>
                     <option>פנאי ותיירות</option>
                   </select>
                   <select value={groupForm.region} onChange={(event) => setGroupForm((current) => ({ ...current, region: event.target.value }))}>

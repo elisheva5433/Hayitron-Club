@@ -184,12 +184,12 @@ export function initializeDatabase(dbPath = path.join(__dirname, '..', '..', '..
   const txCount = db.prepare('SELECT COUNT(*) AS count FROM transactions').get();
   if (txCount.count === 0) {
     const seedTransactions = [
-      ['noa@example.com', 'פיצה פון', 'מסעדנות', 'גוש דן', 186],
+      ['noa@example.com', 'פיצה פון', 'אוכל ומסעדנות', 'גוש דן', 186],
       ['noa@example.com', 'מיני ישראל', 'פנאי ותיירות', 'ירושלים והסביבה', 95],
       ['h346566@gmail.com', 'חנות מצעים וכלי בית - חלום שלי', 'בית וגינה', 'גוש דן', 420],
       ['yb343@gmail.com', 'רפטינג נהר הירדן', 'פנאי ותיירות', 'חיפה והצפון', 330],
-      ['p0554014248@gmail.com', 'קונדיטוריית קצבורג', 'מסעדנות', 'ירושלים והסביבה', 270],
-      ['admin@hayitron.co.il', 'ג׳אסט מיט', 'מסעדנות', 'גוש דן', 155],
+      ['p0554014248@gmail.com', 'קונדיטוריית קצבורג', 'אוכל ומסעדנות', 'ירושלים והסביבה', 270],
+      ['admin@hayitron.co.il', 'ג׳אסט מיט', 'אוכל ומסעדנות', 'גוש דן', 155],
     ];
     const insertTransaction = db.prepare('INSERT INTO transactions (userEmail, businessName, category, region, amount) VALUES (?, ?, ?, ?, ?)');
     for (const transaction of seedTransactions) {

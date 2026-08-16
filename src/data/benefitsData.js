@@ -13,12 +13,6 @@ export const BENEFITS_BUSINESSES = [
     "phones": [],
     "branches": [
       {
-        "city": "לא זמין",
-        "address": "לא זמין",
-        "name": "בית שמש",
-        "phone": null
-      },
-      {
         "city": "בני ברק",
         "address": "הרב קוטלר 3",
         "name": "בני ברק",
@@ -29,9 +23,184 @@ export const BENEFITS_BUSINESSES = [
         "address": "יחזקאל 29",
         "name": "ירושלים",
         "phone": null
+      },
+      {
+        "city": "בית שמש",
+        "address": "בית שמש",
+        "name": "בית שמש",
+        "phone": null
       }
     ],
     "infoVerifiedFrom": "kehilotcard-public-api"
+  },
+  {
+    "id": "biz-211",
+    "name": "שמים וארץ - סוכן טיסות",
+    "cat": "רכבים וטיסות",
+    "region": "כל הארץ",
+    "perk": "כרטיס טיסה מתנה",
+    "benefitText": "כרטיס טיסה ללרנקה הלוך מתנה למזמינים טיסה לניו יורק. יש לבדוק מול הסוכן את תנאי ההזמנה והזכאות לפני הסגירה.",
+    "hours": "יש לבדוק מול הסניף",
+    "addr": "כל הארץ",
+    "logo": "/logos/biz-211.jpg",
+    "website": "",
+    "phones": [],
+    "branches": [],
+    "infoVerifiedFrom": "kehilotcard-public-api"
+  },
+  {
+    "id": "biz-212",
+    "name": "בת מלך החדשה",
+    "cat": "ביגוד נשים",
+    "region": "כל הארץ",
+    "perk": "30% הנחה",
+    "benefitText": "30% הנחה על כלל הפריטים. על הפריטים החדשים ביותר מהשבוע האחרון תקפה הנחה של 20%.",
+    "hours": "יש לבדוק מול הסניף",
+    "addr": "כל הארץ",
+    "logo": "/logos/בת מלך החדשה.webp",
+    "website": "",
+    "phones": [],
+    "branches": [],
+    "infoVerifiedFrom": "kehilotcard-public-api"
+  },
+  {
+    "id": "biz-213",
+    "name": "פנינת האיפור והקוסמטיקה",
+    "cat": "איפור וקוסמטיקה",
+    "region": "בני ברק",
+    "perk": "15% הנחה",
+    "benefitText": "15% הנחה על כל התכשיטים. כתובת: בירנבוים 18, בני ברק.",
+    "hours": "יש לבדוק מול הסניף",
+    "addr": "בירנבוים 18, בני ברק",
+    "logo": "/logos/biz-213.jpg",
+    "website": "",
+    "phones": [],
+    "branches": [
+      {
+        "city": "בני ברק",
+        "address": "בירנבוים 18",
+        "name": "בני ברק",
+        "phone": null
+      }
+    ],
+    "infoVerifiedFrom": "kehilotcard-public-api"
+  },
+  {
+    "id": "biz-214",
+    "name": "מצעית",
+    "cat": "מצעים וכלי בית",
+    "region": "כל הארץ",
+    "perk": "10% הנחה",
+    "benefitText": "10% הנחה. ההטבה תקפה בכל הסניפים.",
+    "hours": "יש לבדוק מול הסניף",
+    "addr": "כל הסניפים",
+    "logo": "/logos/מצעית.png",
+    "website": "",
+    "phones": [],
+    "branches": [],
+    "infoVerifiedFrom": "kehilotcard-public-api"
+  },
+  {
+    "id": "biz-234",
+    "name": "משביר לעמו",
+    "cat": "מזון",
+    "region": "בני ברק",
+    "perk": "3% בכל קנייה",
+    "benefitText": "3% הנחה על כל הקנייה. יש לבדוק את תנאי ההטבה מול הסניף.",
+    "hours": "יש לבדוק מול הסניף",
+    "addr": "אברבנאל 101, בני ברק",
+    "logo": "/logos/biz-211.jpg",
+    "website": "",
+    "phones": [],
+    "branches": [
+      {
+        "city": "גבעת פנחס",
+        "address": "גבעת פנחס",
+        "name": "גבעת פנחס",
+        "phone": null
+      },
+      {
+        "city": "שבטי ישראל",
+        "address": "שבטי ישראל",
+        "name": "שבטי ישראל",
+        "phone": null
+      },
+      {
+        "city": "בני ברק",
+        "address": "אברבנאל 101",
+        "name": "אברבנאל - בני ברק",
+        "phone": null
+      },
+      {
+        "city": "בני ברק",
+        "address": "ירושלים 9",
+        "name": "ירושלים - בני ברק",
+        "phone": null
+      },
+      {
+        "city": "בני ברק",
+        "address": "משה פרדו 1",
+        "name": "משה פרדו - בני ברק",
+        "phone": null
+      },
+      {
+        "city": "בני ברק",
+        "address": "נחמיה 8",
+        "name": "נחמיה - בני ברק",
+        "phone": null
+      },
+      {
+        "city": "בני ברק",
+        "address": "רבי עקיבא 142",
+        "name": "רבי עקיבא - בני ברק",
+        "phone": null
+      }
+    ],
+    "infoVerifiedFrom": "local-manual"
+  },
+  {
+    "id": "biz-235",
+    "name": "מחסני קרעסטיר",
+    "cat": "מזון",
+    "region": "בני ברק",
+    "perk": "4% הנחה",
+    "benefitText": "4 אחוז הנחה בכל קניה.",
+    "hours": "יש לבדוק מול הסניף",
+    "addr": "בר יוחאי 9, בני ברק",
+    "logo": "/logos/biz-214.jpg",
+    "website": "",
+    "phones": [],
+    "branches": [
+      {
+        "city": "בני ברק",
+        "address": "בר יוחאי 9",
+        "name": "בני ברק",
+        "phone": null
+      }
+    ],
+    "infoVerifiedFrom": "local-manual"
+  },
+  {
+    "id": "biz-236",
+    "name": "צרכניית אחיעזר",
+    "cat": "מזון",
+    "region": "בני ברק",
+    "perk": "תשלום בכסף צבור בכרטיס + צבירת נקודות",
+    "benefitText": "תשלום בכסף צבור בכרטיס + צבירת נקודות.",
+    "hours": "יש לבדוק מול הסניף",
+    "addr": "אבני נזר 3, בני ברק",
+    "logo": "",
+    "website": "",
+    "phones": [],
+    "branches": [
+      {
+        "city": "בני ברק",
+        "address": "אבני נזר 3",
+        "name": "בני ברק",
+        "phone": null
+      }
+    ],
+    "infoVerifiedFrom": "local-manual"
   },
   {
     "id": "biz-71",
@@ -57,7 +226,7 @@ export const BENEFITS_BUSINESSES = [
   },
   {
     "id": "biz-182",
-    "name": "מעיין 2000",
+    "name": "מעיין אלפיים",
     "cat": "מזון",
     "region": "באר שבע",
     "perk": "4% הנחה",
@@ -539,6 +708,24 @@ export const BENEFITS_BUSINESSES = [
     "phones": [],
     "branches": [
       {
+        "city": "אשדוד",
+        "address": "אשדוד",
+        "name": "אשדוד",
+        "phone": null
+      },
+      {
+        "city": "בית שמש",
+        "address": "בית שמש",
+        "name": "בית שמש",
+        "phone": null
+      },
+      {
+        "city": "קריית אתא",
+        "address": "קרית אתא",
+        "name": "קרית אתא",
+        "phone": null
+      },
+      {
         "city": "בני ברק",
         "address": "רבי עקיבא 107",
         "name": "רבי עקיבא 107 - בני ברק",
@@ -554,40 +741,6 @@ export const BENEFITS_BUSINESSES = [
         "city": "ירושלים",
         "address": "יפו 234",
         "name": "יפו - ירושלים",
-        "phone": null
-      }
-    ],
-    "infoVerifiedFrom": "kehilotcard-public-api"
-  },
-  {
-    "id": "biz-210",
-    "name": "אביבית ויצמן פאשן",
-    "cat": "ביגוד נשים",
-    "region": "אשדוד",
-    "perk": "8% הנחה",
-    "benefitText": "8 אחוז הנחה כולל כפל מבצעים",
-    "hours": "יש לבדוק מול הסניף",
-    "addr": "אשדוד",
-    "logo": "/logos/biz-210.jpg",
-    "website": "",
-    "phones": [],
-    "branches": [
-      {
-        "city": "אשדוד",
-        "address": "אשדוד",
-        "name": "אשדוד",
-        "phone": null
-      },
-      {
-        "city": "בית שמש",
-        "address": "בית שמש",
-        "name": "בית שמש",
-        "phone": null
-      },
-      {
-        "city": "קרית אתא",
-        "address": "קרית אתא",
-        "name": "קרית אתא",
         "phone": null
       }
     ],
@@ -628,12 +781,6 @@ export const BENEFITS_BUSINESSES = [
     "website": "https://adorefashion.co.il/",
     "phones": [],
     "branches": [
-      {
-        "city": "לא זמין",
-        "address": "לא זמין",
-        "name": ".",
-        "phone": null
-      },
       {
         "city": "אשדוד",
         "address": "רבי ינאי 7 - מרכזון ביזנס סנטר רובע ז'",
@@ -686,7 +833,7 @@ export const BENEFITS_BUSINESSES = [
   {
     "id": "biz-208",
     "name": "אופטיוויו",
-    "cat": "כללי",
+    "cat": "אופטיקה",
     "region": "בני ברק",
     "perk": "15% הנחה",
     "benefitText": "15 אחוז הנחה",
@@ -805,11 +952,11 @@ export const BENEFITS_BUSINESSES = [
       {
         "city": "בית שמש",
         "address": "בית שמש",
-        "name": "השדרה  - בית שמש",
+        "name": "השדרה - בית שמש",
         "phone": null
       },
       {
-        "city": "ביתר",
+        "city": "ביתר עילית",
         "address": "ביתר",
         "name": "ביתר עילית",
         "phone": null
@@ -987,12 +1134,6 @@ export const BENEFITS_BUSINESSES = [
     "phones": [],
     "branches": [
       {
-        "city": "לא זמין",
-        "address": "לא זמין",
-        "name": "בגיר",
-        "phone": null
-      },
-      {
         "city": "אשדוד",
         "address": "הגדוד העברי 16",
         "name": "אשדוד",
@@ -1045,71 +1186,93 @@ export const BENEFITS_BUSINESSES = [
   },
   {
     "id": "biz-121",
-    "name": "בזאר שטראוס - אלעד",
+    "name": "בזאר שטראוס",
     "cat": "כללי",
-    "region": "אלעד",
+    "region": "כל הארץ",
     "perk": "5% הנחה",
     "benefitText": "5 אחוז הנחה בתשלום בכסף הטעון בכרטיס",
     "hours": "יש לבדוק מול הסניף",
-    "addr": "יהודה הנשיא 94",
+    "addr": "אלעד",
     "logo": "/logos/biz-121.jpeg",
     "website": "https://www.bazars.co.il/",
     "phones": [],
     "branches": [
       {
         "city": "אלעד",
-        "address": "יהודה הנשיא 94",
+        "address": "אלעד",
         "name": "אלעד",
         "phone": null
-      }
-    ],
-    "infoVerifiedFrom": "kehilotcard-public-api"
-  },
-  {
-    "id": "biz-126",
-    "name": "בזאר שטראוס - אשדוד",
-    "cat": "כללי",
-    "region": "אשדוד",
-    "perk": "5% הנחה",
-    "benefitText": "הנחה של 5 אחוז בתשלום באמצעות הכרטיס",
-    "hours": "יש לבדוק מול הסניף",
-    "addr": "רשבי 17",
-    "logo": "/logos/biz-126.jpeg",
-    "website": "https://www.bazars.co.il/",
-    "phones": [],
-    "branches": [
+      },
       {
         "city": "אשדוד",
-        "address": "רשבי 17",
+        "address": "אשדוד",
         "name": "אשדוד",
-        "phone": null
-      }
-    ],
-    "infoVerifiedFrom": "kehilotcard-public-api"
-  },
-  {
-    "id": "biz-131",
-    "name": "בזאר שטראוס - בית שמש",
-    "cat": "כללי",
-    "region": "בית שמש",
-    "perk": "5% הנחה",
-    "benefitText": "5 אחוז הנחה בתשלום באמצעות כסף הטעון בכרטיס",
-    "hours": "יש לבדוק מול הסניף",
-    "addr": "דרך יצחק רבין 2",
-    "logo": "/logos/biz-131.jpeg",
-    "website": "https://www.bazars.co.il/",
-    "phones": [],
-    "branches": [
-      {
-        "city": "בית שמש",
-        "address": "דרך יצחק רבין 2",
-        "name": "דרך יצחק רבין",
         "phone": null
       },
       {
         "city": "בית שמש",
-        "address": "נחל ניצנים 12",
-        "name": "נחל ניצנים",
+        "address": "בית שמש",
+        "name": "בית שמש",
+        "phone": null
+      },
+      {
+        "city": "ביתר עילית",
+        "address": "ביתר עילית",
+        "name": "ביתר",
+        "phone": null
+      },
+      {
+        "city": "בני ברק",
+        "address": "בני ברק",
+        "name": "בני ברק",
+        "phone": null
+      },
+      {
+        "city": "ירושלים",
+        "address": "גאולה",
+        "name": "גאולה",
+        "phone": null
+      },
+      {
+        "city": "ירושלים",
+        "address": "גבעת שאול",
+        "name": "גבעת שאול",
+        "phone": null
+      },
+      {
+        "city": "פסגת זאב",
+        "address": "פסגת זאב",
+        "name": "פסגת זאב",
+        "phone": null
+      },
+      {
+        "city": "מודיעין עילית",
+        "address": "מודיעין עילית",
+        "name": "מודיעין עילית",
+        "phone": null
+      },
+      {
+        "city": "ירושלים",
+        "address": "קניון רמות צעצועים",
+        "name": "קניון רמות צעצועים",
+        "phone": null
+      },
+      {
+        "city": "קריית אתא",
+        "address": "קריית אתא",
+        "name": "קרית אתא",
+        "phone": null
+      },
+      {
+        "city": "ירושלים",
+        "address": "קניון רמות ביגוד",
+        "name": "קניון רמות ביגוד",
+        "phone": null
+      },
+      {
+        "city": "ירושלים",
+        "address": "שטראוס (ירושלים)",
+        "name": "שטראוס (ירושלים)",
         "phone": null
       }
     ],
@@ -1129,9 +1292,81 @@ export const BENEFITS_BUSINESSES = [
     "phones": [],
     "branches": [
       {
+        "city": "אלעד",
+        "address": "אלעד",
+        "name": "אלעד",
+        "phone": null
+      },
+      {
+        "city": "אשדוד",
+        "address": "אשדוד",
+        "name": "אשדוד",
+        "phone": null
+      },
+      {
+        "city": "בית שמש",
+        "address": "בית שמש",
+        "name": "בית שמש",
+        "phone": null
+      },
+      {
         "city": "ביתר עילית",
-        "address": "הרן 7",
-        "name": "ביתר עילית",
+        "address": "ביתר עילית",
+        "name": "ביתר",
+        "phone": null
+      },
+      {
+        "city": "בני ברק",
+        "address": "בני ברק",
+        "name": "בני ברק",
+        "phone": null
+      },
+      {
+        "city": "ירושלים",
+        "address": "גאולה",
+        "name": "גאולה",
+        "phone": null
+      },
+      {
+        "city": "ירושלים",
+        "address": "גבעת שאול",
+        "name": "גבעת שאול",
+        "phone": null
+      },
+      {
+        "city": "פסגת זאב",
+        "address": "פסגת זאב",
+        "name": "פסגת זאב",
+        "phone": null
+      },
+      {
+        "city": "מודיעין עילית",
+        "address": "מודיעין עילית",
+        "name": "מודיעין עילית",
+        "phone": null
+      },
+      {
+        "city": "ירושלים",
+        "address": "קניון רמות צעצועים",
+        "name": "קניון רמות צעצועים",
+        "phone": null
+      },
+      {
+        "city": "קריית אתא",
+        "address": "קריית אתא",
+        "name": "קרית אתא",
+        "phone": null
+      },
+      {
+        "city": "ירושלים",
+        "address": "קניון רמות ביגוד",
+        "name": "קניון רמות ביגוד",
+        "phone": null
+      },
+      {
+        "city": "ירושלים",
+        "address": "שטראוס (ירושלים)",
+        "name": "שטראוס (ירושלים)",
         "phone": null
       }
     ],
@@ -1151,9 +1386,81 @@ export const BENEFITS_BUSINESSES = [
     "phones": [],
     "branches": [
       {
+        "city": "אלעד",
+        "address": "אלעד",
+        "name": "אלעד",
+        "phone": null
+      },
+      {
+        "city": "אשדוד",
+        "address": "אשדוד",
+        "name": "אשדוד",
+        "phone": null
+      },
+      {
+        "city": "בית שמש",
+        "address": "בית שמש",
+        "name": "בית שמש",
+        "phone": null
+      },
+      {
+        "city": "ביתר עילית",
+        "address": "ביתר עילית",
+        "name": "ביתר",
+        "phone": null
+      },
+      {
         "city": "בני ברק",
-        "address": "הרב יעקב לנדא 4",
+        "address": "בני ברק",
         "name": "בני ברק",
+        "phone": null
+      },
+      {
+        "city": "ירושלים",
+        "address": "גאולה",
+        "name": "גאולה",
+        "phone": null
+      },
+      {
+        "city": "ירושלים",
+        "address": "גבעת שאול",
+        "name": "גבעת שאול",
+        "phone": null
+      },
+      {
+        "city": "פסגת זאב",
+        "address": "פסגת זאב",
+        "name": "פסגת זאב",
+        "phone": null
+      },
+      {
+        "city": "מודיעין עילית",
+        "address": "מודיעין עילית",
+        "name": "מודיעין עילית",
+        "phone": null
+      },
+      {
+        "city": "ירושלים",
+        "address": "קניון רמות צעצועים",
+        "name": "קניון רמות צעצועים",
+        "phone": null
+      },
+      {
+        "city": "קריית אתא",
+        "address": "קריית אתא",
+        "name": "קרית אתא",
+        "phone": null
+      },
+      {
+        "city": "ירושלים",
+        "address": "קניון רמות ביגוד",
+        "name": "קניון רמות ביגוד",
+        "phone": null
+      },
+      {
+        "city": "ירושלים",
+        "address": "שטראוס (ירושלים)",
+        "name": "שטראוס (ירושלים)",
         "phone": null
       }
     ],
@@ -1173,9 +1480,81 @@ export const BENEFITS_BUSINESSES = [
     "phones": [],
     "branches": [
       {
+        "city": "אלעד",
+        "address": "אלעד",
+        "name": "אלעד",
+        "phone": null
+      },
+      {
+        "city": "אשדוד",
+        "address": "אשדוד",
+        "name": "אשדוד",
+        "phone": null
+      },
+      {
+        "city": "בית שמש",
+        "address": "בית שמש",
+        "name": "בית שמש",
+        "phone": null
+      },
+      {
+        "city": "ביתר עילית",
+        "address": "ביתר עילית",
+        "name": "ביתר",
+        "phone": null
+      },
+      {
+        "city": "בני ברק",
+        "address": "בני ברק",
+        "name": "בני ברק",
+        "phone": null
+      },
+      {
         "city": "ירושלים",
-        "address": "יחזקאל 11",
-        "name": "יחזקאל - גאולה",
+        "address": "גאולה",
+        "name": "גאולה",
+        "phone": null
+      },
+      {
+        "city": "ירושלים",
+        "address": "גבעת שאול",
+        "name": "גבעת שאול",
+        "phone": null
+      },
+      {
+        "city": "פסגת זאב",
+        "address": "פסגת זאב",
+        "name": "פסגת זאב",
+        "phone": null
+      },
+      {
+        "city": "מודיעין עילית",
+        "address": "מודיעין עילית",
+        "name": "מודיעין עילית",
+        "phone": null
+      },
+      {
+        "city": "ירושלים",
+        "address": "קניון רמות צעצועים",
+        "name": "קניון רמות צעצועים",
+        "phone": null
+      },
+      {
+        "city": "קריית אתא",
+        "address": "קריית אתא",
+        "name": "קרית אתא",
+        "phone": null
+      },
+      {
+        "city": "ירושלים",
+        "address": "קניון רמות ביגוד",
+        "name": "קניון רמות ביגוד",
+        "phone": null
+      },
+      {
+        "city": "ירושלים",
+        "address": "שטראוס (ירושלים)",
+        "name": "שטראוס (ירושלים)",
         "phone": null
       }
     ],
@@ -1195,9 +1574,81 @@ export const BENEFITS_BUSINESSES = [
     "phones": [],
     "branches": [
       {
+        "city": "אלעד",
+        "address": "אלעד",
+        "name": "אלעד",
+        "phone": null
+      },
+      {
+        "city": "אשדוד",
+        "address": "אשדוד",
+        "name": "אשדוד",
+        "phone": null
+      },
+      {
+        "city": "בית שמש",
+        "address": "בית שמש",
+        "name": "בית שמש",
+        "phone": null
+      },
+      {
+        "city": "ביתר עילית",
+        "address": "ביתר עילית",
+        "name": "ביתר",
+        "phone": null
+      },
+      {
+        "city": "בני ברק",
+        "address": "בני ברק",
+        "name": "בני ברק",
+        "phone": null
+      },
+      {
         "city": "ירושלים",
-        "address": "בית הדפוס 9",
-        "name": "ביגוד",
+        "address": "גאולה",
+        "name": "גאולה",
+        "phone": null
+      },
+      {
+        "city": "ירושלים",
+        "address": "גבעת שאול",
+        "name": "גבעת שאול",
+        "phone": null
+      },
+      {
+        "city": "פסגת זאב",
+        "address": "פסגת זאב",
+        "name": "פסגת זאב",
+        "phone": null
+      },
+      {
+        "city": "מודיעין עילית",
+        "address": "מודיעין עילית",
+        "name": "מודיעין עילית",
+        "phone": null
+      },
+      {
+        "city": "ירושלים",
+        "address": "קניון רמות צעצועים",
+        "name": "קניון רמות צעצועים",
+        "phone": null
+      },
+      {
+        "city": "קריית אתא",
+        "address": "קריית אתא",
+        "name": "קרית אתא",
+        "phone": null
+      },
+      {
+        "city": "ירושלים",
+        "address": "קניון רמות ביגוד",
+        "name": "קניון רמות ביגוד",
+        "phone": null
+      },
+      {
+        "city": "ירושלים",
+        "address": "שטראוס (ירושלים)",
+        "name": "שטראוס (ירושלים)",
         "phone": null
       }
     ],
@@ -1217,9 +1668,81 @@ export const BENEFITS_BUSINESSES = [
     "phones": [],
     "branches": [
       {
+        "city": "אלעד",
+        "address": "אלעד",
+        "name": "אלעד",
+        "phone": null
+      },
+      {
+        "city": "אשדוד",
+        "address": "אשדוד",
+        "name": "אשדוד",
+        "phone": null
+      },
+      {
+        "city": "בית שמש",
+        "address": "בית שמש",
+        "name": "בית שמש",
+        "phone": null
+      },
+      {
+        "city": "ביתר עילית",
+        "address": "ביתר עילית",
+        "name": "ביתר",
+        "phone": null
+      },
+      {
+        "city": "בני ברק",
+        "address": "בני ברק",
+        "name": "בני ברק",
+        "phone": null
+      },
+      {
+        "city": "ירושלים",
+        "address": "גאולה",
+        "name": "גאולה",
+        "phone": null
+      },
+      {
+        "city": "ירושלים",
+        "address": "גבעת שאול",
+        "name": "גבעת שאול",
+        "phone": null
+      },
+      {
+        "city": "פסגת זאב",
+        "address": "פסגת זאב",
+        "name": "פסגת זאב",
+        "phone": null
+      },
+      {
         "city": "מודיעין עילית",
-        "address": "רשבי 46",
+        "address": "מודיעין עילית",
         "name": "מודיעין עילית",
+        "phone": null
+      },
+      {
+        "city": "ירושלים",
+        "address": "קניון רמות צעצועים",
+        "name": "קניון רמות צעצועים",
+        "phone": null
+      },
+      {
+        "city": "קריית אתא",
+        "address": "קריית אתא",
+        "name": "קרית אתא",
+        "phone": null
+      },
+      {
+        "city": "ירושלים",
+        "address": "קניון רמות ביגוד",
+        "name": "קניון רמות ביגוד",
+        "phone": null
+      },
+      {
+        "city": "ירושלים",
+        "address": "שטראוס (ירושלים)",
+        "name": "שטראוס (ירושלים)",
         "phone": null
       }
     ],
@@ -1239,9 +1762,81 @@ export const BENEFITS_BUSINESSES = [
     "phones": [],
     "branches": [
       {
+        "city": "אלעד",
+        "address": "אלעד",
+        "name": "אלעד",
+        "phone": null
+      },
+      {
+        "city": "אשדוד",
+        "address": "אשדוד",
+        "name": "אשדוד",
+        "phone": null
+      },
+      {
+        "city": "בית שמש",
+        "address": "בית שמש",
+        "name": "בית שמש",
+        "phone": null
+      },
+      {
+        "city": "ביתר עילית",
+        "address": "ביתר עילית",
+        "name": "ביתר",
+        "phone": null
+      },
+      {
+        "city": "בני ברק",
+        "address": "בני ברק",
+        "name": "בני ברק",
+        "phone": null
+      },
+      {
+        "city": "ירושלים",
+        "address": "גאולה",
+        "name": "גאולה",
+        "phone": null
+      },
+      {
+        "city": "ירושלים",
+        "address": "גבעת שאול",
+        "name": "גבעת שאול",
+        "phone": null
+      },
+      {
         "city": "פסגת זאב",
-        "address": "משה דיין 158",
+        "address": "פסגת זאב",
         "name": "פסגת זאב",
+        "phone": null
+      },
+      {
+        "city": "מודיעין עילית",
+        "address": "מודיעין עילית",
+        "name": "מודיעין עילית",
+        "phone": null
+      },
+      {
+        "city": "ירושלים",
+        "address": "קניון רמות צעצועים",
+        "name": "קניון רמות צעצועים",
+        "phone": null
+      },
+      {
+        "city": "קריית אתא",
+        "address": "קריית אתא",
+        "name": "קרית אתא",
+        "phone": null
+      },
+      {
+        "city": "ירושלים",
+        "address": "קניון רמות ביגוד",
+        "name": "קניון רמות ביגוד",
+        "phone": null
+      },
+      {
+        "city": "ירושלים",
+        "address": "שטראוס (ירושלים)",
+        "name": "שטראוס (ירושלים)",
         "phone": null
       }
     ],
@@ -1261,9 +1856,81 @@ export const BENEFITS_BUSINESSES = [
     "phones": [],
     "branches": [
       {
+        "city": "אלעד",
+        "address": "אלעד",
+        "name": "אלעד",
+        "phone": null
+      },
+      {
+        "city": "אשדוד",
+        "address": "אשדוד",
+        "name": "אשדוד",
+        "phone": null
+      },
+      {
+        "city": "בית שמש",
+        "address": "בית שמש",
+        "name": "בית שמש",
+        "phone": null
+      },
+      {
+        "city": "ביתר עילית",
+        "address": "ביתר עילית",
+        "name": "ביתר",
+        "phone": null
+      },
+      {
+        "city": "בני ברק",
+        "address": "בני ברק",
+        "name": "בני ברק",
+        "phone": null
+      },
+      {
         "city": "ירושלים",
-        "address": "שדרות גולדה מאיר 255",
-        "name": "צעצועים",
+        "address": "גאולה",
+        "name": "גאולה",
+        "phone": null
+      },
+      {
+        "city": "ירושלים",
+        "address": "גבעת שאול",
+        "name": "גבעת שאול",
+        "phone": null
+      },
+      {
+        "city": "פסגת זאב",
+        "address": "פסגת זאב",
+        "name": "פסגת זאב",
+        "phone": null
+      },
+      {
+        "city": "מודיעין עילית",
+        "address": "מודיעין עילית",
+        "name": "מודיעין עילית",
+        "phone": null
+      },
+      {
+        "city": "ירושלים",
+        "address": "קניון רמות צעצועים",
+        "name": "קניון רמות צעצועים",
+        "phone": null
+      },
+      {
+        "city": "קריית אתא",
+        "address": "קריית אתא",
+        "name": "קרית אתא",
+        "phone": null
+      },
+      {
+        "city": "ירושלים",
+        "address": "קניון רמות ביגוד",
+        "name": "קניון רמות ביגוד",
+        "phone": null
+      },
+      {
+        "city": "ירושלים",
+        "address": "שטראוס (ירושלים)",
+        "name": "שטראוס (ירושלים)",
         "phone": null
       }
     ],
@@ -1283,9 +1950,81 @@ export const BENEFITS_BUSINESSES = [
     "phones": [],
     "branches": [
       {
+        "city": "אלעד",
+        "address": "אלעד",
+        "name": "אלעד",
+        "phone": null
+      },
+      {
+        "city": "אשדוד",
+        "address": "אשדוד",
+        "name": "אשדוד",
+        "phone": null
+      },
+      {
+        "city": "בית שמש",
+        "address": "בית שמש",
+        "name": "בית שמש",
+        "phone": null
+      },
+      {
+        "city": "ביתר עילית",
+        "address": "ביתר עילית",
+        "name": "ביתר",
+        "phone": null
+      },
+      {
+        "city": "בני ברק",
+        "address": "בני ברק",
+        "name": "בני ברק",
+        "phone": null
+      },
+      {
+        "city": "ירושלים",
+        "address": "גאולה",
+        "name": "גאולה",
+        "phone": null
+      },
+      {
+        "city": "ירושלים",
+        "address": "גבעת שאול",
+        "name": "גבעת שאול",
+        "phone": null
+      },
+      {
+        "city": "פסגת זאב",
+        "address": "פסגת זאב",
+        "name": "פסגת זאב",
+        "phone": null
+      },
+      {
+        "city": "מודיעין עילית",
+        "address": "מודיעין עילית",
+        "name": "מודיעין עילית",
+        "phone": null
+      },
+      {
+        "city": "ירושלים",
+        "address": "קניון רמות צעצועים",
+        "name": "קניון רמות צעצועים",
+        "phone": null
+      },
+      {
         "city": "קריית אתא",
         "address": "קריית אתא",
-        "name": "קרית אתא קניון כפיר",
+        "name": "קרית אתא",
+        "phone": null
+      },
+      {
+        "city": "ירושלים",
+        "address": "קניון רמות ביגוד",
+        "name": "קניון רמות ביגוד",
+        "phone": null
+      },
+      {
+        "city": "ירושלים",
+        "address": "שטראוס (ירושלים)",
+        "name": "שטראוס (ירושלים)",
         "phone": null
       }
     ],
@@ -1305,9 +2044,81 @@ export const BENEFITS_BUSINESSES = [
     "phones": [],
     "branches": [
       {
+        "city": "אלעד",
+        "address": "אלעד",
+        "name": "אלעד",
+        "phone": null
+      },
+      {
+        "city": "אשדוד",
+        "address": "אשדוד",
+        "name": "אשדוד",
+        "phone": null
+      },
+      {
+        "city": "בית שמש",
+        "address": "בית שמש",
+        "name": "בית שמש",
+        "phone": null
+      },
+      {
+        "city": "ביתר עילית",
+        "address": "ביתר עילית",
+        "name": "ביתר",
+        "phone": null
+      },
+      {
+        "city": "בני ברק",
+        "address": "בני ברק",
+        "name": "בני ברק",
+        "phone": null
+      },
+      {
         "city": "ירושלים",
-        "address": "שטראוס 10",
-        "name": "שטראוס",
+        "address": "גאולה",
+        "name": "גאולה",
+        "phone": null
+      },
+      {
+        "city": "ירושלים",
+        "address": "גבעת שאול",
+        "name": "גבעת שאול",
+        "phone": null
+      },
+      {
+        "city": "פסגת זאב",
+        "address": "פסגת זאב",
+        "name": "פסגת זאב",
+        "phone": null
+      },
+      {
+        "city": "מודיעין עילית",
+        "address": "מודיעין עילית",
+        "name": "מודיעין עילית",
+        "phone": null
+      },
+      {
+        "city": "ירושלים",
+        "address": "קניון רמות צעצועים",
+        "name": "קניון רמות צעצועים",
+        "phone": null
+      },
+      {
+        "city": "קריית אתא",
+        "address": "קריית אתא",
+        "name": "קרית אתא",
+        "phone": null
+      },
+      {
+        "city": "ירושלים",
+        "address": "קניון רמות ביגוד",
+        "name": "קניון רמות ביגוד",
+        "phone": null
+      },
+      {
+        "city": "ירושלים",
+        "address": "שטראוס (ירושלים)",
+        "name": "שטראוס (ירושלים)",
         "phone": null
       }
     ],
@@ -1327,9 +2138,81 @@ export const BENEFITS_BUSINESSES = [
     "phones": [],
     "branches": [
       {
+        "city": "אלעד",
+        "address": "אלעד",
+        "name": "אלעד",
+        "phone": null
+      },
+      {
+        "city": "אשדוד",
+        "address": "אשדוד",
+        "name": "אשדוד",
+        "phone": null
+      },
+      {
+        "city": "בית שמש",
+        "address": "בית שמש",
+        "name": "בית שמש",
+        "phone": null
+      },
+      {
+        "city": "ביתר עילית",
+        "address": "ביתר עילית",
+        "name": "ביתר",
+        "phone": null
+      },
+      {
+        "city": "בני ברק",
+        "address": "בני ברק",
+        "name": "בני ברק",
+        "phone": null
+      },
+      {
         "city": "ירושלים",
-        "address": "גולדה מאיר 255",
+        "address": "גאולה",
+        "name": "גאולה",
+        "phone": null
+      },
+      {
+        "city": "ירושלים",
+        "address": "גבעת שאול",
+        "name": "גבעת שאול",
+        "phone": null
+      },
+      {
+        "city": "פסגת זאב",
+        "address": "פסגת זאב",
+        "name": "פסגת זאב",
+        "phone": null
+      },
+      {
+        "city": "מודיעין עילית",
+        "address": "מודיעין עילית",
+        "name": "מודיעין עילית",
+        "phone": null
+      },
+      {
+        "city": "ירושלים",
+        "address": "קניון רמות צעצועים",
+        "name": "קניון רמות צעצועים",
+        "phone": null
+      },
+      {
+        "city": "קריית אתא",
+        "address": "קריית אתא",
+        "name": "קרית אתא",
+        "phone": null
+      },
+      {
+        "city": "ירושלים",
+        "address": "קניון רמות ביגוד",
         "name": "קניון רמות ביגוד",
+        "phone": null
+      },
+      {
+        "city": "ירושלים",
+        "address": "שטראוס (ירושלים)",
+        "name": "שטראוס (ירושלים)",
         "phone": null
       }
     ],
@@ -1557,12 +2440,6 @@ export const BENEFITS_BUSINESSES = [
     "phones": [],
     "branches": [
       {
-        "city": "לא זמין",
-        "address": "לא זמין",
-        "name": "מיסטייט",
-        "phone": null
-      },
-      {
         "city": "אשדוד",
         "address": "חלפתא 13",
         "name": "אשדוד",
@@ -1708,29 +2585,22 @@ export const BENEFITS_BUSINESSES = [
   {
     "id": "biz-27",
     "name": "דובי יגר שליחויות",
-    "cat": "אחר",
+    "cat": "שירותים לבית ולעסק",
     "region": "כל הארץ",
     "perk": "10% הנחה",
     "benefitText": "10 אחוז הנחה לכל משלוח",
     "hours": "יש לבדוק מול הסניף",
     "addr": "כל הארץ",
-    "logo": "/logos/magic-kass.svg",
+    "logo": "",
     "website": "",
     "phones": [],
-    "branches": [
-      {
-        "city": "לא זמין",
-        "address": "לא זמין",
-        "name": "דובי יגר שליחויות",
-        "phone": null
-      }
-    ],
+    "branches": [],
     "infoVerifiedFrom": "kehilotcard-public-api"
   },
   {
     "id": "biz-18",
     "name": "דפוס sos",
-    "cat": "אחר",
+    "cat": "שירותים לבית ולעסק",
     "region": "בני ברק",
     "perk": "15% + 10% הנחה",
     "benefitText": "5-15 אחוז הנחה 10 אחוז הנחה בהדפסת הזמנות",
@@ -1774,7 +2644,7 @@ export const BENEFITS_BUSINESSES = [
   {
     "id": "biz-218",
     "name": "המכירה לקהילה שלך",
-    "cat": "מזון",
+    "cat": "אוכל ומסעדנות",
     "region": "בני ברק",
     "perk": "5% הנחה",
     "benefitText": "5% הנחה למשלמים עם הכסף הטעון בכרטיס + צבירת נקודות.",
@@ -1838,7 +2708,7 @@ export const BENEFITS_BUSINESSES = [
   {
     "id": "biz-203",
     "name": "המעדניה ליזרוביץ",
-    "cat": "מזון",
+    "cat": "אוכל ומסעדנות",
     "region": "ירושלים",
     "perk": "10% + 20% הנחה",
     "benefitText": "10 אחוז הנחה עד 100 שח, בקניה מעל 100 שח - 20 אחוז הנחה בכל קניה + צבירת נקודות",
@@ -1954,7 +2824,7 @@ export const BENEFITS_BUSINESSES = [
   {
     "id": "biz-202",
     "name": "חמדת הארץ",
-    "cat": "מזון",
+    "cat": "אוכל ומסעדנות",
     "region": "בית שמש",
     "perk": "4% הנחה",
     "benefitText": "4  אחוז הנחה בכל קניה",
@@ -2010,7 +2880,7 @@ export const BENEFITS_BUSINESSES = [
   {
     "id": "biz-184",
     "name": "טמבור פלוס",
-    "cat": "קרמיקה תאורה וכלי בית",
+    "cat": "אלקטרוניקה ותאורה",
     "region": "בית שמש",
     "perk": "7% הנחה",
     "benefitText": "7 אחוז הנחה על כל מוצרי החנות!",
@@ -2072,7 +2942,7 @@ export const BENEFITS_BUSINESSES = [
   {
     "id": "biz-45",
     "name": "כשר פון",
-    "cat": "אלקטרוניק וסלולר",
+    "cat": "סלולר",
     "region": "בני ברק",
     "perk": "10% + 7% הנחה",
     "benefitText": "בקניה עד 300 ש''ח - 10 אחוז הנחה  מעל 300 ש''ח - 7 אחוז הנחה",
@@ -2086,28 +2956,6 @@ export const BENEFITS_BUSINESSES = [
         "city": "בני ברק",
         "address": "רבי עקיבא 88",
         "name": "כשר פון",
-        "phone": null
-      }
-    ],
-    "infoVerifiedFrom": "kehilotcard-public-api"
-  },
-  {
-    "id": "biz-212",
-    "name": "לוסו (LUSSO) בגדי יוקרה לתינוקות ופעוטות",
-    "cat": "כללי",
-    "region": "בני ברק",
-    "perk": "10% הנחה",
-    "benefitText": "10 אחוז הנחה כולל כפל נקודות ההנחה עד פסח",
-    "hours": "יש לבדוק מול הסניף",
-    "addr": "רבי עקיבא 101",
-    "logo": "/logos/biz-212.jpg",
-    "website": "",
-    "phones": [],
-    "branches": [
-      {
-        "city": "בני ברק",
-        "address": "רבי עקיבא 101",
-        "name": "לוסו - בני ברק",
         "phone": null
       }
     ],
@@ -2169,14 +3017,7 @@ export const BENEFITS_BUSINESSES = [
     "logo": "/logos/biz-153.jpg",
     "website": "",
     "phones": [],
-    "branches": [
-      {
-        "city": "כל הארץ",
-        "address": "כל הארץ",
-        "name": "",
-        "phone": null
-      }
-    ],
+    "branches": [],
     "infoVerifiedFrom": "kehilotcard-public-api"
   },
   {
@@ -2214,12 +3055,6 @@ export const BENEFITS_BUSINESSES = [
     "website": "",
     "phones": [],
     "branches": [
-      {
-        "city": "לא זמין",
-        "address": "לא זמין",
-        "name": "ליבוביץ",
-        "phone": null
-      },
       {
         "city": "אלעד",
         "address": "שמעון בן שטח 10",
@@ -2342,223 +3177,59 @@ export const BENEFITS_BUSINESSES = [
     "website": "",
     "phones": [],
     "branches": [
-      {
-        "city": "לא זמין",
-        "address": "לא זמין",
-        "name": "דן טאון",
-        "phone": null
-      },
-      {
-        "city": "אופקים",
-        "address": "אופקים",
-        "name": "אופקים",
-        "phone": null
-      },
-      {
-        "city": "אור יהודה",
-        "address": "אור יהודה",
-        "name": "אור יהודה",
-        "phone": null
-      },
-      {
-        "city": "אלעד",
-        "address": "אלעד",
-        "name": "אלעד",
-        "phone": null
-      },
-      {
-        "city": "אשדוד",
-        "address": "אשדוד",
-        "name": "אשדוד",
-        "phone": null
-      },
-      {
-        "city": "אשקלון",
-        "address": "אשקלון",
-        "name": "אשקלון",
-        "phone": null
-      },
-      {
-        "city": "באר שבע",
-        "address": "באר שבע",
-        "name": "באר שבע",
-        "phone": null
-      },
-      {
-        "city": "בארות יצחק",
-        "address": "בארות יצחק",
-        "name": "בארות יצחק",
-        "phone": null
-      },
-      {
-        "city": "בית שמש",
-        "address": "בית שמש",
-        "name": "בית שמש - רמה ד'",
-        "phone": null
-      },
-      {
-        "city": "ביתר עילית",
-        "address": "ביתר עילית",
-        "name": "ביתר A",
-        "phone": null
-      },
-      {
-        "city": "בני ברק",
-        "address": "בני ברק",
-        "name": "בני ברק - הושע",
-        "phone": null
-      },
-      {
-        "city": "בתי ים",
-        "address": "בתי ים",
-        "name": "בתי ים",
-        "phone": null
-      },
-      {
-        "city": "חדרה",
-        "address": "חדרה",
-        "name": "חדרה",
-        "phone": null
-      },
-      {
-        "city": "חיפה",
-        "address": "חיפה",
-        "name": "חיפה",
-        "phone": null
-      },
-      {
-        "city": "חריש",
-        "address": "חריש",
-        "name": "חריש",
-        "phone": null
-      },
-      {
-        "city": "טבריה",
-        "address": "טבריה",
-        "name": "טבריה",
-        "phone": null
-      },
-      {
-        "city": "ירושלים",
-        "address": "ירושלים",
-        "name": "גאולה",
-        "phone": null
-      },
-      {
-        "city": "ירושלים",
-        "address": "כנפי נשרים",
-        "name": "כנפי נשרים",
-        "phone": null
-      },
-      {
-        "city": "מודיעין עילית",
-        "address": "מודיעין עילית",
-        "name": "ברכפלד",
-        "phone": null
-      },
-      {
-        "city": "נהריה",
-        "address": "נהריה",
-        "name": "קניון נהריה",
-        "phone": null
-      },
-      {
-        "city": "נתיבות",
-        "address": "נתיבות",
-        "name": "נתיבות",
-        "phone": null
-      },
-      {
-        "city": "נתניה",
-        "address": "נתניה",
-        "name": "נתניה",
-        "phone": null
-      },
-      {
-        "city": "עפולה",
-        "address": "עפולה",
-        "name": "עפולה",
-        "phone": null
-      },
-      {
-        "city": "ערד",
-        "address": "ערד",
-        "name": "ערד",
-        "phone": null
-      },
-      {
-        "city": "פסגת זאב",
-        "address": "פסגת זאב",
-        "name": "פסגת זאב",
-        "phone": null
-      },
-      {
-        "city": "פתח תקווה",
-        "address": "פתח תקווה",
-        "name": "פתח תקווה",
-        "phone": null
-      },
-      {
-        "city": "צפת",
-        "address": "צפת",
-        "name": "צפת",
-        "phone": null
-      },
-      {
-        "city": "קרית אתא",
-        "address": "קרית אתא",
-        "name": "קרית אתא",
-        "phone": null
-      },
-      {
-        "city": "קרית גת",
-        "address": "קרית גת",
-        "name": "קרית גת",
-        "phone": null
-      },
-      {
-        "city": "קרית מלאכי",
-        "address": "קרית מלאכי",
-        "name": "קרית מלאכי",
-        "phone": null
-      },
-      {
-        "city": "ראש העין",
-        "address": "ראש העין",
-        "name": "ראש העין",
-        "phone": null
-      },
-      {
-        "city": "ראשון לציון",
-        "address": "ראשון לציון",
-        "name": "ראשון לציון - הזהב",
-        "phone": null
-      },
-      {
-        "city": "רחובות",
-        "address": "רחובות",
-        "name": "רחובות",
-        "phone": null
-      },
-      {
-        "city": "רמלה",
-        "address": "רמלה",
-        "name": "רמלה - עזריאלי",
-        "phone": null
-      },
-      {
-        "city": "רמת השרון",
-        "address": "רמת השרון",
-        "name": "קניון השרון",
-        "phone": null
-      }
+      { "city": "אופקים", "address": "אופקים", "name": "אופקים", "phone": null },
+      { "city": "אור יהודה", "address": "אור יהודה", "name": "אור יהודה", "phone": null },
+      { "city": "אלעד", "address": "אלעד", "name": "אלעד", "phone": null },
+      { "city": "אשדוד", "address": "אשדוד", "name": "אשדוד", "phone": null },
+      { "city": "אשדוד", "address": "אשדוד", "name": "אשדוד - הרב לוין", "phone": null },
+      { "city": "אשקלון", "address": "אשקלון", "name": "אשקלון", "phone": null },
+      { "city": "באר שבע", "address": "באר שבע", "name": "באר שבע", "phone": null },
+      { "city": "בארות יצחק", "address": "בארות יצחק", "name": "בארות יצחק", "phone": null },
+      { "city": "בית שמש", "address": "בית שמש", "name": "בית שמש - רמה ד'", "phone": null },
+      { "city": "בית שמש", "address": "בית שמש", "name": "בית שמש א'", "phone": null },
+      { "city": "בית שמש", "address": "בית שמש", "name": "לב הרמה", "phone": null },
+      { "city": "בית שמש", "address": "בית שמש", "name": "סאן מול", "phone": null },
+      { "city": "בית שמש", "address": "בית שמש", "name": "קניון נעימי", "phone": null },
+      { "city": "ביתר עילית", "address": "ביתר עילית", "name": "ביתר A", "phone": null },
+      { "city": "ביתר עילית", "address": "ביתר עילית", "name": "ביתר B", "phone": null },
+      { "city": "בני ברק", "address": "בני ברק", "name": "בני ברק - הושע", "phone": null },
+      { "city": "בני ברק", "address": "בני ברק", "name": "בני ברק - כהנמן", "phone": null },
+      { "city": "בני ברק", "address": "בני ברק", "name": "בני ברק - רבי עקיבא", "phone": null },
+      { "city": "בתי ים", "address": "בתי ים", "name": "בתי ים", "phone": null },
+      { "city": "חדרה", "address": "חדרה", "name": "חדרה", "phone": null },
+      { "city": "חיפה", "address": "חיפה", "name": "חיפה", "phone": null },
+      { "city": "חריש", "address": "חריש", "name": "חריש", "phone": null },
+      { "city": "טבריה", "address": "טבריה", "name": "טבריה", "phone": null },
+      { "city": "ירושלים", "address": "ירושלים", "name": "גאולה", "phone": null },
+      { "city": "ירושלים", "address": "כנפי נשרים", "name": "כנפי נשרים", "phone": null },
+      { "city": "ירושלים", "address": "ירושלים", "name": "קניון מלחה", "phone": null },
+      { "city": "ירושלים", "address": "ירושלים", "name": "קניון רמות", "phone": null },
+      { "city": "מודיעין עילית", "address": "מודיעין עילית", "name": "ברכפלד", "phone": null },
+      { "city": "מודיעין עילית", "address": "מודיעין עילית", "name": "קרית ספר", "phone": null },
+      { "city": "נהריה", "address": "נהריה", "name": "קניון נהריה", "phone": null },
+      { "city": "נתיבות", "address": "נתיבות", "name": "נתיבות", "phone": null },
+      { "city": "נתניה", "address": "נתניה", "name": "נתניה", "phone": null },
+      { "city": "עפולה", "address": "עפולה", "name": "עפולה", "phone": null },
+      { "city": "ערד", "address": "ערד", "name": "ערד", "phone": null },
+      { "city": "פסגת זאב", "address": "פסגת זאב", "name": "פסגת זאב", "phone": null },
+      { "city": "פתח תקווה", "address": "פתח תקווה", "name": "פתח תקווה", "phone": null },
+      { "city": "פתח תקווה", "address": "פתח תקווה", "name": "קניון סירקיון", "phone": null },
+      { "city": "צפת", "address": "צפת", "name": "צפת", "phone": null },
+      { "city": "קרית אתא", "address": "קרית אתא", "name": "קרית אתא", "phone": null },
+      { "city": "קרית גת", "address": "קרית גת", "name": "קרית גת", "phone": null },
+      { "city": "קרית מלאכי", "address": "קרית מלאכי", "name": "קרית מלאכי", "phone": null },
+      { "city": "ראש העין", "address": "ראש העין", "name": "ראש העין", "phone": null },
+      { "city": "ראשון לציון", "address": "ראשון לציון", "name": "ראשון לציון - הזהב", "phone": null },
+      { "city": "רחובות", "address": "רחובות", "name": "רחובות", "phone": null },
+      { "city": "רמלה", "address": "רמלה", "name": "רמלה - עזריאלי", "phone": null },
+      { "city": "רמת השרון", "address": "רמת השרון", "name": "קניון השרון", "phone": null }
     ],
     "infoVerifiedFrom": "kehilotcard-public-api"
   },
   {
     "id": "biz-34",
     "name": "לייביש טשונט",
-    "cat": "מזון",
+    "cat": "אוכל ומסעדנות",
     "region": "בני ברק",
     "perk": "15% הנחה",
     "benefitText": "15 אחוז הנחה",
@@ -2568,12 +3239,6 @@ export const BENEFITS_BUSINESSES = [
     "website": "",
     "phones": [],
     "branches": [
-      {
-        "city": "לא זמין",
-        "address": "לא זמין",
-        "name": "לייביש",
-        "phone": null
-      },
       {
         "city": "בני ברק",
         "address": "רבי טרפון 4",
@@ -2586,7 +3251,7 @@ export const BENEFITS_BUSINESSES = [
   {
     "id": "biz-216",
     "name": "ליל שישי בגג",
-    "cat": "מזון",
+    "cat": "אוכל ומסעדנות",
     "region": "בני ברק",
     "perk": "10 שקל הנחה על כל קניה של 50 שקל + צבירת נקודות",
     "benefitText": "10 שקל הנחה על כל קניה של 50 שקל + צבירת נקודות",
@@ -2614,7 +3279,7 @@ export const BENEFITS_BUSINESSES = [
   {
     "id": "biz-220",
     "name": "מאפיית קציר חיטים",
-    "cat": "מזון",
+    "cat": "אוכל ומסעדנות",
     "region": "בני ברק",
     "perk": "10% הנחה",
     "benefitText": "10 אחוז הנחה מעל  ש\"ח כולל כפל מבצעים וצבירת נקודות",
@@ -2640,31 +3305,9 @@ export const BENEFITS_BUSINESSES = [
     "infoVerifiedFrom": "kehilotcard-public-api"
   },
   {
-    "id": "biz-214",
-    "name": "מחסני קרעסטיר",
-    "cat": "מזון",
-    "region": "בני ברק",
-    "perk": "4.00% הנחה",
-    "benefitText": "4.00 אחוז הנחה בכל קניה",
-    "hours": "יש לבדוק מול הסניף",
-    "addr": "בר יוחאי 9",
-    "logo": "/logos/biz-214.jpg",
-    "website": "",
-    "phones": [],
-    "branches": [
-      {
-        "city": "בני ברק",
-        "address": "בר יוחאי 9",
-        "name": "מחסני קרעסטיר - בני ברק",
-        "phone": null
-      }
-    ],
-    "infoVerifiedFrom": "kehilotcard-public-api"
-  },
-  {
     "id": "biz-97",
     "name": "מטאל - סלולר כשר",
-    "cat": "אלקטרוניק וסלולר",
+    "cat": "סלולר",
     "region": "ירושלים",
     "perk": "12% הנחה",
     "benefitText": "12 אחוז הנחה על הפלאפון החדש רב המכר V4 - יתרונות: חזק ואיכותי ממתכת, סוללה עוצמתית, נוח לאחיזה, מקשים נוחים, טעינה טייפ סי ועוד.       https://metal-call.com/. ניתן לקבל את ההנחה באתר באמצעות קוד קופון \"קהילות\"",
@@ -2718,54 +3361,18 @@ export const BENEFITS_BUSINESSES = [
     "website": "",
     "phones": [],
     "branches": [
-      {
-        "city": "לא זמין",
-        "address": "לא זמין",
-        "name": "בדיקות והדרכות",
-        "phone": null
-      },
-      {
-        "city": "אשדוד",
-        "address": "אשדוד",
-        "name": "אשדוד",
-        "phone": null
-      },
-      {
-        "city": "בית שמש",
-        "address": "בית שמש",
-        "name": "ביג פאשן",
-        "phone": null
-      },
-      {
-        "city": "בני ברק",
-        "address": "בני ברק",
-        "name": "מרכז רימונים",
-        "phone": null
-      },
-      {
-        "city": "ירושלים",
-        "address": "ירושלים",
-        "name": "גאולה",
-        "phone": null
-      },
-      {
-        "city": "מודיעין עילית",
-        "address": "מודיעין עילית",
-        "name": "קרית ספר",
-        "phone": null
-      },
-      {
-        "city": "נתיבות",
-        "address": "נתיבות",
-        "name": "נתיבות",
-        "phone": null
-      },
-      {
-        "city": "קרית אתא",
-        "address": "קרית אתא",
-        "name": "קניון כפיר",
-        "phone": null
-      }
+      { "city": "אשדוד", "address": "אשדוד", "name": "אשדוד", "phone": null },
+      { "city": "בית שמש", "address": "בית שמש", "name": "ביג פאשן", "phone": null },
+      { "city": "בית שמש", "address": "בית שמש", "name": "קניון סאן מאל", "phone": null },
+      { "city": "בני ברק", "address": "בני ברק", "name": "מרכז רימונים", "phone": null },
+      { "city": "בני ברק", "address": "רבי עקיבא", "name": "רבי עקיבא", "phone": null },
+      { "city": "ירושלים", "address": "גאולה", "name": "גאולה", "phone": null },
+      { "city": "ירושלים", "address": "גבעת שאול", "name": "גבעת שאול", "phone": null },
+      { "city": "ירושלים", "address": "קניון סנטר 1", "name": "קניון סנטר 1", "phone": null },
+      { "city": "ירושלים", "address": "קניון רמות", "name": "קניון רמות", "phone": null },
+      { "city": "מודיעין עילית", "address": "מודיעין עילית", "name": "קרית ספר", "phone": null },
+      { "city": "נתיבות", "address": "נתיבות", "name": "נתיבות", "phone": null },
+      { "city": "קרית אתא", "address": "קרית אתא", "name": "קניון כפיר", "phone": null }
     ],
     "infoVerifiedFrom": "kehilotcard-public-api"
   },
@@ -2792,58 +3399,6 @@ export const BENEFITS_BUSINESSES = [
     "infoVerifiedFrom": "kehilotcard-public-api"
   },
   {
-    "id": "biz-211",
-    "name": "משביר לעמו",
-    "cat": "מזון",
-    "region": "בני ברק",
-    "perk": "3% הנחה",
-    "benefitText": "3 אחוז הנחה בכל קניה.",
-    "hours": "יש לבדוק מול הסניף",
-    "addr": "בני ברק",
-    "logo": "/logos/biz-211.jpg",
-    "website": "",
-    "phones": [],
-    "branches": [
-      {
-        "city": "לא זמין",
-        "address": "לא זמין",
-        "name": "גבעת פנחס",
-        "phone": null
-      },
-      {
-        "city": "בני ברק",
-        "address": "אברבנאל 101",
-        "name": "אברבנאל - בני ברק",
-        "phone": null
-      },
-      {
-        "city": "בני ברק",
-        "address": "ירושלים 9",
-        "name": "ירושלים - בני ברק",
-        "phone": null
-      },
-      {
-        "city": "בני ברק",
-        "address": "משה פרדו 1",
-        "name": "משה פרדו - בני ברק",
-        "phone": null
-      },
-      {
-        "city": "בני ברק",
-        "address": "נחמיה 8",
-        "name": "נחמיה - בני ברק",
-        "phone": null
-      },
-      {
-        "city": "בני ברק",
-        "address": "רבי עקיבא 142",
-        "name": "רבי עקיבא - בני ברק",
-        "phone": null
-      }
-    ],
-    "infoVerifiedFrom": "kehilotcard-public-api"
-  },
-  {
     "id": "biz-88",
     "name": "משכן התכלת",
     "cat": "תשמישי קדושה",
@@ -2856,144 +3411,20 @@ export const BENEFITS_BUSINESSES = [
     "website": "https://mishkan-hatchelet.co.il/",
     "phones": [],
     "branches": [
-      {
-        "city": "לא זמין",
-        "address": "לא זמין",
-        "name": "אשדוד - הבנים",
-        "phone": null
-      },
-      {
-        "city": "אלעד",
-        "address": "הלל 9",
-        "name": "אלעד",
-        "phone": null
-      },
-      {
-        "city": "אשקלון",
-        "address": "אשקלון",
-        "name": "אשקלון",
-        "phone": null
-      },
-      {
-        "city": "באר שבע",
-        "address": "באר שבע",
-        "name": "באר שבע - החלוץ",
-        "phone": null
-      },
-      {
-        "city": "בית שמש",
-        "address": "אמוראים 30",
-        "name": "בית שמש - אמוראים",
-        "phone": null
-      },
-      {
-        "city": "בית שמש",
-        "address": "בית שמש",
-        "name": "יצחק רבין - בית שמש",
-        "phone": null
-      },
-      {
-        "city": "בית שמש",
-        "address": "מנחם פורוש 1",
-        "name": "מנחם פורוש - בית שמש",
-        "phone": null
-      },
-      {
-        "city": "ביתר",
-        "address": "ביתר",
-        "name": "ביתר עילית הרן",
-        "phone": null
-      },
-      {
-        "city": "בני ברק",
-        "address": "חזון איש",
-        "name": "בני ברק - חזון איש",
-        "phone": null
-      },
-      {
-        "city": "בני ברק",
-        "address": "בני ברק",
-        "name": "בני ברק - רבי עקיבא 109",
-        "phone": null
-      },
-      {
-        "city": "בני ברק",
-        "address": "רבי עקיבא 86",
-        "name": "רבי עקיבא - 86",
-        "phone": null
-      },
-      {
-        "city": "בני ברק",
-        "address": "רבי עקיבא 34",
-        "name": "רבי עקיבא 34",
-        "phone": null
-      },
-      {
-        "city": "בני ברק",
-        "address": "רבי עקיבא 65",
-        "name": "רבי עקיבא 65",
-        "phone": null
-      },
-      {
-        "city": "ירושלים",
-        "address": "ירושלים",
-        "name": "ירושלים  יצחק שולאל",
-        "phone": null
-      },
-      {
-        "city": "ירושלים",
-        "address": "מלכי ישראל 26",
-        "name": "ירושלים- מלכי ישראל",
-        "phone": null
-      },
-      {
-        "city": "מודיעין עילית",
-        "address": "מודיעין עילית",
-        "name": "מודיעין עילית מסילת יוסף",
-        "phone": null
-      },
-      {
-        "city": "נתיבות",
-        "address": "נתיבות",
-        "name": "נתיבות",
-        "phone": null
-      },
-      {
-        "city": "נתניה",
-        "address": "נתניה",
-        "name": "נתניה - ויצמן",
-        "phone": null
-      },
-      {
-        "city": "פתח תקווה",
-        "address": "העצמאות 65",
-        "name": "פתח תקווה",
-        "phone": null
-      },
-      {
-        "city": "פתח תקווה",
-        "address": "פתח תקווה",
-        "name": "פתח תקווה",
-        "phone": null
-      },
-      {
-        "city": "צפת",
-        "address": "צפת",
-        "name": "צפת",
-        "phone": null
-      },
-      {
-        "city": "קריית אתא",
-        "address": "קריית אתא",
-        "name": "קרית אתא",
-        "phone": null
-      },
-      {
-        "city": "קרית מלאכי",
-        "address": "קרית מלאכי",
-        "name": "קרית מלאכי",
-        "phone": null
-      }
+      { "city": "אלעד", "address": "הלל 9", "name": "אלעד", "phone": null },
+      { "city": "אשקלון", "address": "אשקלון", "name": "אשקלון", "phone": null },
+      { "city": "באר שבע", "address": "באר שבע", "name": "באר שבע - החלוץ", "phone": null },
+      { "city": "בית שמש", "address": "אמוראים 30", "name": "בית שמש - אמוראים", "phone": null },
+      { "city": "ביתר עילית", "address": "ביתר", "name": "ביתר עילית", "phone": null },
+      { "city": "בני ברק", "address": "חזון איש", "name": "בני ברק - חזון איש", "phone": null },
+      { "city": "בני ברק", "address": "בני ברק", "name": "בני ברק - רבי עקיבא 109", "phone": null },
+      { "city": "ירושלים", "address": "מלכי ישראל 26", "name": "ירושלים - מלכי ישראל", "phone": null },
+      { "city": "מודיעין עילית", "address": "מודיעין עילית", "name": "מודיעין עילית מסילת יוסף", "phone": null },
+      { "city": "נתניה", "address": "נתניה", "name": "נתניה - ויצמן", "phone": null },
+      { "city": "פתח תקווה", "address": "העצמאות 65", "name": "פתח תקווה", "phone": null },
+      { "city": "צפת", "address": "צפת", "name": "צפת", "phone": null },
+      { "city": "קרית אתא", "address": "קריית אתא", "name": "קרית אתא", "phone": null },
+      { "city": "קרית מלאכי", "address": "קרית מלאכי", "name": "קרית מלאכי", "phone": null }
     ],
     "infoVerifiedFrom": "kehilotcard-public-api"
   },
@@ -3190,7 +3621,7 @@ export const BENEFITS_BUSINESSES = [
     "benefitText": "7 אחוז הנחה בכל קניה כולל כפל הנחות חנות",
     "hours": "יש לבדוק מול הסניף",
     "addr": "יחזקאל הנביא 24",
-    "logo": "/logos/magic-kass.svg",
+    "logo": "",
     "website": "",
     "phones": [],
     "branches": [
@@ -3206,7 +3637,7 @@ export const BENEFITS_BUSINESSES = [
   {
     "id": "biz-15",
     "name": "נתי קלמן ביטוח",
-    "cat": "ביטוחים",
+    "cat": "שירותים לבית ולעסק",
     "region": "כל הארץ",
     "perk": "30 ש\"ח למליון לפוליסה זוגית בביטוח חיים - יש להרשם באתר איגוד בוגרי הישי...",
     "benefitText": "30 ש\"ח למליון לפוליסה זוגית בביטוח חיים - יש להרשם באתר איגוד בוגרי הישיבות https://igud.kehilotcard.co.il/",
@@ -3215,20 +3646,13 @@ export const BENEFITS_BUSINESSES = [
     "logo": "/logos/biz-15.png",
     "website": "https://igud.kehilotcard.co.il/",
     "phones": [],
-    "branches": [
-      {
-        "city": "לא זמין",
-        "address": "לא זמין",
-        "name": "נתי קלמן ביטוח",
-        "phone": null
-      }
-    ],
+    "branches": [],
     "infoVerifiedFrom": "kehilotcard-public-api"
   },
   {
     "id": "biz-149",
     "name": "סלולארג'",
-    "cat": "אלקטרוניק וסלולר",
+    "cat": "סלולר",
     "region": "בני ברק",
     "perk": "10% הנחה",
     "benefitText": "10 אחוז",
@@ -3259,14 +3683,7 @@ export const BENEFITS_BUSINESSES = [
     "logo": "/logos/biz-150.png",
     "website": "https://www.gitlerbooks.co.il/",
     "phones": [],
-    "branches": [
-      {
-        "city": "כל הארץ",
-        "address": "כל הארץ",
-        "name": "",
-        "phone": null
-      }
-    ],
+    "branches": [],
     "infoVerifiedFrom": "kehilotcard-public-api"
   },
   {
@@ -3429,14 +3846,7 @@ export const BENEFITS_BUSINESSES = [
     "logo": "/logos/biz-181.jpg",
     "website": "",
     "phones": [],
-    "branches": [
-      {
-        "city": "כל הארץ",
-        "address": "כל הארץ",
-        "name": "",
-        "phone": null
-      }
-    ],
+    "branches": [],
     "infoVerifiedFrom": "kehilotcard-public-api"
   },
   {
@@ -3476,7 +3886,7 @@ export const BENEFITS_BUSINESSES = [
   {
     "id": "biz-138",
     "name": "פוד אפיל",
-    "cat": "קרמיקה תאורה וכלי בית",
+    "cat": "מצעים וכלי בית",
     "region": "כל הארץ",
     "perk": "15% הנחה",
     "benefitText": "15 אחוז הנחה כולל כפל מבצעי חנות - יש לבקש מהמוכר להעביר את הכרטיס במערכת מולטיפס",
@@ -3485,14 +3895,7 @@ export const BENEFITS_BUSINESSES = [
     "logo": "/logos/biz-138.png",
     "website": "",
     "phones": [],
-    "branches": [
-      {
-        "city": "לא זמין",
-        "address": "לא זמין",
-        "name": "אשקלון מבקעים",
-        "phone": null
-      }
-    ],
+    "branches": [],
     "infoVerifiedFrom": "kehilotcard-public-api"
   },
   {
@@ -3520,7 +3923,7 @@ export const BENEFITS_BUSINESSES = [
   {
     "id": "biz-64",
     "name": "פינת הגלידה",
-    "cat": "מזון",
+    "cat": "אוכל ומסעדנות",
     "region": "אלעד",
     "perk": "10% הנחה",
     "benefitText": "10 אחוז הנחה",
@@ -3572,7 +3975,7 @@ export const BENEFITS_BUSINESSES = [
   {
     "id": "biz-117",
     "name": "פיצה שמש",
-    "cat": "מזון",
+    "cat": "אוכל ומסעדנות",
     "region": "אופקים",
     "perk": "9% הנחה",
     "benefitText": "9 אחוז הנחה . ההנחה בתשלום בכסף הטעון בכרטיס בלבד!, יש לדרוש מהמוכר להעביר את הכרטיס במערכת מולטיפס.    טעינת הכרטיס מתבצעת באזור האישי בקו הטלפון 083136541, באתר ובעמדות קהילות",
@@ -3584,462 +3987,80 @@ export const BENEFITS_BUSINESSES = [
       "083136541"
     ],
     "branches": [
-      {
-        "city": "לא זמין",
-        "address": "לא זמין",
-        "name": "דוחות אוטומטיים",
-        "phone": "083136541"
-      },
-      {
-        "city": "אופקים",
-        "address": "אופקים",
-        "name": "אופקים",
-        "phone": "083136541"
-      },
-      {
-        "city": "אור יהודה",
-        "address": "אור יהודה",
-        "name": "אור יהודה",
-        "phone": "083136541"
-      },
-      {
-        "city": "אור עקיבא",
-        "address": "אור עקיבא",
-        "name": "אור עקיבא",
-        "phone": "083136541"
-      },
-      {
-        "city": "אזור",
-        "address": "אזור",
-        "name": "אזור",
-        "phone": "083136541"
-      },
-      {
-        "city": "אילת",
-        "address": "אילת",
-        "name": "אילת",
-        "phone": "083136541"
-      },
-      {
-        "city": "אלעד",
-        "address": "אלעד",
-        "name": "אלעד",
-        "phone": "083136541"
-      },
-      {
-        "city": "אפרת",
-        "address": "אפרת",
-        "name": "אפרת",
-        "phone": "083136541"
-      },
-      {
-        "city": "אשדוד",
-        "address": "אשדוד",
-        "name": "אשדוד",
-        "phone": "083136541"
-      },
-      {
-        "city": "אשקלון",
-        "address": "אשקלון",
-        "name": "אשקלון",
-        "phone": "083136541"
-      },
-      {
-        "city": "באר יעקב",
-        "address": "באר יעקב",
-        "name": "באר יעקב",
-        "phone": "083136541"
-      },
-      {
-        "city": "באר שבע",
-        "address": "באר שבע",
-        "name": "באר שבע",
-        "phone": "083136541"
-      },
-      {
-        "city": "בית קמה",
-        "address": "בית קמה",
-        "name": "בית קמה",
-        "phone": "083136541"
-      },
-      {
-        "city": "בית שמש",
-        "address": "בית שמש",
-        "name": "בית שמש רבין",
-        "phone": "083136541"
-      },
-      {
-        "city": "ביתר עילית",
-        "address": "ביתר עילית",
-        "name": "ביתר עילית",
-        "phone": "083136541"
-      },
-      {
-        "city": "ביתר עלית",
-        "address": "ביתר עלית",
-        "name": "ביתר עלית",
-        "phone": "083136541"
-      },
-      {
-        "city": "בני ברק",
-        "address": "בני ברק",
-        "name": "בני ברק - יצחק מאיר הכהן",
-        "phone": "083136541"
-      },
-      {
-        "city": "בת ים",
-        "address": "בת ים",
-        "name": "בת ים",
-        "phone": "083136541"
-      },
-      {
-        "city": "גבעת שמואל",
-        "address": "גבעת שמואל",
-        "name": "גבעת שמואל",
-        "phone": "083136541"
-      },
-      {
-        "city": "גבעתיים",
-        "address": "גבעתיים",
-        "name": "גבעתיים",
-        "phone": "083136541"
-      },
-      {
-        "city": "גדרה",
-        "address": "גדרה",
-        "name": "גדרה",
-        "phone": "083136541"
-      },
-      {
-        "city": "גן יבנה",
-        "address": "גן יבנה",
-        "name": "גן יבנה",
-        "phone": "083136541"
-      },
-      {
-        "city": "גני תקווה",
-        "address": "גני תקווה",
-        "name": "גני תקווה",
-        "phone": "083136541"
-      },
-      {
-        "city": "דימונה",
-        "address": "דימונה",
-        "name": "דימונה",
-        "phone": "083136541"
-      },
-      {
-        "city": "הוד השרון",
-        "address": "הוד השרון",
-        "name": "הוד השרון",
-        "phone": "083136541"
-      },
-      {
-        "city": "הרצליה",
-        "address": "הרצליה",
-        "name": "הרצליה",
-        "phone": "083136541"
-      },
-      {
-        "city": "חדרה",
-        "address": "חדרה",
-        "name": "חדרה",
-        "phone": "083136541"
-      },
-      {
-        "city": "חולון",
-        "address": "חולון",
-        "name": "גולדה מאיר חולון",
-        "phone": "083136541"
-      },
-      {
-        "city": "חיפה",
-        "address": "חיפה",
-        "name": "חיפה גאלה",
-        "phone": "083136541"
-      },
-      {
-        "city": "חריש",
-        "address": "חריש",
-        "name": "חריש",
-        "phone": "083136541"
-      },
-      {
-        "city": "טבריה",
-        "address": "טבריה",
-        "name": "טבריה",
-        "phone": "083136541"
-      },
-      {
-        "city": "טירת הכרמל",
-        "address": "טירת הכרמל",
-        "name": "טירת הכרמל",
-        "phone": "083136541"
-      },
-      {
-        "city": "יבנה",
-        "address": "יבנה",
-        "name": "יבנה",
-        "phone": "083136541"
-      },
-      {
-        "city": "יהוד",
-        "address": "יהוד",
-        "name": "יהוד",
-        "phone": "083136541"
-      },
-      {
-        "city": "יפו",
-        "address": "יפו",
-        "name": "יפו",
-        "phone": "083136541"
-      },
-      {
-        "city": "ירושלים",
-        "address": "ירושלים",
-        "name": "בית וגן ירושלים",
-        "phone": "083136541"
-      },
-      {
-        "city": "כפר חבד",
-        "address": "כפר חבד",
-        "name": "כפר חבד",
-        "phone": "083136541"
-      },
-      {
-        "city": "כפר סבא",
-        "address": "כפר סבא",
-        "name": "כפר סבא",
-        "phone": "083136541"
-      },
-      {
-        "city": "כרמיאל",
-        "address": "כרמיאל",
-        "name": "כרמיאל",
-        "phone": "083136541"
-      },
-      {
-        "city": "לוד",
-        "address": "לוד",
-        "name": "לוד",
-        "phone": "083136541"
-      },
-      {
-        "city": "מגדל העמק",
-        "address": "מגדל העמק",
-        "name": "מגדל העמק",
-        "phone": "083136541"
-      },
-      {
-        "city": "מודיעין",
-        "address": "מודיעין",
-        "name": "מודיעין",
-        "phone": "083136541"
-      },
-      {
-        "city": "מודיעין עילית",
-        "address": "מודיעין עילית",
-        "name": "מודיעין עילית",
-        "phone": "083136541"
-      },
-      {
-        "city": "מישור אדומים",
-        "address": "מישור אדומים",
-        "name": "מישור אדומים",
-        "phone": "083136541"
-      },
-      {
-        "city": "מעלה אדומים",
-        "address": "מעלה אדומים",
-        "name": "מעלה אדומים",
-        "phone": "083136541"
-      },
-      {
-        "city": "מצפה רמון",
-        "address": "מצפה רמון",
-        "name": "מצפה רמון",
-        "phone": "083136541"
-      },
-      {
-        "city": "נהריה",
-        "address": "נהריה",
-        "name": "נהריה",
-        "phone": "083136541"
-      },
-      {
-        "city": "נס ציונה",
-        "address": "נס ציונה",
-        "name": "נס ציונה",
-        "phone": "083136541"
-      },
-      {
-        "city": "נתיבות",
-        "address": "נתיבות",
-        "name": "נתיבות",
-        "phone": "083136541"
-      },
-      {
-        "city": "נתניה",
-        "address": "נתניה",
-        "name": "נתניה - הרצל",
-        "phone": "083136541"
-      },
-      {
-        "city": "עפולה",
-        "address": "עפולה",
-        "name": "עפולה",
-        "phone": "083136541"
-      },
-      {
-        "city": "ערד",
-        "address": "ערד",
-        "name": "ערד",
-        "phone": "083136541"
-      },
-      {
-        "city": "פתח תקווה",
-        "address": "ברון הירש",
-        "name": "פתח תקווה",
-        "phone": "083136541"
-      },
-      {
-        "city": "צפת",
-        "address": "צפת",
-        "name": "צפת",
-        "phone": "083136541"
-      },
-      {
-        "city": "קריית אונו",
-        "address": "קריית אונו",
-        "name": "קריית אונו",
-        "phone": "083136541"
-      },
-      {
-        "city": "קריית אתא",
-        "address": "קריית אתא",
-        "name": "קריית אתא",
-        "phone": "083136541"
-      },
-      {
-        "city": "קריית ביאליק",
-        "address": "קריית ביאליק",
-        "name": "קריית ביאליק",
-        "phone": "083136541"
-      },
-      {
-        "city": "קריית גת",
-        "address": "קריית גת",
-        "name": "קריית גת",
-        "phone": "083136541"
-      },
-      {
-        "city": "קריית מוצקין",
-        "address": "קריית מוצקין",
-        "name": "קריית מוצקין",
-        "phone": "083136541"
-      },
-      {
-        "city": "קריית שמונה",
-        "address": "קריית שמונה",
-        "name": "קריית שמונה",
-        "phone": "083136541"
-      },
-      {
-        "city": "קרית חיים",
-        "address": "קרית חיים",
-        "name": "קרית חיים",
-        "phone": "083136541"
-      },
-      {
-        "city": "קרית ים",
-        "address": "קרית ים",
-        "name": "קרית ים",
-        "phone": "083136541"
-      },
-      {
-        "city": "קרית מלאכי",
-        "address": "קרית מלאכי",
-        "name": "קרית מלאכי",
-        "phone": "083136541"
-      },
-      {
-        "city": "קרני שומרון",
-        "address": "הגפן 1",
-        "name": "קרני שומרון",
-        "phone": "083136541"
-      },
-      {
-        "city": "ראש העין",
-        "address": "ראש העין",
-        "name": "ראש העין",
-        "phone": "083136541"
-      },
-      {
-        "city": "ראשון לציון",
-        "address": "ראשון לציון",
-        "name": "אלוויט ראשון לציון משה בקר",
-        "phone": "083136541"
-      },
-      {
-        "city": "רחובות",
-        "address": "רחובות",
-        "name": "רחובות",
-        "phone": "083136541"
-      },
-      {
-        "city": "רמלה",
-        "address": "רמלה",
-        "name": "רמלה - יוספטל",
-        "phone": "083136541"
-      },
-      {
-        "city": "רמת גן",
-        "address": "רמת גן",
-        "name": "רמת גן",
-        "phone": "083136541"
-      },
-      {
-        "city": "רמת הגולן",
-        "address": "רמת הגולן",
-        "name": "קניון לב קצרין",
-        "phone": "083136541"
-      },
-      {
-        "city": "רעננה",
-        "address": "אחוזה 100",
-        "name": "רעננה - אחוזה",
-        "phone": "083136541"
-      },
-      {
-        "city": "שדרות",
-        "address": "שדרות",
-        "name": "שדרות",
-        "phone": "083136541"
-      },
-      {
-        "city": "שוהם",
-        "address": "שוהם",
-        "name": "שוהם",
-        "phone": "083136541"
-      },
-      {
-        "city": "תל אביב",
-        "address": "תל אביב",
-        "name": "גולדה תל אביב",
-        "phone": "083136541"
-      },
-      {
-        "city": "תל אביב",
-        "address": "יהודה הלוי 49",
-        "name": "תל אביב - יהודה הלוי",
-        "phone": "083136541"
-      },
-      {
-        "city": "תל מונד",
-        "address": "תל מונד",
-        "name": "תל מונד",
-        "phone": "083136541"
-      }
+      { "city": "אופקים", "address": "אופקים", "name": "אופקים", "phone": "083136541" },
+      { "city": "אור יהודה", "address": "אור יהודה", "name": "אור יהודה", "phone": "083136541" },
+      { "city": "אור עקיבא", "address": "אור עקיבא", "name": "אור עקיבא", "phone": "083136541" },
+      { "city": "אזור", "address": "אזור", "name": "אזור", "phone": "083136541" },
+      { "city": "אילת", "address": "אילת", "name": "אילת", "phone": "083136541" },
+      { "city": "אלעד", "address": "אלעד", "name": "אלעד", "phone": "083136541" },
+      { "city": "אפרת", "address": "אפרת", "name": "אפרת", "phone": "083136541" },
+      { "city": "אשדוד", "address": "אשדוד", "name": "אשדוד", "phone": "083136541" },
+      { "city": "אשקלון", "address": "אשקלון", "name": "אשקלון", "phone": "083136541" },
+      { "city": "באר יעקב", "address": "באר יעקב", "name": "באר יעקב", "phone": "083136541" },
+      { "city": "באר שבע", "address": "באר שבע", "name": "באר שבע", "phone": "083136541" },
+      { "city": "בית קמה", "address": "בית קמה", "name": "בית קמה", "phone": "083136541" },
+      { "city": "בית שמש", "address": "בית שמש", "name": "בית שמש", "phone": "083136541" },
+      { "city": "ביתר עילית", "address": "ביתר עילית", "name": "ביתר עילית", "phone": "083136541" },
+      { "city": "ביתר עלית", "address": "ביתר עלית", "name": "ביתר עלית", "phone": "083136541" },
+      { "city": "בני ברק", "address": "בני ברק", "name": "בני ברק", "phone": "083136541" },
+      { "city": "בת ים", "address": "בת ים", "name": "בת ים", "phone": "083136541" },
+      { "city": "גבעת שמואל", "address": "גבעת שמואל", "name": "גבעת שמואל", "phone": "083136541" },
+      { "city": "גבעתיים", "address": "גבעתיים", "name": "גבעתיים", "phone": "083136541" },
+      { "city": "גדרה", "address": "גדרה", "name": "גדרה", "phone": "083136541" },
+      { "city": "גן יבנה", "address": "גן יבנה", "name": "גן יבנה", "phone": "083136541" },
+      { "city": "גני תקווה", "address": "גני תקווה", "name": "גני תקווה", "phone": "083136541" },
+      { "city": "דימונה", "address": "דימונה", "name": "דימונה", "phone": "083136541" },
+      { "city": "הוד השרון", "address": "הוד השרון", "name": "הוד השרון", "phone": "083136541" },
+      { "city": "הרצליה", "address": "הרצליה", "name": "הרצליה", "phone": "083136541" },
+      { "city": "חדרה", "address": "חדרה", "name": "חדרה", "phone": "083136541" },
+      { "city": "חולון", "address": "חולון", "name": "חולון", "phone": "083136541" },
+      { "city": "חיפה", "address": "חיפה", "name": "חיפה", "phone": "083136541" },
+      { "city": "חריש", "address": "חריש", "name": "חריש", "phone": "083136541" },
+      { "city": "טבריה", "address": "טבריה", "name": "טבריה", "phone": "083136541" },
+      { "city": "טירת הכרמל", "address": "טירת הכרמל", "name": "טירת הכרמל", "phone": "083136541" },
+      { "city": "יבנה", "address": "יבנה", "name": "יבנה", "phone": "083136541" },
+      { "city": "יהוד", "address": "יהוד", "name": "יהוד", "phone": "083136541" },
+      { "city": "יפו", "address": "יפו", "name": "יפו", "phone": "083136541" },
+      { "city": "ירושלים", "address": "ירושלים", "name": "ירושלים", "phone": "083136541" },
+      { "city": "כפר חבד", "address": "כפר חבד", "name": "כפר חבד", "phone": "083136541" },
+      { "city": "כפר סבא", "address": "כפר סבא", "name": "כפר סבא", "phone": "083136541" },
+      { "city": "כרמיאל", "address": "כרמיאל", "name": "כרמיאל", "phone": "083136541" },
+      { "city": "לוד", "address": "לוד", "name": "לוד", "phone": "083136541" },
+      { "city": "מגדל העמק", "address": "מגדל העמק", "name": "מגדל העמק", "phone": "083136541" },
+      { "city": "מודיעין", "address": "מודיעין", "name": "מודיעין", "phone": "083136541" },
+      { "city": "מודיעין עילית", "address": "מודיעין עילית", "name": "מודיעין עילית", "phone": "083136541" },
+      { "city": "מישור אדומים", "address": "מישור אדומים", "name": "מישור אדומים", "phone": "083136541" },
+      { "city": "מעלה אדומים", "address": "מעלה אדומים", "name": "מעלה אדומים", "phone": "083136541" },
+      { "city": "מצפה רמון", "address": "מצפה רמון", "name": "מצפה רמון", "phone": "083136541" },
+      { "city": "נהריה", "address": "נהריה", "name": "נהריה", "phone": "083136541" },
+      { "city": "נס ציונה", "address": "נס ציונה", "name": "נס ציונה", "phone": "083136541" },
+      { "city": "נתיבות", "address": "נתיבות", "name": "נתיבות", "phone": "083136541" },
+      { "city": "נתניה", "address": "נתניה", "name": "נתניה", "phone": "083136541" },
+      { "city": "עפולה", "address": "עפולה", "name": "עפולה", "phone": "083136541" },
+      { "city": "ערד", "address": "ערד", "name": "ערד", "phone": "083136541" },
+      { "city": "פתח תקווה", "address": "ברון הירש", "name": "פתח תקווה", "phone": "083136541" },
+      { "city": "צפת", "address": "צפת", "name": "צפת", "phone": "083136541" },
+      { "city": "קריית אונו", "address": "קריית אונו", "name": "קריית אונו", "phone": "083136541" },
+      { "city": "קריית אתא", "address": "קריית אתא", "name": "קריית אתא", "phone": "083136541" },
+      { "city": "קריית ביאליק", "address": "קריית ביאליק", "name": "קריית ביאליק", "phone": "083136541" },
+      { "city": "קריית גת", "address": "קריית גת", "name": "קריית גת", "phone": "083136541" },
+      { "city": "קריית מוצקין", "address": "קריית מוצקין", "name": "קריית מוצקין", "phone": "083136541" },
+      { "city": "קריית שמונה", "address": "קריית שמונה", "name": "קריית שמונה", "phone": "083136541" },
+      { "city": "קרית חיים", "address": "קרית חיים", "name": "קרית חיים", "phone": "083136541" },
+      { "city": "קרית ים", "address": "קרית ים", "name": "קרית ים", "phone": "083136541" },
+      { "city": "קרית מלאכי", "address": "קרית מלאכי", "name": "קרית מלאכי", "phone": "083136541" },
+      { "city": "קרני שומרון", "address": "הגפן 1", "name": "קרני שומרון", "phone": "083136541" },
+      { "city": "ראש העין", "address": "ראש העין", "name": "ראש העין", "phone": "083136541" },
+      { "city": "ראשון לציון", "address": "ראשון לציון", "name": "ראשון לציון", "phone": "083136541" },
+      { "city": "רחובות", "address": "רחובות", "name": "רחובות", "phone": "083136541" },
+      { "city": "רמלה", "address": "רמלה", "name": "רמלה", "phone": "083136541" },
+      { "city": "רמת גן", "address": "רמת גן", "name": "רמת גן", "phone": "083136541" },
+      { "city": "רמת הגולן", "address": "רמת הגולן", "name": "רמת הגולן", "phone": "083136541" },
+      { "city": "רעננה", "address": "אחוזה 100", "name": "רעננה", "phone": "083136541" },
+      { "city": "שדרות", "address": "שדרות", "name": "שדרות", "phone": "083136541" },
+      { "city": "שוהם", "address": "שוהם", "name": "שוהם", "phone": "083136541" },
+      { "city": "תל אביב", "address": "תל אביב", "name": "תל אביב", "phone": "083136541" },
+      { "city": "תל מונד", "address": "תל מונד", "name": "תל מונד", "phone": "083136541" }
     ],
     "infoVerifiedFrom": "kehilotcard-public-api"
   },
@@ -4132,7 +4153,7 @@ export const BENEFITS_BUSINESSES = [
   {
     "id": "biz-217",
     "name": "צ'ירינה",
-    "cat": "מזון",
+    "cat": "אוכל ומסעדנות",
     "region": "בני ברק",
     "perk": "3% הנחה",
     "benefitText": "3 אחוז הנחה בכל עסקה כולל כפל מבצעים",
@@ -4154,7 +4175,7 @@ export const BENEFITS_BUSINESSES = [
   {
     "id": "biz-186",
     "name": "צולנט עולמי",
-    "cat": "מזון",
+    "cat": "אוכל ומסעדנות",
     "region": "בית שמש",
     "perk": "15% הנחה",
     "benefitText": "5 שח הנחה על ה70 ש\"ח הראשונים, בקניה מעל 70 שח - 15 אחוז הנחה",
@@ -4176,7 +4197,7 @@ export const BENEFITS_BUSINESSES = [
   {
     "id": "biz-201",
     "name": "צולנט עולמי - ירושלים",
-    "cat": "מזון",
+    "cat": "אוכל ומסעדנות",
     "region": "ירושלים",
     "perk": "15% הנחה",
     "benefitText": "5 שח הנחה על ה70 ש\"ח הראשונים, בקניה מעל 70 שח - 15 אחוז הנחה",
@@ -4190,28 +4211,6 @@ export const BENEFITS_BUSINESSES = [
         "city": "ירושלים",
         "address": "תורה מציון 10 ירושלים",
         "name": "תורה מציון - (בנין שערי העיר)",
-        "phone": null
-      }
-    ],
-    "infoVerifiedFrom": "kehilotcard-public-api"
-  },
-  {
-    "id": "biz-213",
-    "name": "צרכניית אחיעזר",
-    "cat": "מזון",
-    "region": "בני ברק",
-    "perk": "ניתן לשלם עם הכסף הצבור בכרטיס, ולצבור נקודות",
-    "benefitText": "ניתן לשלם עם הכסף הצבור בכרטיס, ולצבור נקודות",
-    "hours": "יש לבדוק מול הסניף",
-    "addr": "בני ברק",
-    "logo": "/logos/biz-213.jpg",
-    "website": "",
-    "phones": [],
-    "branches": [
-      {
-        "city": "בני ברק",
-        "address": "בני ברק",
-        "name": "צרכניית אחיעזר - בני ברק",
         "phone": null
       }
     ],
@@ -4569,36 +4568,22 @@ export const BENEFITS_BUSINESSES = [
     "logo": "/logos/biz-92.jpeg",
     "website": "",
     "phones": [],
-    "branches": [
-      {
-        "city": "כל הארץ",
-        "address": "כל הארץ",
-        "name": "",
-        "phone": null
-      }
-    ],
+    "branches": [],
     "infoVerifiedFrom": "kehilotcard-public-api"
   },
   {
     "id": "biz-94",
     "name": "תכשיטי שנרך",
-    "cat": "כללי",
+    "cat": "תכשיטים ושעונים",
     "region": "כל הארץ",
     "perk": "7% הנחה",
     "benefitText": "7 אחוז הנחה בכל רכישה",
     "hours": "יש לבדוק מול הסניף",
     "addr": "כל הארץ",
-    "logo": "/logos/magic-kass.svg",
+    "logo": "",
     "website": "",
     "phones": [],
-    "branches": [
-      {
-        "city": "כל הארץ",
-        "address": "כל הארץ",
-        "name": "",
-        "phone": null
-      }
-    ],
+    "branches": [],
     "infoVerifiedFrom": "kehilotcard-public-api"
   },
   {
@@ -4649,6 +4634,18 @@ export const BENEFITS_BUSINESSES = [
         "address": "ירושלים",
         "name": "תכשיק - גאולה",
         "phone": null
+      },
+      {
+        "city": "ירושלים",
+        "address": "ירושלים",
+        "name": "תכשיק - רמות",
+        "phone": null
+      },
+      {
+        "city": "ירושלים",
+        "address": "ירושלים",
+        "name": "תכשיק - שפע",
+        "phone": null
       }
     ],
     "infoVerifiedFrom": "kehilotcard-public-api"
@@ -4662,7 +4659,7 @@ export const BENEFITS_BUSINESSES = [
     "benefitText": "10 אחוז הנחה על כל החנות למעט חולצות. בקנית חולצה זוג גרביים מתנה",
     "hours": "יש לבדוק מול הסניף",
     "addr": "שדרות האמוראים 71",
-    "logo": "/logos/magic-kass.svg",
+    "logo": "",
     "website": "",
     "phones": [],
     "branches": [
@@ -4684,7 +4681,7 @@ export const BENEFITS_BUSINESSES = [
     "benefitText": "10% הנחה על כלל המלאי",
     "hours": "10:00-19:00",
     "addr": "",
-    "logo": "/logos/shmalot-kala-hen.png",
+    "logo": "",
     "website": "",
     "phones": [],
     "branches": [
@@ -4700,13 +4697,13 @@ export const BENEFITS_BUSINESSES = [
   {
     "id": "biz-legacy-2",
     "name": "פיצה פון",
-    "cat": "מסעדנות",
+    "cat": "אוכל ומסעדנות",
     "region": "גוש דן",
     "perk": "15% הנחה",
     "benefitText": "15% הנחה על כל ההזמנה",
     "hours": "11:00-23:00",
     "addr": "",
-    "logo": "/logos/pizza-phone.jpg",
+    "logo": "",
     "website": "",
     "phones": [],
     "branches": [
@@ -4722,13 +4719,13 @@ export const BENEFITS_BUSINESSES = [
   {
     "id": "biz-legacy-3",
     "name": "קונדיטוריית קצבורג",
-    "cat": "מסעדנות",
+    "cat": "אוכל ומסעדנות",
     "region": "ירושלים והסביבה",
     "perk": "10% הנחה",
     "benefitText": "10% הנחה + משלוח חינם",
     "hours": "07:00-21:00",
     "addr": "ירושלים",
-    "logo": "/logos/IMG-20260805-WA0001.jpg",
+    "logo": "",
     "website": "",
     "phones": [],
     "branches": [
@@ -4744,13 +4741,13 @@ export const BENEFITS_BUSINESSES = [
   {
     "id": "biz-legacy-4",
     "name": "פיצה מיה - טבריה",
-    "cat": "מסעדנות",
+    "cat": "אוכל ומסעדנות",
     "region": "חיפה והצפון",
     "perk": "15% הנחה",
     "benefitText": "15% הנחה על כל ההזמנה",
     "hours": "11:00-23:00",
     "addr": "טבריה",
-    "logo": "/logos/pizza-mia.png",
+    "logo": "",
     "website": "",
     "phones": [],
     "branches": [
@@ -4766,13 +4763,13 @@ export const BENEFITS_BUSINESSES = [
   {
     "id": "biz-legacy-5",
     "name": "יין בסביבה בני ברק",
-    "cat": "מסעדנות",
+    "cat": "אוכל ומסעדנות",
     "region": "גוש דן",
     "perk": "הטבה מיוחדת",
     "benefitText": "בקבוק יין במתנה ברכישה מעל 200 ש\"ח",
     "hours": "09:00-22:00",
     "addr": "בני ברק",
-    "logo": "/logos/IMG-20260804-WA0001.jpg",
+    "logo": "",
     "website": "",
     "phones": [],
     "branches": [
@@ -4788,13 +4785,13 @@ export const BENEFITS_BUSINESSES = [
   {
     "id": "biz-legacy-6",
     "name": "פיצה פסטלה קריית ספר",
-    "cat": "מסעדנות",
+    "cat": "אוכל ומסעדנות",
     "region": "ירושלים והסביבה",
     "perk": "15% הנחה",
     "benefitText": "15% הנחה על כל ההזמנה",
     "hours": "11:00-23:00",
     "addr": "קריית ספר",
-    "logo": "/logos/IMG-20260804-WA0014.jpg",
+    "logo": "",
     "website": "",
     "phones": [],
     "branches": [
@@ -4810,13 +4807,13 @@ export const BENEFITS_BUSINESSES = [
   {
     "id": "biz-legacy-7",
     "name": "המסעדה היהודית",
-    "cat": "מסעדנות",
+    "cat": "אוכל ומסעדנות",
     "region": "גוש דן",
     "perk": "10% הנחה",
     "benefitText": "10% הנחה על התפריט",
     "hours": "12:00-23:00",
     "addr": "",
-    "logo": "/logos/hamisada-hayehudit.png",
+    "logo": "",
     "website": "",
     "phones": [],
     "branches": [
@@ -4832,13 +4829,13 @@ export const BENEFITS_BUSINESSES = [
   {
     "id": "biz-legacy-8",
     "name": "ג'אסט מיט",
-    "cat": "מסעדנות",
+    "cat": "אוכל ומסעדנות",
     "region": "גוש דן",
     "perk": "10% הנחה",
     "benefitText": "10% הנחה על כל הזמנה",
     "hours": "11:00-22:00",
     "addr": "",
-    "logo": "/logos/just-meat.jpg",
+    "logo": "",
     "website": "",
     "phones": [],
     "branches": [
@@ -4860,7 +4857,7 @@ export const BENEFITS_BUSINESSES = [
     "benefitText": "20% הנחה לחברי המועדון",
     "hours": "08:00-17:00",
     "addr": "נהר הירדן",
-    "logo": "/logos/rafting-yarden.png",
+    "logo": "",
     "website": "",
     "phones": [],
     "branches": [
@@ -4882,7 +4879,7 @@ export const BENEFITS_BUSINESSES = [
     "benefitText": "15% הנחה על כרטיסי כניסה",
     "hours": "10:00-18:00",
     "addr": "לטרון",
-    "logo": "/logos/mini-israel.png",
+    "logo": "",
     "website": "",
     "phones": [],
     "branches": [
@@ -4904,7 +4901,7 @@ export const BENEFITS_BUSINESSES = [
     "benefitText": "20% הנחה על פעילויות",
     "hours": "09:00-17:00",
     "addr": "",
-    "logo": "/logos/halom-olami.png",
+    "logo": "",
     "website": "",
     "phones": [],
     "branches": [
@@ -4926,7 +4923,7 @@ export const BENEFITS_BUSINESSES = [
     "benefitText": "15% הנחה על כרטיסי כניסה",
     "hours": "09:00-20:00",
     "addr": "",
-    "logo": "/logos/ninja-israel.png",
+    "logo": "",
     "website": "",
     "phones": [],
     "branches": [
@@ -4948,7 +4945,7 @@ export const BENEFITS_BUSINESSES = [
     "benefitText": "20% הנחה לקבוצות",
     "hours": "09:00-18:00",
     "addr": "הגושרים",
-    "logo": "/logos/paintball-hagoshrim.png",
+    "logo": "",
     "website": "",
     "phones": [],
     "branches": [
@@ -4970,35 +4967,13 @@ export const BENEFITS_BUSINESSES = [
     "benefitText": "15% הנחה על סיורי ג'יפים",
     "hours": "08:00-17:00",
     "addr": "נהר הירדן",
-    "logo": "/logos/IMG-20260804-WA0007.jpg",
+    "logo": "",
     "website": "",
     "phones": [],
     "branches": [
       {
         "city": "חיפה והצפון",
         "address": "נהר הירדן",
-        "name": "",
-        "phone": null
-      }
-    ],
-    "infoVerifiedFrom": "local-legacy-data"
-  },
-  {
-    "id": "biz-legacy-15",
-    "name": "איתמר ג'יפים",
-    "cat": "פנאי ותיירות",
-    "region": "חיפה והצפון",
-    "perk": "15% הנחה",
-    "benefitText": "15% הנחה על סיורים",
-    "hours": "08:00-17:00",
-    "addr": "",
-    "logo": "/logos/IMG-20260804-WA0003.jpg",
-    "website": "",
-    "phones": [],
-    "branches": [
-      {
-        "city": "חיפה והצפון",
-        "address": "חיפה והצפון",
         "name": "",
         "phone": null
       }
@@ -5014,7 +4989,7 @@ export const BENEFITS_BUSINESSES = [
     "benefitText": "20% הנחה על פעילויות",
     "hours": "09:00-18:00",
     "addr": "",
-    "logo": "/logos/razor-bar.png",
+    "logo": "",
     "website": "",
     "phones": [],
     "branches": [
@@ -5036,7 +5011,7 @@ export const BENEFITS_BUSINESSES = [
     "benefitText": "15% הנחה על פעילויות",
     "hours": "09:00-17:00",
     "addr": "",
-    "logo": "/logos/golkapa.svg",
+    "logo": "",
     "website": "",
     "phones": [],
     "branches": [
@@ -5052,13 +5027,13 @@ export const BENEFITS_BUSINESSES = [
   {
     "id": "biz-225",
     "name": "חיימקה סלולר",
-    "cat": "אלקטרוניק וסלולר",
+    "cat": "סלולר",
     "region": "בני ברק",
     "perk": "יש לבדוק מול הסניף",
     "benefitText": "בית פרמיום לסלולר — הטבות חברי המועדון. יש לבדוק פרטי ההנחה מול הסניף.",
     "hours": "יש לבדוק מול הסניף",
     "addr": "בני ברק",
-    "logo": "/logos/חיימקה.jpg",
+    "logo": "",
     "website": "",
     "phones": [],
     "branches": [
@@ -5074,60 +5049,48 @@ export const BENEFITS_BUSINESSES = [
   {
     "id": "biz-226",
     "name": "קלינג - תקשורת נקיה",
-    "cat": "אלקטרוניק וסלולר",
+    "cat": "סלולר",
     "region": "כל הארץ",
     "perk": "יש לבדוק מול הסניף",
     "benefitText": "תקשורת נקיה — הטבות חברי המועדון. יש לבדוק פרטי ההנחה מול הסניף.",
     "hours": "יש לבדוק מול הסניף",
     "addr": "כל הארץ",
-    "logo": "/logos/קלינג.png",
+    "logo": "",
     "website": "",
     "phones": [],
-    "branches": [
-      {
-        "city": "כל הארץ",
-        "address": "כל הארץ",
-        "name": "קלינג",
-        "phone": null
-      }
-    ],
+    "branches": [],
     "infoVerifiedFrom": "local-manual"
   },
   {
     "id": "biz-227",
     "name": "מעדנייה בסביבה",
-    "cat": "מזון",
+    "cat": "אוכל ומסעדנות",
     "region": "כל הארץ",
     "perk": "יש לבדוק מול הסניף",
     "benefitText": "כשר למהדרין — סלטים, דגים מלוחים ומעושנים, פיצוחים, חלות. הטבות חברי המועדון. לבירורים: 03-6526667.",
     "hours": "יש לבדוק מול הסניף",
     "addr": "כל הארץ",
-    "logo": "/logos/מעדנייה בסביבה.jpg",
+    "logo": "",
     "website": "",
-    "phones": ["03-6526667"],
-    "branches": [
-      {
-        "city": "כל הארץ",
-        "address": "כל הארץ",
-        "name": "מעדנייה בסביבה",
-        "phone": "03-6526667"
-      }
+    "phones": [
+      "03-6526667"
     ],
+    "branches": [],
     "infoVerifiedFrom": "local-manual"
   },
   {
     "id": "biz-228",
     "name": "יין בסביבה",
-    "cat": "מסעדנות",
+    "cat": "אוכל ומסעדנות",
     "region": "כל הארץ",
     "perk": "יש לבדוק מול הסניף",
     "benefitText": "הטבות חברי המועדון — יש לבדוק פרטי ההנחה מול הסניף.",
     "hours": "יש לבדוק מול הסניף",
     "addr": "כל הארץ",
-    "logo": "/logos/IMG-20260804-WA0001.jpg",
+    "logo": "",
     "website": "",
     "phones": [],
-    "branches": [{ "city": "כל הארץ", "address": "כל הארץ", "name": "יין בסביבה", "phone": null }],
+    "branches": [],
     "infoVerifiedFrom": "local-manual"
   },
   {
@@ -5139,42 +5102,89 @@ export const BENEFITS_BUSINESSES = [
     "benefitText": "טיולי ג'יפים ושטח — הטבות חברי המועדון. טלפון: 054-6444950.",
     "hours": "יש לבדוק מול הסניף",
     "addr": "כל הארץ",
-    "logo": "/logos/IMG-20260804-WA0003.jpg",
+    "logo": "",
     "website": "",
-    "phones": ["054-6444950"],
-    "branches": [{ "city": "כל הארץ", "address": "כל הארץ", "name": "אשד הנחלים", "phone": "054-6444950" }],
+    "phones": [
+      "054-6444950"
+    ],
+    "branches": [],
     "infoVerifiedFrom": "local-manual"
   },
   {
-    "id": "biz-230",
-    "name": "פיצה פסטה",
-    "cat": "מסעדנות",
-    "region": "כל הארץ",
-    "perk": "יש לבדוק מול הסניף",
-    "benefitText": "הטבות חברי המועדון — יש לבדוק פרטי ההנחה מול הסניף.",
+    "id": "biz-232",
+    "name": "צימר זוגי במעלה עמוס",
+    "cat": "מלונות וצימרים",
+    "region": "מעלה עמוס",
+    "perk": "10% הנחה",
+    "benefitText": "10% הנחה",
     "hours": "יש לבדוק מול הסניף",
-    "addr": "כל הארץ",
-    "logo": "/logos/IMG-20260804-WA0014.jpg",
+    "addr": "יונתן בן עוזיאל 414, מעלה עמוס",
+    "logo": "",
     "website": "",
-    "phones": [],
-    "branches": [{ "city": "כל הארץ", "address": "כל הארץ", "name": "פיצה פסטה", "phone": null }],
+    "phones": [
+      "0559236161"
+    ],
+    "branches": [
+      {
+        "city": "מעלה עמוס",
+        "address": "יונתן בן עוזיאל 414",
+        "name": "צימר זוגי במעלה עמוס",
+        "phone": "0559236161"
+      }
+    ],
+    "infoVerifiedFrom": "local-manual"
+  },
+  {
+    "id": "biz-233",
+    "name": "חלום שלי",
+    "cat": "מצעים וכלי בית",
+    "region": "בני ברק",
+    "perk": "יש לבדוק מול הסניף",
+    "benefitText": "הטבות חברי המועדון — יש לבדוק מול הסניף.",
+    "hours": "יש לבדוק מול הסניף",
+    "addr": "רבי עקיבא 64, בני ברק",
+    "logo": "",
+    "website": "",
+    "phones": [
+      "035504545"
+    ],
+    "branches": [
+      {
+        "city": "בני ברק",
+        "address": "רבי עקיבא 64",
+        "name": "חלום שלי",
+        "phone": "035504545"
+      }
+    ],
     "infoVerifiedFrom": "local-manual"
   },
   {
     "id": "biz-231",
     "name": "מגדנית קצבורג",
-    "cat": "מזון",
+    "cat": "אוכל ומסעדנות",
     "region": "ירושלים",
     "perk": "יש לבדוק מול הסניף",
     "benefitText": "מגדנית קצבורג — נוסד 1954. הטבות חברי המועדון. לבירורים: 02-5375777.",
     "hours": "יש לבדוק מול הסניף",
     "addr": "יחזקאל 14",
-    "logo": "/logos/IMG-20260805-WA0001.jpg",
+    "logo": "",
     "website": "",
-    "phones": ["02-5375777"],
+    "phones": [
+      "02-5375777"
+    ],
     "branches": [
-      { "city": "ירושלים", "address": "יחזקאל 14", "name": "יחזקאל", "phone": "02-5375777" },
-      { "city": "ירושלים", "address": "מלכי ישראל 6", "name": "מלכי ישראל", "phone": "02-5375777" }
+      {
+        "city": "ירושלים",
+        "address": "יחזקאל 14",
+        "name": "יחזקאל",
+        "phone": "02-5375777"
+      },
+      {
+        "city": "ירושלים",
+        "address": "מלכי ישראל 6",
+        "name": "מלכי ישראל",
+        "phone": "02-5375777"
+      }
     ],
     "infoVerifiedFrom": "local-manual"
   }

@@ -2,10 +2,10 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { BENEFITS_BUSINESSES } from '../data/benefitsData.js';
 
-const MEN_CATS   = new Set(['ביגוד גברים','ביגוד חסידי','כובעים','רכב','ארבעת המינים','תשמישי קדושה','ספרים','ביטוחים','אלקטרוניק וסלולר','חשמל']);
-const WOMEN_CATS = new Set(['ביגוד נשים','תכשיטים ושעונים','קרמיקה תאורה וכלי בית','בשמים','אופנה','ריהוט ומזרונים']);
+const MEN_CATS   = new Set(['ביגוד גברים','ביגוד חסידי','כובעים','רכב','ארבעת המינים','תשמישי קדושה','ספרים','ביטוחים','סלולר','אלקטרוניקה ותאורה','חשמל']);
+const WOMEN_CATS = new Set(['ביגוד נשים','תכשיטים ושעונים','בשמים','אופנה','ריהוט ומזרונים']);
 // categories that appear on both cards
-const SHARED_CATS = new Set(['כללי','מזון','אופטיקה','נעליים','בגדי ילדים','מסעדנות','פנאי ותיירות','כלי כתיבה וצעצועים','אחר']);
+const SHARED_CATS = new Set(['כללי','מזון','אוכל ומסעדנות','אופטיקה','נעליים','בגדי ילדים','פנאי ותיירות','כלי כתיבה וצעצועים','אחר','מצעים וכלי בית']);
 
 const menBenefits   = BENEFITS_BUSINESSES.filter(b => MEN_CATS.has(b.cat) || SHARED_CATS.has(b.cat));
 const womenBenefits = BENEFITS_BUSINESSES.filter(b => WOMEN_CATS.has(b.cat) || SHARED_CATS.has(b.cat));
