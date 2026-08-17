@@ -82,7 +82,7 @@ export function matchesBusinessName(name, query) {
   const nameWords = normalizedName.split(/\s+/).filter(Boolean);
   const queryTokens = normalizedQuery.split(/\s+/).filter(Boolean);
 
-  return queryTokens.some((token) => {
+  return queryTokens.every((token) => {
     if (!token) return false;
     if (normalizedName.includes(token)) return true;
     return nameWords.some((word) => word.startsWith(token) || word.endsWith(token));

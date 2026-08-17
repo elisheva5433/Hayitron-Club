@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { normalizePartnerKey } from '../src/utils/benefitsCatalog.js';
+import { matchesBusinessName, normalizePartnerKey } from '../src/utils/benefitsCatalog.js';
 import { BENEFITS_BUSINESSES } from '../src/data/benefitsData.js';
 
 test('normalizePartnerKey collapses same-brand branch variants into one canonical key', () => {
@@ -12,9 +12,16 @@ test('normalizePartnerKey collapses same-brand branch variants into one canonica
   assert.equal(normalizePartnerKey('בזאר שטראוס קניון רמות ביגוד'), 'בזאר שטראוס');
 });
 
-test('restaurant category is normalized and the six food businesses remain in the מזון bucket', () => {
+test('multi-word business searches require every query word to match', () => {
+  assert.equal(matchesBusinessName('עידן גל אופן', 'גל אופן'), true);
+  assert.equal(matchesBusinessName('גלורי קידס בע"מ', 'גל אופן'), false);
+  assert.equal(matchesBusinessName('פינת הגלידה', 'גל אופן'), false);
+});
+
+test('restaurant category is normalized and food businesses remain in the מזון bucket', () => {
   const foodNames = BENEFITS_BUSINESSES.filter((biz) => biz.cat === 'מזון').map((biz) => biz.name).sort();
   const expectedNames = [
+    'המכירה לקהילה שלך',
     'מעיין אלפיים',
     'מחסני קרעסטיר',
     'משביר לעמו',

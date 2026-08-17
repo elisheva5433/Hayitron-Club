@@ -222,28 +222,6 @@ export const BENEFITS_BUSINESSES = [
     "infoVerifiedFrom": "local-manual"
   },
   {
-    "id": "biz-71",
-    "name": "ויסטה - בני ברק",
-    "cat": "אופטיקה",
-    "region": "בני ברק",
-    "perk": "10% הנחה",
-    "benefitText": "מותגים גד ברוס לילי וכדו' – 320 (כולל עדשות  1.56 שדרוג ל 1.6 עם מסגרת 50 ₪ בלי מסגרת 100 ₪ )  משקפי מותגים – 10 %. עדשות – 10%",
-    "hours": "יש לבדוק מול הסניף",
-    "addr": "שלמה המלך 12",
-    "logo": "/logos/biz-71.jpg",
-    "website": "",
-    "phones": [],
-    "branches": [
-      {
-        "city": "בני ברק",
-        "address": "שלמה המלך 12",
-        "name": "בני ברק",
-        "phone": null
-      }
-    ],
-    "infoVerifiedFrom": "kehilotcard-public-api"
-  },
-  {
     "id": "biz-182",
     "name": "מעיין אלפיים",
     "cat": "מזון",
@@ -873,7 +851,7 @@ export const BENEFITS_BUSINESSES = [
   },
   {
     "id": "biz-109",
-    "name": "אופטימלי - בית שמש",
+    "name": "אופטימלי",
     "cat": "אופטיקה",
     "region": "בית שמש",
     "perk": "15% הנחה",
@@ -895,23 +873,7 @@ export const BENEFITS_BUSINESSES = [
         "address": "נחל ניצנים 12",
         "name": "נחל ניצנים",
         "phone": null
-      }
-    ],
-    "infoVerifiedFrom": "kehilotcard-public-api"
-  },
-  {
-    "id": "biz-73",
-    "name": "אופטימלי - מלכי ישראל",
-    "cat": "אופטיקה",
-    "region": "ירושלים",
-    "perk": "15% הנחה",
-    "benefitText": "מסגרות שמחירם 300 ש''ח ב 270 ש''ח.  מסגרות שמחירם עד 500 ש''ח ב 320 ש''ח . כל מסגרת מעל 500 ש''ח 15 אחוז הנחה",
-    "hours": "יש לבדוק מול הסניף",
-    "addr": "מלכי ישראל 6",
-    "logo": "/logos/biz-73.jpg",
-    "website": "https://optimali.ravpage.co.il/",
-    "phones": [],
-    "branches": [
+      },
       {
         "city": "ירושלים",
         "address": "מלכי ישראל 6",
@@ -996,112 +958,23 @@ export const BENEFITS_BUSINESSES = [
     "infoVerifiedFrom": "kehilotcard-public-api"
   },
   {
-    "id": "biz-96",
-    "name": "אקסוס - אלעד",
-    "cat": "כללי",
-    "region": "אלעד",
-    "perk": "הנחות ת\"ת כללי",
-    "benefitText": "הנחות ת\"ת כללי",
-    "hours": "יש לבדוק מול הסניף",
-    "addr": "הריטבא 25",
-    "logo": "/logos/biz-59.jpg",
-    "website": "https://xsosshirts.co.il/",
-    "phones": [],
-    "branches": [
-      {
-        "city": "אלעד",
-        "address": "הריטבא 25",
-        "name": "אלעד",
-        "phone": null
-      }
-    ],
-    "infoVerifiedFrom": "kehilotcard-public-api"
-  },
-  {
-    "id": "biz-102",
-    "name": "אקסוס - ביתר",
-    "cat": "ביגוד גברים",
-    "region": "ביתר",
-    "perk": "מחירון מוזל תת\"ים לפי פריטים",
-    "benefitText": "מחירון מוזל תת\"ים לפי פריטים",
-    "hours": "יש לבדוק מול הסניף",
-    "addr": "הרן 14",
-    "logo": "/logos/biz-102.webp",
-    "website": "https://xsosshirts.co.il/",
-    "phones": [],
-    "branches": [
-      {
-        "city": "ביתר",
-        "address": "הרן 14",
-        "name": "ביתר",
-        "phone": null
-      }
-    ],
-    "infoVerifiedFrom": "kehilotcard-public-api"
-  },
-  {
     "id": "biz-59",
-    "name": "אקסוס - בני ברק",
+    "name": "אקסוס",
     "cat": "ביגוד גברים",
-    "region": "בני ברק",
+    "region": "כל הארץ",
     "perk": "מחירון ת\"תים כללי",
     "benefitText": "מחירון ת\"תים כללי",
     "hours": "יש לבדוק מול הסניף",
-    "addr": "רבי עקיבא 51",
+    "addr": "שמגר 16, ירושלים",
     "logo": "/logos/biz-59.jpg",
     "website": "https://xsosshirts.co.il/",
     "phones": [],
     "branches": [
-      {
-        "city": "בני ברק",
-        "address": "רבי עקיבא 51",
-        "name": "אקסוס בני ברק",
-        "phone": null
-      }
-    ],
-    "infoVerifiedFrom": "kehilotcard-public-api"
-  },
-  {
-    "id": "biz-40",
-    "name": "אקסוס יחזקאל",
-    "cat": "ביגוד גברים",
-    "region": "ירושלים",
-    "perk": "מחירון ת\"תים",
-    "benefitText": "מחירון ת\"תים",
-    "hours": "יש לבדוק מול הסניף",
-    "addr": "יחזקאל 29",
-    "logo": "/logos/biz-40.jpg",
-    "website": "https://xsosshirts.co.il/",
-    "phones": [],
-    "branches": [
-      {
-        "city": "ירושלים",
-        "address": "יחזקאל 29",
-        "name": "אקסוס יחזקאל",
-        "phone": null
-      }
-    ],
-    "infoVerifiedFrom": "kehilotcard-public-api"
-  },
-  {
-    "id": "biz-39",
-    "name": "אקסוס רב שפע",
-    "cat": "ביגוד גברים",
-    "region": "ירושלים",
-    "perk": "מחירון ת\"תים",
-    "benefitText": "מחירון ת\"תים",
-    "hours": "יש לבדוק מול הסניף",
-    "addr": "שמגר 16",
-    "logo": "/logos/biz-39.jpg",
-    "website": "https://xsosshirts.co.il/",
-    "phones": [],
-    "branches": [
-      {
-        "city": "ירושלים",
-        "address": "שמגר 16",
-        "name": "אקסוס רב שפע",
-        "phone": null
-      }
+      { "city": "ירושלים", "address": "שמגר 16", "name": "רב שפע", "phone": null },
+      { "city": "ירושלים", "address": "יחזקאל 29", "name": "יחזקאל", "phone": null },
+      { "city": "בני ברק", "address": "רבי עקיבא 51", "name": "בני ברק", "phone": null },
+      { "city": "ביתר", "address": "הרן 14", "name": "ביתר", "phone": null },
+      { "city": "אלעד", "address": "הריטבא 25", "name": "אלעד", "phone": null }
     ],
     "infoVerifiedFrom": "kehilotcard-public-api"
   },
@@ -1206,7 +1079,7 @@ export const BENEFITS_BUSINESSES = [
   {
     "id": "biz-121",
     "name": "בזאר שטראוס",
-    "cat": "כללי",
+    "cat": "בגדי ילדים",
     "region": "כל הארץ",
     "perk": "5% הנחה",
     "benefitText": "5 אחוז הנחה בתשלום בכסף הטעון בכרטיס",
@@ -1300,7 +1173,7 @@ export const BENEFITS_BUSINESSES = [
   {
     "id": "biz-119",
     "name": "בזאר שטראוס - ביתר",
-    "cat": "כללי",
+    "cat": "בגדי ילדים",
     "region": "ביתר עילית",
     "perk": "5% הנחה",
     "benefitText": "5 אחוז הנחה בתשלום בכסף הטעון בכרטיס.",
@@ -1394,7 +1267,7 @@ export const BENEFITS_BUSINESSES = [
   {
     "id": "biz-120",
     "name": "בזאר שטראוס - בני ברק",
-    "cat": "כללי",
+    "cat": "בגדי ילדים",
     "region": "בני ברק",
     "perk": "5% הנחה",
     "benefitText": "5 אחוז הנחה בתשלום בכסף הטעון בכרטיס",
@@ -1488,7 +1361,7 @@ export const BENEFITS_BUSINESSES = [
   {
     "id": "biz-127",
     "name": "בזאר שטראוס - גאולה",
-    "cat": "כללי",
+    "cat": "בגדי ילדים",
     "region": "ירושלים",
     "perk": "5% הנחה",
     "benefitText": "5 אחוז הנחה בתשלום באמצעות הכרטיס",
@@ -1582,7 +1455,7 @@ export const BENEFITS_BUSINESSES = [
   {
     "id": "biz-130",
     "name": "בזאר שטראוס - גבעת שאול",
-    "cat": "כללי",
+    "cat": "בגדי ילדים",
     "region": "ירושלים",
     "perk": "5% הנחה",
     "benefitText": "5 אחוז הנחה בתשלום באמצעות הכרטיס",
@@ -1676,7 +1549,7 @@ export const BENEFITS_BUSINESSES = [
   {
     "id": "biz-122",
     "name": "בזאר שטראוס - מודיעין עילית",
-    "cat": "כללי",
+    "cat": "בגדי ילדים",
     "region": "מודיעין עילית",
     "perk": "5% הנחה",
     "benefitText": "5 אחוז הנחה בתשלום באמצעות כסף הטעון בכרטיס",
@@ -1770,7 +1643,7 @@ export const BENEFITS_BUSINESSES = [
   {
     "id": "biz-129",
     "name": "בזאר שטראוס - פסגת זאב",
-    "cat": "כללי",
+    "cat": "בגדי ילדים",
     "region": "פסגת זאב",
     "perk": "5% הנחה",
     "benefitText": "5 אחוז הנחה בתשלום באמצעות כסף הטעון הכרטיס",
@@ -1864,7 +1737,7 @@ export const BENEFITS_BUSINESSES = [
   {
     "id": "biz-132",
     "name": "בזאר שטראוס - קניון רמות צעצועים",
-    "cat": "כללי",
+    "cat": "בגדי ילדים",
     "region": "ירושלים",
     "perk": "5% הנחה",
     "benefitText": "5 אחוז הנחה בתשלום באמצעות כסף הטעון הכרטיס",
@@ -1958,7 +1831,7 @@ export const BENEFITS_BUSINESSES = [
   {
     "id": "biz-128",
     "name": "בזאר שטראוס - קרית אתא",
-    "cat": "כללי",
+    "cat": "בגדי ילדים",
     "region": "קריית אתא",
     "perk": "5% הנחה",
     "benefitText": "5 אחוז הנחה בתשלום באמצעות הכרטיס",
@@ -2052,7 +1925,7 @@ export const BENEFITS_BUSINESSES = [
   {
     "id": "biz-125",
     "name": "בזאר שטראוס - שטראוס (ירושלים)",
-    "cat": "כללי",
+    "cat": "בגדי ילדים",
     "region": "ירושלים",
     "perk": "5% הנחה",
     "benefitText": "5 אחוז הנחה בתשלום בכסף הטעון בכרטיס",
@@ -2146,7 +2019,7 @@ export const BENEFITS_BUSINESSES = [
   {
     "id": "biz-133",
     "name": "בזאר שטראוס קניון רמות ביגוד",
-    "cat": "כללי",
+    "cat": "בגדי ילדים",
     "region": "ירושלים",
     "perk": "5% הנחה",
     "benefitText": "5 אחוז הנחה בתשלום באמצעות כסף הטעון בכרטיס",
@@ -2257,31 +2130,15 @@ export const BENEFITS_BUSINESSES = [
         "phone": null
       },
       {
-        "city": "יאושלים",
+        "city": "ירושלים",
         "address": "שמגר 16 קומה 3-",
         "name": "ירושלים",
         "phone": null
-      }
-    ],
-    "infoVerifiedFrom": "kehilotcard-public-api"
-  },
-  {
-    "id": "biz-28",
-    "name": "בלאן - בני ברק",
-    "cat": "ביגוד גברים",
-    "region": "בני ברק",
-    "perk": "150 ש''ח הנחה לחליפה 30 ש''ח הנחה למכנס",
-    "benefitText": "150 ש''ח הנחה לחליפה 30 ש''ח הנחה למכנס",
-    "hours": "יש לבדוק מול הסניף",
-    "addr": "קוטלר 4",
-    "logo": "/logos/biz-28.jpg",
-    "website": "",
-    "phones": [],
-    "branches": [
+      },
       {
         "city": "בני ברק",
         "address": "קוטלר 4",
-        "name": "בלאן",
+        "name": "בני ברק",
         "phone": null
       }
     ],
@@ -2663,7 +2520,7 @@ export const BENEFITS_BUSINESSES = [
   {
     "id": "biz-218",
     "name": "המכירה לקהילה שלך",
-    "cat": "אוכל ומסעדנות",
+    "cat": "מזון",
     "region": "בני ברק",
     "perk": "5% הנחה",
     "benefitText": "5% הנחה למשלמים עם הכסף הטעון בכרטיס + צבירת נקודות.",
@@ -2776,7 +2633,7 @@ export const BENEFITS_BUSINESSES = [
   },
   {
     "id": "biz-9",
-    "name": "ויסטה - ירושלים",
+    "name": "ויסטה",
     "cat": "אופטיקה",
     "region": "ירושלים",
     "perk": "10% הנחה",
@@ -2790,6 +2647,12 @@ export const BENEFITS_BUSINESSES = [
       {
         "city": "ירושלים",
         "address": "עלי הכהן 18",
+        "name": "ויסטה",
+        "phone": null
+      },
+      {
+        "city": "בני ברק",
+        "address": "שלמה המלך 12",
         "name": "ויסטה",
         "phone": null
       }
@@ -4209,27 +4072,11 @@ export const BENEFITS_BUSINESSES = [
         "address": "שדרות האמוראים 6",
         "name": "האמוראים - בית שמש",
         "phone": null
-      }
-    ],
-    "infoVerifiedFrom": "kehilotcard-public-api"
-  },
-  {
-    "id": "biz-201",
-    "name": "צולנט עולמי - ירושלים",
-    "cat": "אוכל ומסעדנות",
-    "region": "ירושלים",
-    "perk": "15% הנחה",
-    "benefitText": "5 שח הנחה על ה70 ש\"ח הראשונים, בקניה מעל 70 שח - 15 אחוז הנחה",
-    "hours": "יש לבדוק מול הסניף",
-    "addr": "תורה מציון 10 ירושלים",
-    "logo": "/logos/biz-201.png",
-    "website": "",
-    "phones": [],
-    "branches": [
+      },
       {
         "city": "ירושלים",
-        "address": "תורה מציון 10 ירושלים",
-        "name": "תורה מציון - (בנין שערי העיר)",
+        "address": "תורה מציון 10",
+        "name": "תורה מציון - ירושלים",
         "phone": null
       }
     ],
@@ -4578,7 +4425,7 @@ export const BENEFITS_BUSINESSES = [
   {
     "id": "biz-92",
     "name": "שפע סטוק - בני ברק",
-    "cat": "כללי",
+    "cat": "כלי כתיבה ומשחקים",
     "region": "כל הארץ",
     "perk": "8% הנחה",
     "benefitText": "8 אחוז הנחה",
@@ -4696,8 +4543,8 @@ export const BENEFITS_BUSINESSES = [
     "name": "שמלות כלה חן",
     "cat": "אופנה",
     "region": "גוש דן",
-    "perk": "10% הנחה",
-    "benefitText": "10% הנחה על כלל המלאי",
+    "perk": "7% הנחה",
+    "benefitText": "7% הנחה על כלל המלאי",
     "hours": "10:00-19:00",
     "addr": "אמרי חיים 48, בני ברק",
     "logo": "/logos/shmalot-kala-hen.png",
@@ -4718,8 +4565,8 @@ export const BENEFITS_BUSINESSES = [
     "name": "פיצה פון",
     "cat": "אוכל ומסעדנות",
     "region": "גוש דן",
-    "perk": "15% הנחה",
-    "benefitText": "15% הנחה על כל ההזמנה",
+    "perk": "9% הנחה",
+    "benefitText": "9% הנחה על כל ההזמנה",
     "hours": "11:00-23:00",
     "addr": "שלמה המלך 12, בני ברק",
     "logo": "/logos/pizza-phone.jpg",
@@ -4740,8 +4587,8 @@ export const BENEFITS_BUSINESSES = [
     "name": "פיצה מיה - טבריה",
     "cat": "אוכל ומסעדנות",
     "region": "חיפה והצפון",
-    "perk": "15% הנחה",
-    "benefitText": "15% הנחה על כל ההזמנה",
+    "perk": "10% הנחה",
+    "benefitText": "10% הנחה על כל ההזמנה",
     "hours": "11:00-23:00",
     "addr": "טיילת יגאל אלון, טבריה",
     "logo": "/logos/pizza-mia.png",
@@ -4762,8 +4609,8 @@ export const BENEFITS_BUSINESSES = [
     "name": "יין בסביבה בני ברק",
     "cat": "אוכל ומסעדנות",
     "region": "גוש דן",
-    "perk": "הטבה מיוחדת",
-    "benefitText": "בקבוק יין במתנה ברכישה מעל 200 ש\"ח",
+    "perk": "10% הנחה",
+    "benefitText": "10% הנחה",
     "hours": "09:00-22:00",
     "addr": "החלוצים 15, בני ברק",
     "logo": "",
@@ -4784,8 +4631,8 @@ export const BENEFITS_BUSINESSES = [
     "name": "פיצה פסטלה קריית ספר",
     "cat": "אוכל ומסעדנות",
     "region": "ירושלים והסביבה",
-    "perk": "15% הנחה",
-    "benefitText": "15% הנחה על כל ההזמנה",
+    "perk": "10% הנחה מעל 150 ש\"ח - 15% הנחה",
+    "benefitText": "10% הנחה; בקנייה מעל 150 ש\"ח - 15% הנחה",
     "hours": "11:00-23:00",
     "addr": "שערי תשובה 31, קריית ספר",
     "logo": "/logos/IMG-20260804-WA0014.jpg",
@@ -4807,7 +4654,7 @@ export const BENEFITS_BUSINESSES = [
     "cat": "אוכל ומסעדנות",
     "region": "גוש דן",
     "perk": "10% הנחה",
-    "benefitText": "10% הנחה על התפריט",
+    "benefitText": "10% הנחה בכל יום בין השעות 17:30-23:00",
     "hours": "12:00-23:00",
     "addr": "כינרת 4, בני ברק",
     "logo": "/logos/המסעדה היהודית.png",
@@ -4828,8 +4675,8 @@ export const BENEFITS_BUSINESSES = [
     "name": "ג'אסט מיט",
     "cat": "אוכל ומסעדנות",
     "region": "גוש דן",
-    "perk": "10% הנחה",
-    "benefitText": "10% הנחה על כל הזמנה",
+    "perk": "8% הנחה מעל 250 ש\"ח - 10% הנחה",
+    "benefitText": "8% הנחה; בקנייה מעל 250 ש\"ח - 10% הנחה",
     "hours": "11:00-22:00",
     "addr": "בית שמש; קניון ביג, נתניה; פרויקט יהלום, בסר 4, בני ברק; מלחה, ירושלים",
     "logo": "/logos/just-meat.jpg",
@@ -4868,8 +4715,8 @@ export const BENEFITS_BUSINESSES = [
     "name": "רפטינג נהר הירדן",
     "cat": "פנאי ותיירות",
     "region": "חיפה והצפון",
-    "perk": "20% הנחה",
-    "benefitText": "20% הנחה לחברי המועדון",
+    "perk": "50% הנחה",
+    "benefitText": "50% הנחה לחברי המועדון",
     "hours": "08:00-17:00",
     "addr": "נהר הירדן",
     "logo": "/logos/rafting-yarden.png",
@@ -4890,8 +4737,8 @@ export const BENEFITS_BUSINESSES = [
     "name": "מיני ישראל",
     "cat": "פנאי ותיירות",
     "region": "ירושלים והסביבה",
-    "perk": "15% הנחה",
-    "benefitText": "15% הנחה על כרטיסי כניסה",
+    "perk": "30% הנחה; קבוצה מעל 20 - 50% הנחה",
+    "benefitText": "30% הנחה על כרטיסי כניסה; קבוצה מעל 20 - 50% הנחה",
     "hours": "10:00-18:00",
     "addr": "לטרון",
     "logo": "/logos/mini-israel.png",
@@ -4912,8 +4759,8 @@ export const BENEFITS_BUSINESSES = [
     "name": "חלום עולמי",
     "cat": "פנאי ותיירות",
     "region": "חיפה והצפון",
-    "perk": "20% הנחה",
-    "benefitText": "20% הנחה על פעילויות",
+    "perk": "25% הנחה",
+    "benefitText": "25% הנחה על פעילויות",
     "hours": "09:00-17:00",
     "addr": "שדרות אליעזר קפלן, טבריה",
     "logo": "/logos/halom-olami.png",
@@ -4934,8 +4781,8 @@ export const BENEFITS_BUSINESSES = [
     "name": "נינג'ה ישראל",
     "cat": "פנאי ותיירות",
     "region": "גוש דן",
-    "perk": "15% הנחה",
-    "benefitText": "15% הנחה על כרטיסי כניסה",
+    "perk": "30% הנחה",
+    "benefitText": "30% הנחה על כרטיסי כניסה",
     "hours": "09:00-20:00",
     "addr": "פארק מיני ישראל, נחשון",
     "logo": "/logos/ninja-israel.png",
@@ -4957,7 +4804,7 @@ export const BENEFITS_BUSINESSES = [
     "cat": "פנאי ותיירות",
     "region": "חיפה והצפון",
     "perk": "20% הנחה",
-    "benefitText": "20% הנחה לקבוצות",
+    "benefitText": "20% הנחה",
     "hours": "09:00-18:00",
     "addr": "צומת מעיין ברוך, אזור עמק חולה",
     "logo": "/logos/paintball-hagoshrim.png",
@@ -4978,8 +4825,8 @@ export const BENEFITS_BUSINESSES = [
     "name": "ג'יפים נהר הירדן",
     "cat": "פנאי ותיירות",
     "region": "חיפה והצפון",
-    "perk": "15% הנחה",
-    "benefitText": "15% הנחה על סיורי ג'יפים",
+    "perk": "20% הנחה במסלול המלא",
+    "benefitText": "20% הנחה על המסלול המלא. מסלול מקוצר - 500 ש\"ח (מסלול של שעה)",
     "hours": "08:00-17:00",
     "addr": "נהר הירדן",
     "logo": "",
@@ -5000,8 +4847,8 @@ export const BENEFITS_BUSINESSES = [
     "name": "רייזר בר",
     "cat": "פנאי ותיירות",
     "region": "גוש דן",
-    "perk": "20% הנחה",
-    "benefitText": "20% הנחה על פעילויות",
+    "perk": "10% הנחה",
+    "benefitText": "10% הנחה על פעילויות",
     "hours": "09:00-18:00",
     "addr": "צומת כ\"ח",
     "logo": "/logos/razor-bar.png",
@@ -5022,8 +4869,8 @@ export const BENEFITS_BUSINESSES = [
     "name": "עידן גל אופן",
     "cat": "פנאי ותיירות",
     "region": "גוש דן",
-    "perk": "15% הנחה",
-    "benefitText": "15% הנחה על פעילויות",
+    "perk": "20% הנחה",
+    "benefitText": "20% הנחה על פעילויות",
     "hours": "09:00-17:00",
     "addr": "רבדים",
     "logo": "/logos/גולפאן (1).png",
@@ -5066,8 +4913,8 @@ export const BENEFITS_BUSINESSES = [
     "name": "אשד הנחלים - איתמר ג'יפים",
     "cat": "פנאי ותיירות",
     "region": "ביריה",
-    "perk": "אין מידע",
-    "benefitText": "אין מידע",
+    "perk": "50 ש\"ח הנחה",
+    "benefitText": "50 ש\"ח הנחה",
     "hours": "אין מידע",
     "addr": "מצודת ביריה, ביריה",
     "logo": "",
@@ -5103,8 +4950,8 @@ export const BENEFITS_BUSINESSES = [
     "name": "מעדנייה בסביבה",
     "cat": "אוכל ומסעדנות",
     "region": "כל הארץ",
-    "perk": "יש לבדוק מול הסניף",
-    "benefitText": "כשר למהדרין — סלטים, דגים מלוחים ומעושנים, פיצוחים, חלות. הטבות חברי המועדון. לבירורים: 03-6526667.",
+    "perk": "10% הנחה",
+    "benefitText": "10% הנחה. כשר למהדרין — סלטים, דגים מלוחים ומעושנים, פיצוחים, חלות. לבירורים: 03-6526667.",
     "hours": "יש לבדוק מול הסניף",
     "addr": "כל הארץ",
     "logo": "/logos/מעדנייה בסביבה copy.jpg",
@@ -5120,8 +4967,8 @@ export const BENEFITS_BUSINESSES = [
     "name": "יין בסביבה",
     "cat": "אוכל ומסעדנות",
     "region": "כל הארץ",
-    "perk": "יש לבדוק מול הסניף",
-    "benefitText": "הטבות חברי המועדון — יש לבדוק פרטי ההנחה מול הסניף.",
+    "perk": "10% הנחה",
+    "benefitText": "10% הנחה.",
     "hours": "יש לבדוק מול הסניף",
     "addr": "כל הארץ",
     "logo": "",
@@ -5139,7 +4986,7 @@ export const BENEFITS_BUSINESSES = [
     "benefitText": "10% הנחה",
     "hours": "יש לבדוק מול הסניף",
     "addr": "יונתן בן עוזיאל 414, מעלה עמוס",
-    "logo": "",
+    "logo": "/logos/צימר זוגי במעלה עמוס.png",
     "website": "",
     "phones": [
       "0559236161"
@@ -5183,8 +5030,8 @@ export const BENEFITS_BUSINESSES = [
     "name": "מגדנית קצבורג",
     "cat": "אוכל ומסעדנות",
     "region": "ירושלים",
-    "perk": "יש לבדוק מול הסניף",
-    "benefitText": "מגדנית קצבורג — נוסד 1954. הטבות חברי המועדון. לבירורים: 02-5375777.",
+    "perk": "10% הנחה מעל 300 ש\"ח - 25% הנחה",
+    "benefitText": "10% הנחה; בקנייה מעל 300 ש\"ח - 25% הנחה. לבירורים: 02-5375777.",
     "hours": "יש לבדוק מול הסניף",
     "addr": "יחזקאל 14",
     "logo": "/logos/מגדנית קצבורג.jpg",
@@ -5198,6 +5045,28 @@ export const BENEFITS_BUSINESSES = [
         "address": "יחזקאל 14",
         "name": "יחזקאל",
         "phone": "02-5375777"
+      }
+    ],
+    "infoVerifiedFrom": "local-manual"
+  },
+  {
+    "id": "biz-238",
+    "name": "פינת מרגוע",
+    "cat": "מלונות וצימרים",
+    "region": "ירושלים",
+    "perk": "10% על הלילה הראשון ו-20% על הלילה השני",
+    "benefitText": "10% הנחה על הלילה הראשון ו-20% הנחה על הלילה השני.",
+    "hours": "אין מידע",
+    "addr": "ירושלים",
+    "logo": "",
+    "website": "",
+    "phones": ["אין מידע"],
+    "branches": [
+      {
+        "city": "ירושלים",
+        "address": "אין מידע",
+        "name": "ירושלים",
+        "phone": "אין מידע"
       }
     ],
     "infoVerifiedFrom": "local-manual"
