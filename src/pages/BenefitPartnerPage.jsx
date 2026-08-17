@@ -1,6 +1,6 @@
 import { useMemo, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
-import { BENEFITS_BUSINESSES } from '../data/benefitsData.js';
+import { BENEFITS_BUSINESSES, BUSINESS_DESCRIPTIONS } from '../data/benefitsData.js';
 
 function sanitizeText(value) {
   const text = String(value || '');
@@ -41,6 +41,9 @@ function toDistinctBranches(branches) {
 }
 
 function getReliablePromoText(partnerName, category, perk) {
+  const description = BUSINESS_DESCRIPTIONS[partnerName];
+  if (description) return description;
+
   const safeName = sanitizeText(partnerName || 'בית העסק');
   const safeCategory = sanitizeText(category || 'מגוון מוצרים');
   const safePerk = sanitizeText(perk || 'הטבת מועדון');
@@ -82,10 +85,6 @@ function BenefitPartnerPage() {
   const branchSource = officialBranches.length > 0 ? officialBranches : relatedBranches;
   const branches = useMemo(() => toDistinctBranches(branchSource), [branchSource]);
 
-  const verifiedNote = selected.infoVerifiedFrom === 'kehilotcard-public-api'
-    ? 'נתוני העסק והסניפים אומתו מול מאגר ציבורי רשמי של קהילות.'
-    : 'חלק מהנתונים מבוססים על מאגר מקומי היסטורי, ללא מקור ציבורי מאמת לכל השדות.';
-
   const branchPhonesText = branches.some((branch) => branch.phone)
     ? branches.map((branch) => `${branch.city}: ${branch.phone || 'לא זמין'}`).join(' | ')
     : phones.length > 0
@@ -110,9 +109,7 @@ function BenefitPartnerPage() {
     <>
       <section className="partners-hero">
         <div className="container">
-          <p className="eyebrow" style={{ color: 'rgba(255,255,255,0.7)' }}>עמוד עסק</p>
           <h1 className="font-display" style={{ margin: '0.25rem 0 0.6rem', color: 'white', fontSize: 'clamp(1.9rem, 4vw, 2.8rem)' }}>{sanitizeText(selected.name)}</h1>
-          <p style={{ color: 'rgba(255,255,255,0.8)', margin: 0 }}>{verifiedNote}</p>
         </div>
       </section>
 
@@ -135,7 +132,6 @@ function BenefitPartnerPage() {
               </div>
 
               <div className="card-body">
-                <h2 className="font-display" style={{ marginTop: 0, marginBottom: '0.7rem' }}>על החנות והמוצרים</h2>
                 <p style={{ marginTop: 0, color: 'var(--ink-soft)' }}>
                   העסק פועל בתחום {sanitizeText(selected.cat || 'לא זמין')}. פירוט רשמי מהמאגר: {sanitizeText(selected.benefitText || 'לא זמין')}
                 </p>
@@ -168,17 +164,14 @@ function BenefitPartnerPage() {
                 </ul>
 
                 <div className="partner-promo-box">
-                  <h4 style={{ marginTop: 0, marginBottom: '0.5rem' }}>למה כדאי לבדוק את העסק</h4>
+                  <h4 style={{ marginTop: 0, marginBottom: '0.5rem' }}>הכירו את {sanitizeText(selected.name)}</h4>
                   <p style={{ margin: 0, color: 'var(--ink-soft)' }}>{getReliablePromoText(selected.name, selected.cat, selected.perk)}</p>
                 </div>
               </div>
             </article>
 
             <aside className="card card-body">
-              <h3 className="font-display" style={{ marginTop: 0 }}>סניפים לפי המאגר</h3>
-              <p style={{ marginTop: 0, color: 'var(--ink-soft)', fontSize: '0.9rem' }}>
-                הרשימה מבוססת על רשומות קיימות באינדקס. אם חסר סניף, המשמעות היא שאין עליו נתון מאומת במאגר.
-              </p>
+              <h3 className="font-display" style={{ marginTop: 0 }}>סניפים</h3>
               <div className="partner-branches-list">
                 {branches.length > 0 ? branches.map((branch) => (
                   <div key={branch.id} className="partner-branch-item">
