@@ -42,10 +42,17 @@ export const BENEFITS_BUSINESSES = [
     "benefitText": "כרטיס טיסה ללרנקה הלוך מתנה למזמינים טיסה לניו יורק. יש לבדוק מול הסוכן את תנאי ההזמנה והזכאות לפני הסגירה.",
     "hours": "יש לבדוק מול הסניף",
     "addr": "כל הארץ",
-    "logo": "/logos/biz-211.jpg",
+    "logo": "",
     "website": "",
-    "phones": [],
-    "branches": [],
+    "phones": ["אין מידע"],
+    "branches": [
+      {
+        "city": "כל הארץ",
+        "address": "אין מידע",
+        "name": "שמים וארץ",
+        "phone": "אין מידע"
+      }
+    ],
     "infoVerifiedFrom": "kehilotcard-public-api"
   },
   {
@@ -59,8 +66,15 @@ export const BENEFITS_BUSINESSES = [
     "addr": "כל הארץ",
     "logo": "/logos/בת מלך החדשה.webp",
     "website": "",
-    "phones": [],
-    "branches": [],
+    "phones": ["אין מידע"],
+    "branches": [
+      {
+        "city": "בני ברק",
+        "address": "יהודה הלוי 24",
+        "name": "בני ברק",
+        "phone": "אין מידע"
+      }
+    ],
     "infoVerifiedFrom": "kehilotcard-public-api"
   },
   {
@@ -72,15 +86,15 @@ export const BENEFITS_BUSINESSES = [
     "benefitText": "15% הנחה על כל התכשיטים. כתובת: בירנבוים 18, בני ברק.",
     "hours": "יש לבדוק מול הסניף",
     "addr": "בירנבוים 18, בני ברק",
-    "logo": "/logos/biz-213.jpg",
+    "logo": "",
     "website": "",
-    "phones": [],
+    "phones": ["אין מידע"],
     "branches": [
       {
         "city": "בני ברק",
         "address": "בירנבוים 18",
         "name": "בני ברק",
-        "phone": null
+        "phone": "אין מידע"
       }
     ],
     "infoVerifiedFrom": "kehilotcard-public-api"
@@ -93,11 +107,16 @@ export const BENEFITS_BUSINESSES = [
     "perk": "10% הנחה",
     "benefitText": "10% הנחה. ההטבה תקפה בכל הסניפים.",
     "hours": "יש לבדוק מול הסניף",
-    "addr": "כל הסניפים",
+    "addr": "שטראוס 32, ירושלים; המביט 10, ירושלים; סנטר 1, ירמיהו 43, ירושלים; קניון סאן מול, שד' האמוראים 2, בית שמש",
     "logo": "/logos/מצעית.png",
     "website": "",
-    "phones": [],
-    "branches": [],
+    "phones": ["02-5370544", "02-5389881", "02-5388892", "02-6322152"],
+    "branches": [
+      { "city": "ירושלים", "address": "שטראוס 32", "name": "שטראוס", "phone": "02-5370544" },
+      { "city": "ירושלים", "address": "המביט 10", "name": "המביט", "phone": "02-5389881" },
+      { "city": "ירושלים", "address": "סנטר 1, ירמיהו 43", "name": "סנטר 1", "phone": "02-5388892" },
+      { "city": "בית שמש", "address": "קניון סאן מול, שד' האמוראים 2", "name": "קניון סאן מול", "phone": "02-6322152" }
+    ],
     "infoVerifiedFrom": "kehilotcard-public-api"
   },
   {
@@ -189,7 +208,7 @@ export const BENEFITS_BUSINESSES = [
     "benefitText": "תשלום בכסף צבור בכרטיס + צבירת נקודות.",
     "hours": "יש לבדוק מול הסניף",
     "addr": "אבני נזר 3, בני ברק",
-    "logo": "",
+    "logo": "/logos/biz-213.jpg",
     "website": "",
     "phones": [],
     "branches": [
@@ -4680,16 +4699,16 @@ export const BENEFITS_BUSINESSES = [
     "perk": "10% הנחה",
     "benefitText": "10% הנחה על כלל המלאי",
     "hours": "10:00-19:00",
-    "addr": "",
-    "logo": "",
+    "addr": "אמרי חיים 48, בני ברק",
+    "logo": "/logos/shmalot-kala-hen.png",
     "website": "",
-    "phones": [],
+    "phones": ["0527158857"],
     "branches": [
       {
-        "city": "גוש דן",
-        "address": "גוש דן",
-        "name": "",
-        "phone": null
+        "city": "בני ברק",
+        "address": "אמרי חיים 48",
+        "name": "בני ברק",
+        "phone": "0527158857"
       }
     ],
     "infoVerifiedFrom": "local-legacy-data"
@@ -4702,38 +4721,16 @@ export const BENEFITS_BUSINESSES = [
     "perk": "15% הנחה",
     "benefitText": "15% הנחה על כל ההזמנה",
     "hours": "11:00-23:00",
-    "addr": "",
-    "logo": "",
+    "addr": "שלמה המלך 12, בני ברק",
+    "logo": "/logos/pizza-phone.jpg",
     "website": "",
-    "phones": [],
+    "phones": ["אין מידע"],
     "branches": [
       {
-        "city": "גוש דן",
-        "address": "גוש דן",
-        "name": "",
-        "phone": null
-      }
-    ],
-    "infoVerifiedFrom": "local-legacy-data"
-  },
-  {
-    "id": "biz-legacy-3",
-    "name": "קונדיטוריית קצבורג",
-    "cat": "אוכל ומסעדנות",
-    "region": "ירושלים והסביבה",
-    "perk": "10% הנחה",
-    "benefitText": "10% הנחה + משלוח חינם",
-    "hours": "07:00-21:00",
-    "addr": "ירושלים",
-    "logo": "",
-    "website": "",
-    "phones": [],
-    "branches": [
-      {
-        "city": "ירושלים והסביבה",
-        "address": "ירושלים",
-        "name": "",
-        "phone": null
+        "city": "בני ברק",
+        "address": "שלמה המלך 12",
+        "name": "בני ברק",
+        "phone": "אין מידע"
       }
     ],
     "infoVerifiedFrom": "local-legacy-data"
@@ -4746,16 +4743,16 @@ export const BENEFITS_BUSINESSES = [
     "perk": "15% הנחה",
     "benefitText": "15% הנחה על כל ההזמנה",
     "hours": "11:00-23:00",
-    "addr": "טבריה",
-    "logo": "",
+    "addr": "טיילת יגאל אלון, טבריה",
+    "logo": "/logos/pizza-mia.png",
     "website": "",
-    "phones": [],
+    "phones": ["אין מידע"],
     "branches": [
       {
-        "city": "חיפה והצפון",
-        "address": "טבריה",
-        "name": "",
-        "phone": null
+        "city": "טבריה",
+        "address": "טיילת יגאל אלון",
+        "name": "טבריה",
+        "phone": "אין מידע"
       }
     ],
     "infoVerifiedFrom": "local-legacy-data"
@@ -4768,16 +4765,16 @@ export const BENEFITS_BUSINESSES = [
     "perk": "הטבה מיוחדת",
     "benefitText": "בקבוק יין במתנה ברכישה מעל 200 ש\"ח",
     "hours": "09:00-22:00",
-    "addr": "בני ברק",
+    "addr": "החלוצים 15, בני ברק",
     "logo": "",
     "website": "",
-    "phones": [],
+    "phones": ["אין מידע"],
     "branches": [
       {
-        "city": "גוש דן",
-        "address": "בני ברק",
-        "name": "",
-        "phone": null
+        "city": "בני ברק",
+        "address": "החלוצים 15",
+        "name": "בני ברק",
+        "phone": "אין מידע"
       }
     ],
     "infoVerifiedFrom": "local-legacy-data"
@@ -4790,16 +4787,16 @@ export const BENEFITS_BUSINESSES = [
     "perk": "15% הנחה",
     "benefitText": "15% הנחה על כל ההזמנה",
     "hours": "11:00-23:00",
-    "addr": "קריית ספר",
-    "logo": "",
+    "addr": "שערי תשובה 31, קריית ספר",
+    "logo": "/logos/IMG-20260804-WA0014.jpg",
     "website": "",
-    "phones": [],
+    "phones": ["08-6455151"],
     "branches": [
       {
-        "city": "ירושלים והסביבה",
-        "address": "קריית ספר",
-        "name": "",
-        "phone": null
+        "city": "קריית ספר",
+        "address": "שערי תשובה 31",
+        "name": "קריית ספר",
+        "phone": "08-6455151"
       }
     ],
     "infoVerifiedFrom": "local-legacy-data"
@@ -4812,16 +4809,16 @@ export const BENEFITS_BUSINESSES = [
     "perk": "10% הנחה",
     "benefitText": "10% הנחה על התפריט",
     "hours": "12:00-23:00",
-    "addr": "",
-    "logo": "",
+    "addr": "כינרת 4, בני ברק",
+    "logo": "/logos/המסעדה היהודית.png",
     "website": "",
-    "phones": [],
+    "phones": ["03-5789999"],
     "branches": [
       {
-        "city": "גוש דן",
-        "address": "גוש דן",
-        "name": "",
-        "phone": null
+        "city": "בני ברק",
+        "address": "כינרת 4",
+        "name": "בני ברק",
+        "phone": "03-5789999"
       }
     ],
     "infoVerifiedFrom": "local-legacy-data"
@@ -4834,16 +4831,34 @@ export const BENEFITS_BUSINESSES = [
     "perk": "10% הנחה",
     "benefitText": "10% הנחה על כל הזמנה",
     "hours": "11:00-22:00",
-    "addr": "",
-    "logo": "",
+    "addr": "בית שמש; קניון ביג, נתניה; פרויקט יהלום, בסר 4, בני ברק; מלחה, ירושלים",
+    "logo": "/logos/just-meat.jpg",
     "website": "",
-    "phones": [],
+    "phones": ["אין מידע"],
     "branches": [
       {
-        "city": "גוש דן",
-        "address": "גוש דן",
-        "name": "",
-        "phone": null
+        "city": "בית שמש",
+        "address": "אין מידע",
+        "name": "בית שמש",
+        "phone": "אין מידע"
+      },
+      {
+        "city": "נתניה",
+        "address": "קניון ביג, נתניה",
+        "name": "קניון ביג",
+        "phone": "אין מידע"
+      },
+      {
+        "city": "בני ברק",
+        "address": "פרויקט יהלום, בסר 4",
+        "name": "פרויקט יהלום",
+        "phone": "אין מידע"
+      },
+      {
+        "city": "ירושלים",
+        "address": "מלחה",
+        "name": "מלחה",
+        "phone": "אין מידע"
       }
     ],
     "infoVerifiedFrom": "local-legacy-data"
@@ -4857,15 +4872,15 @@ export const BENEFITS_BUSINESSES = [
     "benefitText": "20% הנחה לחברי המועדון",
     "hours": "08:00-17:00",
     "addr": "נהר הירדן",
-    "logo": "",
+    "logo": "/logos/rafting-yarden.png",
     "website": "",
-    "phones": [],
+    "phones": ["072-3726527", "050-9695171"],
     "branches": [
       {
         "city": "חיפה והצפון",
         "address": "נהר הירדן",
-        "name": "",
-        "phone": null
+        "name": "נהר הירדן",
+        "phone": "072-3726527 / 050-9695171"
       }
     ],
     "infoVerifiedFrom": "local-legacy-data"
@@ -4879,15 +4894,15 @@ export const BENEFITS_BUSINESSES = [
     "benefitText": "15% הנחה על כרטיסי כניסה",
     "hours": "10:00-18:00",
     "addr": "לטרון",
-    "logo": "",
+    "logo": "/logos/mini-israel.png",
     "website": "",
-    "phones": [],
+    "phones": ["1700-559-559"],
     "branches": [
       {
         "city": "ירושלים והסביבה",
         "address": "לטרון",
-        "name": "",
-        "phone": null
+        "name": "לטרון",
+        "phone": "1700-559-559"
       }
     ],
     "infoVerifiedFrom": "local-legacy-data"
@@ -4900,16 +4915,16 @@ export const BENEFITS_BUSINESSES = [
     "perk": "20% הנחה",
     "benefitText": "20% הנחה על פעילויות",
     "hours": "09:00-17:00",
-    "addr": "",
-    "logo": "",
+    "addr": "שדרות אליעזר קפלן, טבריה",
+    "logo": "/logos/halom-olami.png",
     "website": "",
-    "phones": [],
+    "phones": ["050-9693185"],
     "branches": [
       {
-        "city": "חיפה והצפון",
-        "address": "חיפה והצפון",
-        "name": "",
-        "phone": null
+        "city": "טבריה",
+        "address": "שדרות אליעזר קפלן",
+        "name": "טבריה",
+        "phone": "050-9693185"
       }
     ],
     "infoVerifiedFrom": "local-legacy-data"
@@ -4922,16 +4937,16 @@ export const BENEFITS_BUSINESSES = [
     "perk": "15% הנחה",
     "benefitText": "15% הנחה על כרטיסי כניסה",
     "hours": "09:00-20:00",
-    "addr": "",
-    "logo": "",
+    "addr": "פארק מיני ישראל, נחשון",
+    "logo": "/logos/ninja-israel.png",
     "website": "",
-    "phones": [],
+    "phones": ["0559795604"],
     "branches": [
       {
-        "city": "גוש דן",
-        "address": "גוש דן",
-        "name": "",
-        "phone": null
+        "city": "נחשון",
+        "address": "פארק מיני ישראל",
+        "name": "פארק מיני ישראל",
+        "phone": "0559795604"
       }
     ],
     "infoVerifiedFrom": "local-legacy-data"
@@ -4944,16 +4959,16 @@ export const BENEFITS_BUSINESSES = [
     "perk": "20% הנחה",
     "benefitText": "20% הנחה לקבוצות",
     "hours": "09:00-18:00",
-    "addr": "הגושרים",
-    "logo": "",
+    "addr": "צומת מעיין ברוך, אזור עמק חולה",
+    "logo": "/logos/paintball-hagoshrim.png",
     "website": "",
-    "phones": [],
+    "phones": ["050-5473508"],
     "branches": [
       {
         "city": "חיפה והצפון",
         "address": "הגושרים",
-        "name": "",
-        "phone": null
+        "name": "צומת מעיין ברוך",
+        "phone": "050-5473508"
       }
     ],
     "infoVerifiedFrom": "local-legacy-data"
@@ -4969,13 +4984,13 @@ export const BENEFITS_BUSINESSES = [
     "addr": "נהר הירדן",
     "logo": "",
     "website": "",
-    "phones": [],
+    "phones": ["אין מידע"],
     "branches": [
       {
         "city": "חיפה והצפון",
         "address": "נהר הירדן",
-        "name": "",
-        "phone": null
+        "name": "נהר הירדן",
+        "phone": "אין מידע"
       }
     ],
     "infoVerifiedFrom": "local-legacy-data"
@@ -4988,16 +5003,16 @@ export const BENEFITS_BUSINESSES = [
     "perk": "20% הנחה",
     "benefitText": "20% הנחה על פעילויות",
     "hours": "09:00-18:00",
-    "addr": "",
-    "logo": "",
+    "addr": "צומת כ\"ח",
+    "logo": "/logos/razor-bar.png",
     "website": "",
-    "phones": [],
+    "phones": ["055-453-3480"],
     "branches": [
       {
-        "city": "גוש דן",
-        "address": "גוש דן",
-        "name": "",
-        "phone": null
+        "city": "צומת כ\"ח",
+        "address": "צומת כ\"ח",
+        "name": "צומת כ\"ח",
+        "phone": "055-453-3480"
       }
     ],
     "infoVerifiedFrom": "local-legacy-data"
@@ -5010,16 +5025,16 @@ export const BENEFITS_BUSINESSES = [
     "perk": "15% הנחה",
     "benefitText": "15% הנחה על פעילויות",
     "hours": "09:00-17:00",
-    "addr": "",
-    "logo": "",
+    "addr": "רבדים",
+    "logo": "/logos/גולפאן (1).png",
     "website": "",
-    "phones": [],
+    "phones": ["058-5523333"],
     "branches": [
       {
-        "city": "גוש דן",
-        "address": "גוש דן",
-        "name": "",
-        "phone": null
+        "city": "רבדים",
+        "address": "רבדים",
+        "name": "רבדים",
+        "phone": "058-5523333"
       }
     ],
     "infoVerifiedFrom": "local-legacy-data"
@@ -5032,16 +5047,38 @@ export const BENEFITS_BUSINESSES = [
     "perk": "יש לבדוק מול הסניף",
     "benefitText": "בית פרמיום לסלולר — הטבות חברי המועדון. יש לבדוק פרטי ההנחה מול הסניף.",
     "hours": "יש לבדוק מול הסניף",
-    "addr": "בני ברק",
-    "logo": "",
+    "addr": "רבי עקיבא 79, בני ברק, ישראל",
+    "logo": "/logos/חיימקה.jpg",
     "website": "",
-    "phones": [],
+    "phones": ["03-533-1717"],
     "branches": [
       {
         "city": "בני ברק",
-        "address": "בני ברק",
+        "address": "רבי עקיבא 79",
         "name": "חיימקה סלולר",
-        "phone": null
+        "phone": "03-533-1717"
+      }
+    ],
+    "infoVerifiedFrom": "local-manual"
+  },
+  {
+    "id": "biz-237",
+    "name": "אשד הנחלים - איתמר ג'יפים",
+    "cat": "פנאי ותיירות",
+    "region": "ביריה",
+    "perk": "אין מידע",
+    "benefitText": "אין מידע",
+    "hours": "אין מידע",
+    "addr": "מצודת ביריה, ביריה",
+    "logo": "",
+    "website": "",
+    "phones": ["055-453-3797"],
+    "branches": [
+      {
+        "city": "ביריה",
+        "address": "מצודת ביריה",
+        "name": "ביריה",
+        "phone": "055-453-3797"
       }
     ],
     "infoVerifiedFrom": "local-manual"
@@ -5055,7 +5092,7 @@ export const BENEFITS_BUSINESSES = [
     "benefitText": "תקשורת נקיה — הטבות חברי המועדון. יש לבדוק פרטי ההנחה מול הסניף.",
     "hours": "יש לבדוק מול הסניף",
     "addr": "כל הארץ",
-    "logo": "",
+    "logo": "/logos/קלינג.png",
     "website": "",
     "phones": [],
     "branches": [],
@@ -5070,7 +5107,7 @@ export const BENEFITS_BUSINESSES = [
     "benefitText": "כשר למהדרין — סלטים, דגים מלוחים ומעושנים, פיצוחים, חלות. הטבות חברי המועדון. לבירורים: 03-6526667.",
     "hours": "יש לבדוק מול הסניף",
     "addr": "כל הארץ",
-    "logo": "",
+    "logo": "/logos/מעדנייה בסביבה copy.jpg",
     "website": "",
     "phones": [
       "03-6526667"
@@ -5090,23 +5127,6 @@ export const BENEFITS_BUSINESSES = [
     "logo": "",
     "website": "",
     "phones": [],
-    "branches": [],
-    "infoVerifiedFrom": "local-manual"
-  },
-  {
-    "id": "biz-229",
-    "name": "אשד הנחלים – טיולי גיפים",
-    "cat": "פנאי ותיירות",
-    "region": "כל הארץ",
-    "perk": "יש לבדוק מול הסניף",
-    "benefitText": "טיולי ג'יפים ושטח — הטבות חברי המועדון. טלפון: 054-6444950.",
-    "hours": "יש לבדוק מול הסניף",
-    "addr": "כל הארץ",
-    "logo": "",
-    "website": "",
-    "phones": [
-      "054-6444950"
-    ],
     "branches": [],
     "infoVerifiedFrom": "local-manual"
   },
@@ -5143,7 +5163,7 @@ export const BENEFITS_BUSINESSES = [
     "benefitText": "הטבות חברי המועדון — יש לבדוק מול הסניף.",
     "hours": "יש לבדוק מול הסניף",
     "addr": "רבי עקיבא 64, בני ברק",
-    "logo": "",
+    "logo": "/logos/חלום שלי.png",
     "website": "",
     "phones": [
       "035504545"
@@ -5167,7 +5187,7 @@ export const BENEFITS_BUSINESSES = [
     "benefitText": "מגדנית קצבורג — נוסד 1954. הטבות חברי המועדון. לבירורים: 02-5375777.",
     "hours": "יש לבדוק מול הסניף",
     "addr": "יחזקאל 14",
-    "logo": "",
+    "logo": "/logos/מגדנית קצבורג.jpg",
     "website": "",
     "phones": [
       "02-5375777"
@@ -5177,12 +5197,6 @@ export const BENEFITS_BUSINESSES = [
         "city": "ירושלים",
         "address": "יחזקאל 14",
         "name": "יחזקאל",
-        "phone": "02-5375777"
-      },
-      {
-        "city": "ירושלים",
-        "address": "מלכי ישראל 6",
-        "name": "מלכי ישראל",
         "phone": "02-5375777"
       }
     ],

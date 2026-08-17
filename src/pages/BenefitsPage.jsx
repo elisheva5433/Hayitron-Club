@@ -84,7 +84,12 @@ function BenefitsPage() {
   }, [businesses]);
 
   const regions = useMemo(() => {
-    const dynamicRegions = [...new Set(businesses.map((b) => b.region).filter((value) => value && value !== 'כל הארץ'))];
+    const dynamicRegions = [...new Set(
+      businesses.flatMap((biz) => [
+        biz.region,
+        ...(Array.isArray(biz.branches) ? biz.branches.map((branch) => branch?.city) : []),
+      ]).filter((value) => value && value !== 'כל הארץ')
+    )];
     return ['כל הארץ', ...dynamicRegions];
   }, [businesses]);
 
@@ -93,7 +98,8 @@ function BenefitsPage() {
   const filtered = businesses.filter((b) => {
     const matchSearch = !normalizedSearch || matchesBusinessName(b.name, normalizedSearch);
     const matchCat = cat === 'הכל' || b.cat === cat;
-    const matchRegion = region === 'כל הארץ' || b.region === region;
+    const branchCities = Array.isArray(b.branches) ? b.branches.map((branch) => branch?.city) : [];
+    const matchRegion = region === 'כל הארץ' || b.region === region || branchCities.includes(region);
     return matchSearch && matchCat && matchRegion;
   });
 
