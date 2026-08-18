@@ -51,21 +51,6 @@ function getReliablePromoText(partnerName, category, perk) {
   return `${safeName} הוא עסק שותף במועדון בתחום ${safeCategory}. ההטבה הרשמית במאגר היא: ${safePerk}. מומלץ לבדוק מול הסניף את פרטי המלאי והתנאים לפני הרכישה.`;
 }
 
-function getBenefitActionText(benefitText, perk) {
-  const safeBenefitText = sanitizeText(benefitText || '');
-  const safePerk = sanitizeText(perk || 'הטבת מועדון');
-
-  if (/טעון|טעינה|כרטיס/i.test(safeBenefitText)) {
-    return 'בתשלום באמצעות הכסף הטעון בכרטיס';
-  }
-
-  if (/קופה|קופ/i.test(safeBenefitText)) {
-    return 'יש לעדכן בקופה לפי תנאי העסק';
-  }
-
-  return `מימוש בהתאם לתנאי העסק לצד ${safePerk}`;
-}
-
 function BenefitPartnerPage() {
   const { businessId } = useParams();
   const [logoFailed, setLogoFailed] = useState(false);
@@ -132,18 +117,11 @@ function BenefitPartnerPage() {
               </div>
 
               <div className="card-body">
-                <p style={{ marginTop: 0, color: 'var(--ink-soft)' }}>
-                  העסק פועל בתחום {sanitizeText(selected.cat || 'לא זמין')}. פירוט רשמי מהמאגר: {sanitizeText(selected.benefitText || 'לא זמין')}
-                </p>
-
                 <div className="partner-benefit-hero">
                   <div className="partner-benefit-hero-copy">
-                    <div className="partner-benefit-hero-value">{sanitizeText(selected.perk || 'לא זמין')}</div>
-                    <div className="partner-benefit-hero-note">{getBenefitActionText(selected.benefitText, selected.perk)}</div>
-                  </div>
-                  <div className="partner-benefit-hero-meta">
-                    <span className="partner-benefit-hero-label">גובה ההטבה</span>
-                    <span className="partner-benefit-hero-subtitle">המידע החשוב ביותר במבט אחד</span>
+                    <div className="partner-benefit-hero-value">
+                      {sanitizeText(selected.perk || 'לא זמין').split(' או ')[0]}
+                    </div>
                   </div>
                 </div>
 

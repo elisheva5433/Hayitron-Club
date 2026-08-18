@@ -13,6 +13,7 @@ test('normalizePartnerKey collapses same-brand branch variants into one canonica
 });
 
 test('multi-word business searches require every query word to match', () => {
+  assert.equal(matchesBusinessName('פיצה פון', 'פ'), true);
   assert.equal(matchesBusinessName('עידן גל אופן', 'גל אופן'), true);
   assert.equal(matchesBusinessName('גלורי קידס בע"מ', 'גל אופן'), false);
   assert.equal(matchesBusinessName('פינת הגלידה', 'גל אופן'), false);

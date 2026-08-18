@@ -1,7 +1,7 @@
 import { useMemo, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
 import { BENEFITS_BUSINESSES } from '../data/benefitsData.js';
-import { sanitizeText, normalizePartnerKey, normalizeSearchValue, matchesBusinessName, getBranchSummary } from '../utils/benefitsCatalog.js';
+import { sanitizeText, normalizePartnerKey, normalizeSearchValue, matchesBusinessName } from '../utils/benefitsCatalog.js';
 
 function getLogoFallbackLabel(name) {
   const text = String(name || '').trim();
@@ -12,13 +12,12 @@ function getLogoFallbackLabel(name) {
   return initials || text.slice(0, 2);
 }
 
-function BizCard({ biz }) {
+function BizCard({ biz, filterQuery }) {
   const [logoFailed, setLogoFailed] = useState(false);
   const fallbackLabel = getLogoFallbackLabel(biz.name);
-  const branchSummary = getBranchSummary(biz);
 
   return (
-    <Link to={`/benefits/${biz.id}`} className="partner-card" aria-label={`מעבר לעסק ${biz.name}`}>
+    <Link to={`/benefits/${biz.id}${filterQuery}`} className="partner-card" aria-label={`מעבר לעסק ${biz.name}`}>
       <div className="partner-card-logo-shell">
         {biz.logo && !logoFailed ? (
           <img
@@ -36,14 +35,8 @@ function BizCard({ biz }) {
         )}
       </div>
 
-      <div className="partner-card-body">
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '0.5rem', gap: '0.6rem' }}>
-          <h3 style={{ margin: 0, fontSize: '1.02rem' }}>{sanitizeText(biz.name)}</h3>
-          <span className="tag">{sanitizeText(biz.cat)}</span>
-        </div>
-        <p style={{ margin: '0 0 0.35rem', fontWeight: 700, color: 'var(--teal)', fontSize: '0.95rem' }}>{sanitizeText(biz.perk)}</p>
-        <p style={{ margin: 0, fontSize: '0.86rem', color: 'var(--ink-soft)' }}>📍 {branchSummary || sanitizeText(biz.addr)}</p>
-        <p style={{ margin: '0.2rem 0 0', fontSize: '0.78rem', color: 'var(--ink-soft)' }}>לצפייה בפרטי העסק המלאים</p>
+      <div className="partner-card-body" style={{ display: 'flex', justifyContent: 'flex-start' }}>
+        <span className="tag">{sanitizeText(biz.cat)}</span>
       </div>
     </Link>
   );
@@ -74,9 +67,20 @@ function BenefitsPage() {
     return Array.from(deduped.values());
   }, []);
 
-  const [search, setSearch] = useState('');
-  const [cat, setCat] = useState('הכל');
-  const [region, setRegion] = useState('כל הארץ');
+  const [searchParams, setSearchParams] = useSearchParams();
+  const search = searchParams.get('search') || '';
+  const cat = searchParams.get('cat') || 'הכל';
+  const region = searchParams.get('region') || 'כל הארץ';
+
+  const updateFilter = (key, value, defaultValue) => {
+    const nextParams = new URLSearchParams(searchParams);
+    if (value === defaultValue) {
+      nextParams.delete(key);
+    } else {
+      nextParams.set(key, value);
+    }
+    setSearchParams(nextParams, { replace: true });
+  };
 
   const categories = useMemo(() => {
     const dynamicCategories = [...new Set(businesses.map((b) => b.cat).filter(Boolean))];
@@ -118,17 +122,17 @@ function BenefitsPage() {
           <div className="benefits-filters">
             <div className="benefits-filter-search">
               <label className="label">חיפוש</label>
-              <input className="field benefits-filter-control" placeholder="שם עסק" value={search} onChange={(e) => setSearch(e.target.value)} />
+              <input className="field benefits-filter-control" placeholder="שם עסק" value={search} onChange={(e) => updateFilter('search', e.target.value, '')} />
             </div>
             <div className="benefits-filter-field">
               <label className="label">קטגוריה</label>
-              <select className="field benefits-filter-control" value={cat} onChange={(e) => setCat(e.target.value)}>
+              <select className="field benefits-filter-control" value={cat} onChange={(e) => updateFilter('cat', e.target.value, 'הכל')}>
                 {categories.map((c) => <option key={c}>{c}</option>)}
               </select>
             </div>
             <div className="benefits-filter-field">
               <label className="label">אזור</label>
-              <select className="field benefits-filter-control" value={region} onChange={(e) => setRegion(e.target.value)}>
+              <select className="field benefits-filter-control" value={region} onChange={(e) => updateFilter('region', e.target.value, 'כל הארץ')}>
                 {regions.map((r) => <option key={r}>{r}</option>)}
               </select>
             </div>
@@ -138,7 +142,7 @@ function BenefitsPage() {
 
           {filtered.length > 0 ? (
             <div className="grid-3">
-              {filtered.map((b) => <BizCard key={b.id} biz={b} />)}
+              {filtered.map((b) => <BizCard key={b.id} biz={b} filterQuery={searchParams.toString() ? `?${searchParams.toString()}` : ''} />)}
             </div>
           ) : (
             <div className="empty-state">לא נמצאו תוצאות לחיפוש הזה.</div>
@@ -154,7 +158,6 @@ export {
   normalizePartnerKey,
   normalizeSearchValue,
   matchesBusinessName,
-  getBranchSummary,
 };
 
 export default BenefitsPage;

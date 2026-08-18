@@ -75,7 +75,7 @@ export function matchesBusinessName(name, query) {
   const normalizedName = normalizeSearchValue(name);
   const normalizedQuery = normalizeSearchValue(query);
 
-  if (!normalizedQuery || normalizedQuery.length <= 1) {
+  if (!normalizedQuery) {
     return false;
   }
 

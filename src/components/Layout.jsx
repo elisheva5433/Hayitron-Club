@@ -32,7 +32,7 @@ function Layout() {
           <div style={{ background: 'var(--paper)', borderBottom: '1px solid var(--line)', padding: '0.5rem 0' }}>
             <div className="container">
               <button onClick={() => navigate(-1)} style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'var(--ink-soft)', fontSize: '0.88rem', fontWeight: 600, display: 'flex', alignItems: 'center', gap: '0.3rem', padding: '0.2rem 0' }}>
-                ← חזרה
+                <span aria-hidden="true" style={{ fontSize: '1.35rem', lineHeight: 1 }}>→</span> חזרה
               </button>
             </div>
           </div>
