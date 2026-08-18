@@ -204,11 +204,11 @@ export const BENEFITS_BUSINESSES = [
     "name": "פנינת האיפור והקוסמטיקה",
     "cat": "איפור וקוסמטיקה",
     "region": "בני ברק",
-    "perk": "15% הנחה",
+    "perk": "15% הנחה על התכשיטים, ו- 5% הנחה אל איפור ובישום",
     "benefitText": "15% הנחה על כל התכשיטים. כתובת: בירנבוים 18, בני ברק.",
     "hours": "יש לבדוק מול הסניף",
     "addr": "בירנבוים 18, בני ברק",
-    "logo": "",
+    "logo": "/logos/פנינת האיפור והקוסמטיקה.jpg",
     "website": "",
     "phones": ["אין מידע"],
     "branches": [
@@ -2713,7 +2713,7 @@ export const BENEFITS_BUSINESSES = [
     "hours": "יש לבדוק מול הסניף",
     "addr": "הפסגה 25",
     "logo": "/logos/biz-203.jpg",
-    "website": "",
+    "website": "https://elichef.co.il/",
     "phones": [],
     "branches": [
       {
@@ -5192,5 +5192,76 @@ export const BENEFITS_BUSINESSES = [
       }
     ],
     "infoVerifiedFrom": "local-manual"
+  },
+  {
+    "id": "biz-239",
+    "name": "נוף הרים רכסים",
+    "cat": "מלונות וצימרים",
+    "region": "רכסים",
+    "perk": "10% הנחה בלילה הראשון ו-15% הנחה בלילה השני",
+    "benefitText": "10% הנחה בלילה הראשון ו-15% הנחה בלילה השני.",
+    "hours": "אין מידע",
+    "addr": "רכסים",
+    "logo": "",
+    "website": "",
+    "phones": ["0527137541"],
+    "branches": [
+      {
+        "city": "רכסים",
+        "address": "רכסים",
+        "name": "נוף הרים רכסים",
+        "phone": "0527137541"
+      }
+    ],
+    "infoVerifiedFrom": "local-manual"
   }
 ];
+
+const BUSINESS_WEBSITES = {
+  "בורסלינו - כובעים": "https://borsalino.co.il/",
+  "מצעית": "https://matzait.com/?utm_source=chatgpt.com",
+  "101 חליפות": "https://101privateline.com/",
+  "אדור - אהרונוביץ": "https://adorefashion.co.il/",
+  "אדור - בית אופנה לגברים": "https://adorefashion.co.il/",
+  "אופטימלי": "https://optimali.ravpage.co.il/",
+  "ויסטה": "",
+  "אורדמן - חלוקים": "https://www.ordman.co.il/",
+  "אקסוס": "https://xsosshirts.co.il/",
+  "בגיר": "https://bagir-il.com/",
+  "בזאר שטראוס": "https://www.bazars.co.il/",
+  "בלאן": "https://skybranding.co.il/%D7%91%D7%9C%D7%90%D7%9F/?utm_source=chatgpt.com",
+  "בלייזר חליפות": "https://www.blazershop.co.il/",
+  "ברודווי הלבשה חסידית": "https://xtra.co.il/pages/brand/broadway-haredi-fashion",
+  "ברון": "https://baronhats.co.il/",
+  "גלורי קידס בע\"מ": "https://glorykids.co.il/",
+  "גרביים עד הבית": "https://sockstohome.co.il/",
+  "המכירה לקהילה שלך": "https://www.sales.org.il/",
+  "המסעדה היהודית": "https://jewish-restaurant.co.il/?utm_source=chatgpt.com",
+  "ג'אסט מיט": "https://www.just-meat.co.il/?utm_source=chatgpt.com",
+  "חיימקה סלולר": "https://haimke.co.il/?utm_source=chatgpt.com",
+  "רפטינג נהר הירדן": "https://www.rafting.co.il/?utm_source=chatgpt.com",
+  "מיני ישראל": "https://www.minisrael.co.il/?utm_source=chatgpt.com",
+  "נינג'ה ישראל": "https://ninjaisrael.com/?utm_source=chatgpt.com",
+  "פיינטבול הגושרים": "https://www.pbhg.co.il/?utm_source=chatgpt.com",
+  "מאפיית קציר חיטים": "https://kzirhitim.co.il/",
+  "משכן התכלת": "https://mishkan-hatchelet.co.il/",
+  "נטו חיסכון": "https://nettochisachon.com/",
+  "נתי קלמן ביטוח": "https://www.kalman-ins.co.il/",
+  "ספרייתי גיטלר": "https://www.gitlerbooks.co.il/",
+  "פאקו מישל": "https://www.pacomishel.co.il/",
+  "פוד אפיל": "https://www.foodappeal-online.com/?utm_source=chatgpt.com",
+  "עור והדר": "https://orvehadar.co.il/?utm_source=chatgpt.com",
+  "פיצה שמש": "https://pizza-shemesh.co.il/",
+  "פמילי פאשן": "https://www.malaya.co.il/",
+  "פרסטר": "https://fersterhats.com/",
+  "קינדר טויס": "https://kindertoys.co.il/",
+  "רפאלי - רבי עקיבא": "https://refaeli.co.il/",
+  "שטיין יודאיקה": "https://steinjudaica.co.il/"
+  ,"צימר זוגי במעלה עמוס": "https://nof-hamidbar-zimmer.web.app/?utm_source=chatgpt.com"
+};
+
+for (const business of BENEFITS_BUSINESSES) {
+  if (Object.prototype.hasOwnProperty.call(BUSINESS_WEBSITES, business.name)) {
+    business.website = BUSINESS_WEBSITES[business.name];
+  }
+}

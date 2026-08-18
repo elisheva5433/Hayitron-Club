@@ -101,7 +101,7 @@ export default function AiChat() {
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '0.75rem 1rem', background: 'var(--ink)', color: '#fff' }}>
             <div>
               <div style={{ fontWeight: 700, fontSize: '0.9rem' }}>העוזר האישי של הלב היהודי</div>
-              <div style={{ fontSize: '0.75rem', color: 'rgba(255,255,255,0.5)' }}>זמין 24/7 · מבוסס בינה מלאכותית</div>
+              <div style={{ fontSize: '0.75rem', color: 'rgba(255,255,255,0.5)' }}>זמין 24/6 · מבוסס בינה מלאכותית</div>
             </div>
             <button onClick={() => setOpen(false)} style={{ background: 'none', border: 'none', color: 'rgba(255,255,255,0.7)', cursor: 'pointer', padding: '4px' }}>
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 6L18 18M18 6L6 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/></svg>

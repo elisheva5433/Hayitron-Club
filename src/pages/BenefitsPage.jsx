@@ -109,26 +109,26 @@ function BenefitsPage() {
         <div className="container">
           <p className="eyebrow" style={{ marginBottom: '0.5rem' }}>שותפים</p>
           <h2 className="font-display" style={{ margin: '0 0 0.5rem', fontSize: 'clamp(1.8rem, 3.5vw, 2.4rem)', color: 'white' }}>מועדון העסקים השותפים</h2>
-          <p style={{ color: 'rgba(255,255,255,0.72)', margin: 0 }}>קטלוג העסקים וההטבות הרשמיות, מבוסס על נתוני המאגר בלבד.</p>
+          <p style={{ color: 'rgba(255,255,255,0.72)', margin: 0 }}>קטלוג העסקים וההטבות הרשמיות.</p>
         </div>
       </section>
 
       <section className="section-pad" style={{ paddingTop: '2.5rem' }}>
         <div className="container">
-          <div style={{ display: 'flex', gap: '0.75rem', alignItems: 'flex-end', marginBottom: '1.5rem', flexWrap: 'wrap' }}>
-            <div style={{ flex: 1, minWidth: '200px' }}>
+          <div className="benefits-filters">
+            <div className="benefits-filter-search">
               <label className="label">חיפוש</label>
-              <input className="field" style={{ height: '44px', padding: '0 0.9rem' }} placeholder="שם עסק" value={search} onChange={(e) => setSearch(e.target.value)} />
+              <input className="field benefits-filter-control" placeholder="שם עסק" value={search} onChange={(e) => setSearch(e.target.value)} />
             </div>
-            <div>
+            <div className="benefits-filter-field">
               <label className="label">קטגוריה</label>
-              <select className="field" style={{ height: '44px', padding: '0 0.9rem' }} value={cat} onChange={(e) => setCat(e.target.value)}>
+              <select className="field benefits-filter-control" value={cat} onChange={(e) => setCat(e.target.value)}>
                 {categories.map((c) => <option key={c}>{c}</option>)}
               </select>
             </div>
-            <div>
+            <div className="benefits-filter-field">
               <label className="label">אזור</label>
-              <select className="field" style={{ height: '44px', padding: '0 0.9rem' }} value={region} onChange={(e) => setRegion(e.target.value)}>
+              <select className="field benefits-filter-control" value={region} onChange={(e) => setRegion(e.target.value)}>
                 {regions.map((r) => <option key={r}>{r}</option>)}
               </select>
             </div>
