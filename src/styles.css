@@ -381,9 +381,9 @@ select.benefits-filter-control {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(145deg, #fff8d5 0%, #d2a83f 18%, #fff4b0 38%, #a8781d 61%, #f5d76a 82%, #fff8d5 100%);
+  background: linear-gradient(145deg, #fffdf4 0%, #ead9ad 18%, #fff9e8 38%, #c9b47d 61%, #ead8a9 82%, #fffdf4 100%);
   position: relative;
-  border: 1px solid #8e6418;
+  border: 1px solid #c5b27e;
   border-radius: 0.85rem;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.9), inset 0 -2px 0 rgba(104, 67, 8, 0.28), 0 7px 16px rgba(139, 96, 16, 0.2);
   overflow: hidden;
@@ -409,6 +409,7 @@ select.benefits-filter-control {
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
+  border-radius: 0.7rem;
   position: relative;
   z-index: 1;
   filter: drop-shadow(0 10px 13px rgba(24, 34, 60, 0.25));
@@ -458,12 +459,14 @@ select.benefits-filter-control {
   background:
     radial-gradient(circle at 15% 12%, rgba(255, 255, 255, 0.9), transparent 38%),
     linear-gradient(145deg, #fefaf1 0%, #efe4d2 48%, #f8f2e6 100%);
+  overflow: hidden;
 }
 
 .partner-detail-logo {
   max-width: 100%;
   max-height: 320px;
   object-fit: contain;
+  border-radius: 0.9rem;
   filter: drop-shadow(0 20px 30px rgba(23, 27, 46, 0.2));
 }
 
