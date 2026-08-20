@@ -82,6 +82,10 @@ function BenefitsPage() {
     setSearchParams(nextParams, { replace: true });
   };
 
+  const clearFilters = () => {
+    setSearchParams({}, { replace: true });
+  };
+
   const categories = useMemo(() => {
     const dynamicCategories = [...new Set(businesses.map((b) => b.cat).filter(Boolean))]
       .sort((first, second) => first.localeCompare(second, 'he', { sensitivity: 'base' }));
@@ -137,6 +141,9 @@ function BenefitsPage() {
                 {regions.map((r) => <option key={r}>{r}</option>)}
               </select>
             </div>
+            <button type="button" className="btn-ghost benefits-clear-filters" onClick={clearFilters}>
+              נקה חיפוש
+            </button>
           </div>
 
           <p style={{ margin: '0 0 1rem', fontSize: '0.9rem', color: 'var(--ink-soft)' }}>{filtered.length} עסקים שותפים נמצאו</p>

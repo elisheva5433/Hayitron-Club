@@ -122,6 +122,9 @@ function BenefitPartnerPage() {
                     <div className="partner-benefit-hero-value">
                       {sanitizeText(selected.perk || 'לא זמין').split(' או ')[0]}
                     </div>
+                    {selected.benefitText ? (
+                      <div className="partner-benefit-hero-note">{sanitizeText(selected.benefitText)}</div>
+                    ) : null}
                   </div>
                 </div>
 

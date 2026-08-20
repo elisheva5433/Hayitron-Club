@@ -331,6 +331,12 @@ label { font-weight: 700; }
 select.benefits-filter-control {
   width: 100%;
 }
+.benefits-clear-filters {
+  height: 44px;
+  margin-top: 0.4rem;
+  margin-bottom: 0.8rem;
+  flex-shrink: 0;
+}
 @media (max-width: 768px) {
   .benefits-filter-search,
   .benefits-filter-field {
@@ -509,7 +515,7 @@ select.benefits-filter-control {
 
 .partner-benefit-hero-note {
   margin-top: 0.65rem;
-  font-size: 0.98rem;
+  font-size: 0.88rem;
   color: rgba(243, 225, 163, 0.92);
 }
 
