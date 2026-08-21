@@ -4,6 +4,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import authRoutes from './src/backend/routes/authRoutes.js';
 import adminRoutes from './src/backend/routes/adminRoutes.js';
+import cardRoutes from './src/backend/routes/cardRoutes.js';
 import { requireAuth, requireAdmin } from './src/backend/middleware/authMiddleware.js';
 
 const app = express();
@@ -14,6 +15,7 @@ const __dirname = path.dirname(__filename);
 app.use(express.json());
 
 app.use('/api', authRoutes);
+app.use('/api/cards', cardRoutes);
 app.use('/api/admin', requireAuth, requireAdmin, adminRoutes);
 
 app.post('/api/chat', async (req, res) => {
@@ -45,6 +47,7 @@ app.post('/api/chat', async (req, res) => {
 });
 
 import { getDatabase } from './src/backend/db/database.js';
+import { findUserByEmail } from './src/backend/services/userService.js';
 
 app.get('/api/users', (req, res) => {
   res.json({ users: [] });
@@ -54,8 +57,17 @@ app.get('/api/votes', (req, res) => {
   try {
     const db = getDatabase();
     const month = new Date().toISOString().slice(0, 7);
-    const rows = db.prepare('SELECT optionId, count FROM votes WHERE month = ?').all(month);
-    res.json({ votes: rows, month });
+    const rows = db.prepare(`
+      SELECT optionId, COUNT(*) AS count
+      FROM member_votes
+      WHERE month = ?
+      GROUP BY optionId
+    `).all(month);
+    const userEmail = String(req.query.userEmail || '').trim().toLowerCase();
+    const selection = userEmail
+      ? db.prepare('SELECT optionId FROM member_votes WHERE month = ? AND userEmail = ?').get(month, userEmail)
+      : null;
+    res.json({ votes: rows, month, selectedOptionId: selection?.optionId || null });
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
@@ -64,14 +76,26 @@ app.get('/api/votes', (req, res) => {
 app.post('/api/votes', (req, res) => {
   try {
     const db = getDatabase();
-    const { optionId } = req.body;
+    const optionId = String(req.body.optionId || '').trim();
+    const userEmail = String(req.body.userEmail || '').trim().toLowerCase();
+    if (!optionId || !userEmail || !findUserByEmail(userEmail)) {
+      return res.status(400).json({ error: 'יש להתחבר כדי להצביע למוצר' });
+    }
     const month = new Date().toISOString().slice(0, 7);
     db.prepare(`
-      INSERT INTO votes (month, optionId, count) VALUES (?, ?, 1)
-      ON CONFLICT(month, optionId) DO UPDATE SET count = count + 1
-    `).run(month, optionId);
-    const rows = db.prepare('SELECT optionId, count FROM votes WHERE month = ?').all(month);
-    res.json({ votes: rows, month });
+      INSERT INTO member_votes (month, userEmail, optionId)
+      VALUES (?, ?, ?)
+      ON CONFLICT(month, userEmail) DO UPDATE SET
+        optionId = excluded.optionId,
+        updatedAt = CURRENT_TIMESTAMP
+    `).run(month, userEmail, optionId);
+    const rows = db.prepare(`
+      SELECT optionId, COUNT(*) AS count
+      FROM member_votes
+      WHERE month = ?
+      GROUP BY optionId
+    `).all(month);
+    res.json({ votes: rows, month, selectedOptionId: optionId });
   } catch (err) {
     res.status(500).json({ error: err.message });
   }

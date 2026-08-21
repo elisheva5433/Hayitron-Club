@@ -32,16 +32,16 @@ export function AuthProvider({ children }) {
     }
   }, [member, isAuthenticated]);
 
-  const login = async (email, password) => {
-    const data = await loginUser(email, password);
+  const login = async (cardNumber) => {
+    const data = await loginUser(cardNumber);
     setMember(data.user);
     setIsAuthenticated(true);
     setStatusMessage('התחברת בהצלחה');
     return data;
   };
 
-  const register = async ({ name, email, password, cardNumber }) => {
-    const data = await registerUser({ name, email, password, cardNumber });
+  const register = async ({ name, email, password, cardNumber, cardId, idNumber, address, phone, cardName }) => {
+    const data = await registerUser({ name, email, password, cardNumber, cardId, idNumber, address, phone, cardName });
     setMember(data.user);
     setIsAuthenticated(true);
     setStatusMessage('ההרשמה הצליחה');

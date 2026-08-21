@@ -15,6 +15,10 @@ function mapUser(row) {
     email: row.email,
     password: row.password,
     cardNumber: row.cardNumber,
+    idNumber: row.idNumber,
+    address: row.address,
+    phone: row.phone,
+    cardName: row.cardName,
     balance: row.balance,
     status: row.status,
     role: row.role || 'user',
@@ -64,9 +68,22 @@ export function findUserByEmail(email) {
   return mapUser(row);
 }
 
-export function registerUser({ name, email, password, cardNumber }) {
+export function registerUser({ name, email, password, cardNumber, idNumber, address, phone, cardName }) {
   const db = getDatabase();
-  const existing = db.prepare('SELECT 1 FROM users WHERE email = ?').get(email);
+  const normalizedName = String(name || '').trim();
+  const normalizedEmail = String(email || '').trim().toLowerCase();
+  const normalizedIdNumber = String(idNumber || '').trim();
+  const normalizedAddress = String(address || '').trim();
+  const normalizedPhone = String(phone || '').trim();
+  const normalizedCardName = String(cardName || '').trim();
+
+  if (!normalizedName || !EMAIL_REGEX.test(normalizedEmail) || !normalizedIdNumber || !normalizedAddress || !normalizedPhone || !normalizedCardName) {
+    const error = new Error('יש למלא את כל פרטי ההצטרפות כנדרש');
+    error.statusCode = 400;
+    throw error;
+  }
+
+  const existing = db.prepare('SELECT 1 FROM users WHERE email = ?').get(normalizedEmail);
 
   if (existing) {
     const error = new Error('משתמש כבר קיים');
@@ -75,17 +92,28 @@ export function registerUser({ name, email, password, cardNumber }) {
   }
 
   const result = db.prepare(`
-    INSERT INTO users (name, email, password, cardNumber, balance, status)
-    VALUES (?, ?, ?, ?, 0, 'active')
-  `).run(name, email, password, cardNumber || '0000 0000 0000 0000');
+    INSERT INTO users (name, email, password, cardNumber, idNumber, address, phone, cardName, balance, status)
+    VALUES (?, ?, ?, ?, ?, ?, ?, ?, 0, 'active')
+  `).run(
+    normalizedName,
+    normalizedEmail,
+    password || 'card-login',
+    cardNumber || `4291 ${String(Date.now()).slice(-12).replace(/(\d{4})(?=\d)/g, '$1 ')}`,
+    normalizedIdNumber,
+    normalizedAddress,
+    normalizedPhone,
+    normalizedCardName,
+  );
 
   const row = db.prepare('SELECT * FROM users WHERE id = ?').get(result.lastInsertRowid);
   return mapUser(row);
 }
 
-export function loginUser(email, password) {
+export function loginUser(cardNumber) {
   const db = getDatabase();
-  const row = db.prepare('SELECT * FROM users WHERE email = ? AND password = ?').get(email, password);
+  const normalizedCardNumber = String(cardNumber || '').replace(/\D/g, '');
+  const row = db.prepare("SELECT * FROM users WHERE REPLACE(REPLACE(cardNumber, ' ', ''), '-', '') = ?")
+    .get(normalizedCardNumber);
 
   if (!row) {
     const error = new Error('פרטי התחברות לא תקינים');

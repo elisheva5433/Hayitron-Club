@@ -240,6 +240,80 @@ button { cursor: pointer; }
 .card { background: white; border-radius: 1.2rem; border: 1px solid var(--line); box-shadow: 0 8px 30px rgba(0,0,0,0.06); }
 .card-body { padding: 1.2rem; }
 .tile { background: white; border-radius: 1rem; border: 1px solid var(--line); padding: 1rem; }
+.card-actions { display: grid; gap: 0.55rem; margin-top: 1.2rem; }
+.card-actions .btn-primary,
+.card-actions .btn-ghost { width: 100%; margin-top: 0; }
+.membership-card-grid { align-items: stretch; }
+.membership-plan { display: flex; flex-direction: column; height: 100%; }
+.membership-plan .card-actions { margin-top: auto; padding-top: 1.2rem; }
+.bulk-order-callout {
+  margin-top: 2rem;
+  padding: 1.4rem 1.5rem;
+  border: 1px solid rgba(201, 160, 80, 0.55);
+  border-right: 5px solid var(--gold);
+  border-radius: 0.5rem;
+  background: #fffaf0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+.bulk-order-callout .eyebrow { margin: 0 0 0.2rem; }
+.bulk-order-callout h3 { margin: 0; font-size: 1.35rem; }
+.bulk-order-callout p:last-child { margin: 0.25rem 0 0; color: var(--ink-soft); }
+.bulk-order-actions { display: flex; flex-wrap: wrap; gap: 0.65rem; }
+.bulk-order-actions a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 0.55rem 0.9rem;
+  border: 1px solid var(--teal);
+  border-radius: 0.5rem;
+  color: var(--teal);
+  background: white;
+  font-weight: 700;
+  text-decoration: none;
+}
+.bulk-order-actions a:hover { background: var(--teal); color: white; }
+.card-tagline { margin: 0 0 0.7rem; color: var(--teal); font-weight: 800; line-height: 1.45; }
+.card-description { margin: 0 0 0.9rem; color: var(--ink-soft); font-size: 0.92rem; line-height: 1.55; }
+.card-audience-picker,
+.card-benefits-audience { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.45rem; }
+.card-audience-picker button,
+.card-benefits-audience button {
+  min-height: 40px;
+  border: 1px solid var(--line);
+  border-radius: 0.55rem;
+  background: white;
+  color: var(--ink-soft);
+  font-weight: 700;
+}
+.card-audience-picker button.active,
+.card-benefits-audience button.active { background: var(--ink); border-color: var(--ink); color: white; }
+.card-benefits-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  background: rgba(23, 27, 46, 0.56);
+}
+.card-benefits-modal {
+  width: min(680px, 100%);
+  max-height: min(720px, calc(100vh - 2rem));
+  overflow: auto;
+  padding: 1.35rem;
+  border-radius: 0.75rem;
+  background: var(--paper);
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.3);
+}
+.card-benefits-modal-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 1rem; margin-bottom: 1rem; }
+.modal-close { width: 2.25rem; height: 2.25rem; border: 0; border-radius: 50%; background: rgba(23, 27, 46, 0.08); color: var(--ink); font-size: 1.5rem; line-height: 1; }
+.card-benefits-list { display: grid; gap: 0.55rem; margin-top: 1rem; }
+.card-benefits-list > div { display: flex; justify-content: space-between; gap: 1rem; align-items: baseline; padding: 0.8rem 0; border-bottom: 1px solid var(--line); }
+.card-benefits-list span { color: var(--teal); font-size: 0.9rem; font-weight: 700; }
 .eyebrow { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; font-weight: 700; }
 .font-num { font-family: 'Frank Ruhl Libre', serif; }
 .font-display { font-family: 'Frank Ruhl Libre', serif; font-weight: 700; }
@@ -251,8 +325,8 @@ button { cursor: pointer; }
 .grid-3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
 .grid-2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
 .membership-card { border-radius: 1.2rem; padding: 1.2rem; color: white; min-height: 240px; }
-.membership-card.basic { background: linear-gradient(135deg, #1f2740 0%, #0f1428 100%); }
-.membership-card.vip { background: linear-gradient(135deg, #6b4811 0%, #c99a4f 100%); }
+.membership-card.basic { background: linear-gradient(135deg, #222f5c 0%, #111a38 100%); }
+.membership-card.vip { background: linear-gradient(135deg, #5a4210 0%, #b88b35 100%); }
 .membership-card.family { background: linear-gradient(135deg, #184f41 0%, #2f6f62 100%); }
 
 /* 3D card stage for homepage hero */

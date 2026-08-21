@@ -25,6 +25,10 @@ test('registerController returns a demo token', () => {
       email,
       password: '123456',
       cardNumber: '1111 2222 3333 4444',
+      idNumber: '123456789',
+      address: 'רחוב הבדיקה 1, ירושלים',
+      phone: '050-1234567',
+      cardName: 'משתמש בדיקה',
     },
   };
   const res = createResponse();
@@ -34,13 +38,16 @@ test('registerController returns a demo token', () => {
   assert.equal(res.statusCode, 201);
   assert.equal(res.payload.success, true);
   assert.equal(res.payload.token, 'demo-jwt-token');
+  assert.equal(res.payload.user.idNumber, '123456789');
+  assert.equal(res.payload.user.address, 'רחוב הבדיקה 1, ירושלים');
+  assert.equal(res.payload.user.phone, '050-1234567');
+  assert.equal(res.payload.user.cardName, 'משתמש בדיקה');
 });
 
 test('loginController returns a demo token', () => {
   const req = {
     body: {
-      email: 'noa@example.com',
-      password: '123456',
+      cardNumber: '4291-8830-1122-4457',
     },
   };
   const res = createResponse();
@@ -50,4 +57,18 @@ test('loginController returns a demo token', () => {
   assert.equal(res.statusCode, 200);
   assert.equal(res.payload.success, true);
   assert.equal(res.payload.token, 'demo-jwt-token');
+});
+
+test('loginController identifies the administrator by card number', () => {
+  const req = {
+    body: {
+      cardNumber: '4291 0000 0000 0001',
+    },
+  };
+  const res = createResponse();
+
+  loginController(req, res);
+
+  assert.equal(res.statusCode, 200);
+  assert.equal(res.payload.user.role, 'admin');
 });

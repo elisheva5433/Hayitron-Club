@@ -19,7 +19,7 @@ function PersonalPage() {
     e.preventDefault();
     const form = e.target;
     try {
-      await login(form.email.value.trim(), form.password.value);
+      await login(form.cardNumber.value.trim());
     } catch (error) {
       setStatusMessage(error.message);
     }
@@ -74,8 +74,7 @@ function PersonalPage() {
               <div className="card card-body">
                 <h3 className="font-display" style={{ marginTop: 0, marginBottom: '1.25rem', fontSize: '1.2rem' }}>התחברות לאזור האישי</h3>
                 <form onSubmit={handleLogin} style={{ display: 'flex', flexDirection: 'column', gap: '0.85rem' }}>
-                  <div><label className="label">אימייל</label><input className="field" name="email" type="email" required /></div>
-                  <div><label className="label">סיסמה</label><input className="field" name="password" type="password" required /></div>
+                  <div><label className="label">מספר כרטיס</label><input className="field" name="cardNumber" inputMode="numeric" autoComplete="cc-number" placeholder="0000 0000 0000 0000" required /></div>
                   <button className="btn-teal" type="submit">כניסה לאזור האישי</button>
                 </form>
               </div>

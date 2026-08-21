@@ -17,6 +17,7 @@ import PersonalPage from './pages/PersonalPage';
 import AdminPage from './pages/AdminPage';
 import BeitNaamanPage from './pages/BeitNaamanPage';
 import BenBaitPage from './pages/BenBaitPage';
+import CardBenefitsPage from './pages/CardBenefitsPage';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           <Route element={<Layout />}>
             <Route path="/" element={<HomePage />} />
             <Route path="/cards" element={<CardsPage />} />
+            <Route path="/cards/:cardId/benefits" element={<CardBenefitsPage />} />
             <Route path="/benefits" element={<BenefitsPage />} />
             <Route path="/benefits/:businessId" element={<BenefitPartnerPage />} />
             <Route path="/community" element={<CommunityPage />} />

@@ -7,7 +7,7 @@ function CardVisual() {
         style={{
           minHeight: '200px', position: 'relative', display: 'flex', flexDirection: 'column',
           justifyContent: 'space-between', padding: '1.3rem',
-          background: 'linear-gradient(135deg, #0a1628 0%, #1e4080 52%, #0d2a55 100%)',
+          background: 'linear-gradient(135deg, #124d40 0%, #25755f 52%, #0d3028 100%)',
           borderRadius: '18px', color: 'white',
           transform: 'rotateY(-10deg) rotateX(5deg)',
           transition: 'transform .25s ease',
@@ -55,7 +55,7 @@ function CardVisual() {
 export default function BenBaitPage() {
   return (
     <>
-      <section style={{ background: 'linear-gradient(135deg, #0a1628 0%, #1e4080 60%, #0d2a55 100%)', padding: '4rem 0 3rem', color: 'white' }}>
+      <section style={{ background: 'linear-gradient(135deg, #124d40 0%, #25755f 60%, #0d3028 100%)', padding: '4rem 0 3rem', color: 'white' }}>
         <div className="container" style={{ textAlign: 'center', maxWidth: '680px' }}>
           <p className="eyebrow" style={{ color: 'rgba(255,255,255,0.55)', marginBottom: '0.5rem' }}>כרטיס תושבי חו"ל</p>
           <h1 className="font-display" style={{ margin: '0 0 1rem', fontSize: 'clamp(2rem, 4.5vw, 3rem)', lineHeight: 1.15, color: 'white' }}>

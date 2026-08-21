@@ -24,24 +24,44 @@ function adminRequest(path, email, options = {}) {
   });
 }
 
-export async function loginUser(email, password) {
+export async function loginUser(cardNumber) {
   return request('/api/login', {
     method: 'POST',
-    body: JSON.stringify({ email, password }),
+    body: JSON.stringify({ cardNumber }),
   });
 }
 
-export async function registerUser({ name, email, password, cardNumber }) {
+export async function registerUser({ name, email, password, cardNumber, cardId, idNumber, address, phone, cardName }) {
   return request('/api/register', {
     method: 'POST',
-    body: JSON.stringify({ name, email, password, cardNumber }),
+    body: JSON.stringify({ name, email, password, cardNumber, cardId, idNumber, address, phone, cardName }),
   });
+}
+
+export async function getCards() {
+  return request('/api/cards', { method: 'GET' });
+}
+
+export async function getCardBenefits(cardId) {
+  return request(`/api/cards/${encodeURIComponent(cardId)}/benefits`, { method: 'GET' });
 }
 
 export async function topupBalance(email, amount) {
   return request('/api/topup', {
     method: 'POST',
     body: JSON.stringify({ email, amount }),
+  });
+}
+
+export async function getVotes(userEmail) {
+  const query = userEmail ? `?userEmail=${encodeURIComponent(userEmail)}` : '';
+  return request(`/api/votes${query}`, { method: 'GET' });
+}
+
+export async function castVote({ optionId, userEmail }) {
+  return request('/api/votes', {
+    method: 'POST',
+    body: JSON.stringify({ optionId, userEmail }),
   });
 }
 

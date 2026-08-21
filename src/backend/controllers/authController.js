@@ -1,9 +1,18 @@
 import { loginUser, registerUser, topupUser } from '../services/userService.js';
 import { sendWelcomeEmail } from '../services/emailService.js';
+import { assignUserCard, validateCardId } from '../services/cardService.js';
 
 export async function registerController(req, res) {
   try {
+    if (req.body.cardId && !validateCardId(req.body.cardId)) {
+      const error = new Error('הכרטיס שנבחר לא נמצא');
+      error.statusCode = 400;
+      throw error;
+    }
     const user = registerUser(req.body);
+    if (req.body.cardId) {
+      assignUserCard(user.id, req.body.cardId);
+    }
     // send welcome email in background, don't block response
     sendWelcomeEmail({ name: user.name, email: user.email, cardNumber: user.cardNumber })
       .then(result => console.log('Email sent:', JSON.stringify(result)))
@@ -16,7 +25,7 @@ export async function registerController(req, res) {
 
 export function loginController(req, res) {
   try {
-    const user = loginUser(req.body.email, req.body.password);
+    const user = loginUser(req.body.cardNumber);
     res.json({ success: true, user, token: 'demo-jwt-token' });
   } catch (error) {
     res.status(error.statusCode || 500).json({ error: error.message || 'שגיאה בהתחברות' });

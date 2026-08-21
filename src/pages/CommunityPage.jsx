@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
-import { createCommunityPost, getCommunityPosts } from '../services/api';
+import { createCommunityPost, getCommunityPosts, getVotes, castVote as submitVote } from '../services/api';
+import { useAuth } from '../context/AuthContext';
 
 const VOTE_OPTIONS = [
   { id: 'stroller', name: 'עגלת תינוקות פרימיום', emoji: '🛒', price: '₪890 (מחיר רגיל ₪1,450)' },
@@ -30,6 +31,7 @@ function useCountdown() {
 }
 
 function CommunityPage() {
+  const { member, isAuthenticated } = useAuth();
   const [votes, setVotes] = useState({});
   const [votedId, setVotedId] = useState(null);
   const [posts, setPosts] = useState([]);
@@ -37,15 +39,15 @@ function CommunityPage() {
   const countdown = useCountdown();
 
   useEffect(() => {
-    fetch('/api/votes')
-      .then(r => r.json())
+    getVotes(member?.email)
       .then(data => {
         const map = {};
         (data.votes || []).forEach(v => { map[v.optionId] = v.count; });
         setVotes(map);
+        setVotedId(data.selectedOptionId || null);
       })
       .catch(() => {});
-  }, []);
+  }, [member?.email]);
 
   useEffect(() => {
     getCommunityPosts()
@@ -56,21 +58,14 @@ function CommunityPage() {
   const totalVotes = VOTE_OPTIONS.reduce((s, v) => s + (votes[v.id] || 0), 0);
 
   async function castVote(id) {
-    if (votedId === id) return;
-    setVotedId(id);
+    if (!isAuthenticated) return;
     try {
-      const res = await fetch('/api/votes', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ optionId: id }),
-      });
-      const data = await res.json();
+      const data = await submitVote({ optionId: id, userEmail: member.email });
       const map = {};
       (data.votes || []).forEach(v => { map[v.optionId] = v.count; });
       setVotes(map);
-    } catch {
-      setVotes(prev => ({ ...prev, [id]: (prev[id] || 0) + 1 }));
-    }
+      setVotedId(data.selectedOptionId);
+    } catch {}
   }
 
   async function addPost(e) {
@@ -115,6 +110,7 @@ function CommunityPage() {
                     key={v.id}
                     type="button"
                     onClick={() => castVote(v.id)}
+                    disabled={!isAuthenticated}
                     style={{
                       textAlign: 'right', background: 'white', border: `1.5px solid ${isVoted ? 'var(--teal)' : 'var(--line)'}`,
                       borderRadius: '14px', padding: '1rem', cursor: 'pointer', position: 'relative', overflow: 'hidden',
@@ -136,7 +132,8 @@ function CommunityPage() {
                 );
               })}
             </div>
-            {votedId && <p style={{ marginTop: '0.75rem', color: 'var(--teal)', fontWeight: 600, fontSize: '0.9rem' }}>✓ הצבעתם נרשמה!</p>}
+            {!isAuthenticated && <p style={{ marginTop: '0.75rem', color: 'var(--ink-soft)', fontSize: '0.9rem' }}>יש להתחבר לאזור האישי כדי להצביע.</p>}
+            {votedId && <p style={{ marginTop: '0.75rem', color: 'var(--teal)', fontWeight: 600, fontSize: '0.9rem' }}>✓ הבחירה נשמרה. אפשר לבחור מוצר אחר כדי לשנות את ההצבעה.</p>}
           </div>
 
           <div>

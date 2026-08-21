@@ -2,12 +2,14 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { DatabaseSync } from 'node:sqlite';
 import { fileURLToPath } from 'node:url';
+import { BENEFITS_BUSINESSES } from '../../data/benefitsData.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const ADMIN_EMAIL = 'admin@hayitron.co.il';
 const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || 'HayitronAdm!2026';
+const ADMIN_CARD_NUMBER = process.env.ADMIN_CARD_NUMBER || '4291 0000 0000 0001';
 const LEGACY_ADMIN_PASSWORDS = new Set(['admin1234']);
 
 export function initializeDatabase(dbPath = path.join(__dirname, '..', '..', '..', 'data', 'hayitron.db')) {
@@ -22,10 +24,61 @@ export function initializeDatabase(dbPath = path.join(__dirname, '..', '..', '..
       email TEXT NOT NULL UNIQUE,
       password TEXT NOT NULL,
       cardNumber TEXT,
+      idNumber TEXT,
+      address TEXT,
+      phone TEXT,
+      cardName TEXT,
       balance REAL NOT NULL DEFAULT 0,
       status TEXT NOT NULL DEFAULT 'active',
       role TEXT NOT NULL DEFAULT 'user',
       createdAt TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP
+    );
+  `);
+
+  db.exec(`
+    CREATE TABLE IF NOT EXISTS cards (
+      id TEXT PRIMARY KEY,
+      cardName TEXT NOT NULL,
+      title TEXT NOT NULL,
+      audience TEXT NOT NULL DEFAULT 'general',
+      price TEXT NOT NULL,
+      period TEXT NOT NULL,
+      description TEXT NOT NULL DEFAULT '',
+      parentCardId TEXT
+    );
+  `);
+
+  db.exec(`
+    CREATE TABLE IF NOT EXISTS benefits (
+      id TEXT PRIMARY KEY,
+      businessName TEXT NOT NULL,
+      category TEXT NOT NULL,
+      region TEXT NOT NULL,
+      perk TEXT NOT NULL DEFAULT '',
+      benefitText TEXT NOT NULL DEFAULT '',
+      logo TEXT NOT NULL DEFAULT '',
+      detailsJson TEXT NOT NULL
+    );
+  `);
+
+  db.exec(`
+    CREATE TABLE IF NOT EXISTS card_benefits (
+      cardId TEXT NOT NULL,
+      benefitId TEXT NOT NULL,
+      PRIMARY KEY (cardId, benefitId),
+      FOREIGN KEY (cardId) REFERENCES cards(id),
+      FOREIGN KEY (benefitId) REFERENCES benefits(id)
+    );
+  `);
+
+  db.exec(`
+    CREATE TABLE IF NOT EXISTS user_cards (
+      userId INTEGER NOT NULL,
+      cardId TEXT NOT NULL,
+      createdAt TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
+      PRIMARY KEY (userId, cardId),
+      FOREIGN KEY (userId) REFERENCES users(id),
+      FOREIGN KEY (cardId) REFERENCES cards(id)
     );
   `);
 
@@ -36,6 +89,18 @@ export function initializeDatabase(dbPath = path.join(__dirname, '..', '..', '..
       optionId TEXT NOT NULL,
       count INTEGER NOT NULL DEFAULT 0,
       UNIQUE(month, optionId)
+    );
+  `);
+
+  db.exec(`
+    CREATE TABLE IF NOT EXISTS member_votes (
+      month TEXT NOT NULL,
+      userEmail TEXT NOT NULL,
+      optionId TEXT NOT NULL,
+      createdAt TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
+      updatedAt TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
+      PRIMARY KEY (month, userEmail),
+      FOREIGN KEY (userEmail) REFERENCES users(email)
     );
   `);
 
@@ -138,6 +203,10 @@ export function initializeDatabase(dbPath = path.join(__dirname, '..', '..', '..
 
   // add role column to existing DBs that predate this column
   try { db.exec(`ALTER TABLE users ADD COLUMN role TEXT NOT NULL DEFAULT 'user'`); } catch {}
+  try { db.exec(`ALTER TABLE users ADD COLUMN idNumber TEXT`); } catch {}
+  try { db.exec(`ALTER TABLE users ADD COLUMN address TEXT`); } catch {}
+  try { db.exec(`ALTER TABLE users ADD COLUMN phone TEXT`); } catch {}
+  try { db.exec(`ALTER TABLE users ADD COLUMN cardName TEXT`); } catch {}
   try { db.exec(`ALTER TABLE banners ADD COLUMN imagePath TEXT`); } catch {}
   try { db.exec(`ALTER TABLE purchase_groups ADD COLUMN supplier TEXT`); } catch {}
   try { db.exec(`ALTER TABLE purchase_groups ADD COLUMN closesAt TEXT`); } catch {}
@@ -148,9 +217,9 @@ export function initializeDatabase(dbPath = path.join(__dirname, '..', '..', '..
   const adminExists = Boolean(adminUser);
   if (!adminExists) {
     db.prepare(`INSERT INTO users (name, email, password, cardNumber, balance, status, role) VALUES (?, ?, ?, ?, ?, ?, ?)`)
-      .run('מנהל מערכת', ADMIN_EMAIL, ADMIN_PASSWORD, '', 0, 'active', 'admin');
+      .run('מנהל מערכת', ADMIN_EMAIL, ADMIN_PASSWORD, ADMIN_CARD_NUMBER, 0, 'active', 'admin');
   } else {
-    db.prepare(`UPDATE users SET role = 'admin' WHERE email = ?`).run(ADMIN_EMAIL);
+    db.prepare(`UPDATE users SET role = 'admin', cardNumber = ? WHERE email = ?`).run(ADMIN_CARD_NUMBER, ADMIN_EMAIL);
     if (LEGACY_ADMIN_PASSWORDS.has(String(adminUser.password || ''))) {
       db.prepare('UPDATE users SET password = ? WHERE email = ?').run(ADMIN_PASSWORD, ADMIN_EMAIL);
     }
@@ -167,7 +236,65 @@ export function initializeDatabase(dbPath = path.join(__dirname, '..', '..', '..
     db.prepare(`
       INSERT INTO users (name, email, password, cardNumber, balance, status, role)
       VALUES (?, ?, ?, ?, ?, ?, ?)
-    `).run('מנהל מערכת', ADMIN_EMAIL, ADMIN_PASSWORD, '', 0, 'active', 'admin');
+    `).run('מנהל מערכת', ADMIN_EMAIL, ADMIN_PASSWORD, ADMIN_CARD_NUMBER, 0, 'active', 'admin');
+  }
+
+  const cards = [
+    ['basic', 'ברכת הבית', 'כרטיס בסיסי', 'general', '₪19', 'לחודש', 'הטבות בסיסיות במאות עסקים', null],
+    ['beit-naaman-men', 'בית נאמן', 'בית נאמן לגברים', 'men', '₪49', 'לחודש', 'הטבות מותאמות לגברים', 'beit-naaman'],
+    ['beit-naaman-women', 'בית נאמן', 'בית נאמן לנשים', 'women', '₪49', 'לחודש', 'הטבות מותאמות לנשים', 'beit-naaman'],
+    ['ben-bait', 'בן בית', 'כרטיס תושבי חו"ל', 'overseas', '₪89', 'לחודש', 'הטבות ייחודיות לתושבי חו"ל', null],
+  ];
+  const insertCard = db.prepare(`
+    INSERT INTO cards (id, cardName, title, audience, price, period, description, parentCardId)
+    VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+    ON CONFLICT(id) DO UPDATE SET
+      cardName = excluded.cardName,
+      title = excluded.title,
+      audience = excluded.audience,
+      price = excluded.price,
+      period = excluded.period,
+      description = excluded.description,
+      parentCardId = excluded.parentCardId
+  `);
+  for (const card of cards) {
+    insertCard.run(...card);
+  }
+
+  const menCategories = new Set(['ביגוד גברים', 'ביגוד חסידי', 'כובעים', 'רכבים וטיסות', 'ארבעת המינים', 'תשמישי קדושה', 'ספרים', 'ביטוחים', 'סלולר', 'אלקטרוניקה ותאורה', 'חשמל']);
+  const womenCategories = new Set(['ביגוד נשים', 'תכשיטים ושעונים', 'בשמים', 'אופנה', 'ריהוט ומזרונים']);
+  const sharedCategories = new Set(['כללי', 'מזון', 'אוכל ומסעדנות', 'אופטיקה', 'נעליים', 'בגדי ילדים', 'פנאי ותיירות', 'כלי כתיבה וצעצועים', 'אחר', 'מצעים וכלי בית']);
+  const insertBenefit = db.prepare(`
+    INSERT INTO benefits (id, businessName, category, region, perk, benefitText, logo, detailsJson)
+    VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+    ON CONFLICT(id) DO UPDATE SET
+      businessName = excluded.businessName,
+      category = excluded.category,
+      region = excluded.region,
+      perk = excluded.perk,
+      benefitText = excluded.benefitText,
+      logo = excluded.logo,
+      detailsJson = excluded.detailsJson
+  `);
+  const insertCardBenefit = db.prepare('INSERT OR IGNORE INTO card_benefits (cardId, benefitId) VALUES (?, ?)');
+  for (const business of BENEFITS_BUSINESSES) {
+    insertBenefit.run(
+      business.id,
+      business.name,
+      business.cat || '',
+      business.region || '',
+      business.perk || '',
+      business.benefitText || '',
+      business.logo || '',
+      JSON.stringify(business)
+    );
+    insertCardBenefit.run('basic', business.id);
+    if (menCategories.has(business.cat) || sharedCategories.has(business.cat)) {
+      insertCardBenefit.run('beit-naaman-men', business.id);
+    }
+    if (womenCategories.has(business.cat) || sharedCategories.has(business.cat)) {
+      insertCardBenefit.run('beit-naaman-women', business.id);
+    }
   }
 
   const votingWindow = db.prepare('SELECT 1 FROM admin_settings WHERE key = ?').get('votingOpen');
